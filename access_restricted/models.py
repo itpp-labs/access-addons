@@ -10,7 +10,7 @@ class ResUsers(models.Model):
     def fields_view_get(self, cr, uid, view_id=None, view_type='form', context=None, toolbar=False, submenu=False):
         if view_type == 'form':
             last_uid = self.pool['ir.config_parameter'].get_param(cr, uid, IR_CONFIG_NAME, context=context)
-            if int(last_uid) != uid:
+            if int(last_uid) != uid and self.pool.get('res.users').has_group(cr, uid, 'base.group_system'):
                 ctx = (context or {}).copy()
                 ctx['access_restricted'] = 1
                 self.pool['res.groups'].update_user_groups_view(cr, uid, context=ctx)
