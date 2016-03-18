@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 {
-     "name": """Control access to Apps in Websit""",
-     "summary": """Restrict access to the 'Install Apps' item in the 'Customize' menu""",
-     "category": "Tools",
+     "name": """Restrict access to "Install Apps" in Website""",
+     "summary": """Only users with "Show Apps Menu" access see "Install Apps" menu.""",
+     "category": "Access",
      "images": ["images/install_apps.png"],
      "version": "1.0.0",
 
-     "author": "IT-Projects LLC, Developer Name",
+     "author": "IT-Projects LLC",
      "website": "https://it-projects.info",
      "license": "GPL-3",
      "price": 20.00,
