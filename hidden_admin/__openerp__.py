@@ -1,6 +1,6 @@
 {
     'name': 'Hide admin from user and partner lists',
-    'version': '1.0.0',
+    'version': '1.0.1',
     'author': 'IT-Projects LLC, Ivan Yelizariev',
     'category': 'Tools',
     'website': 'https://twitter.com/yelizariev',
