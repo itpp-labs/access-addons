@@ -5,7 +5,7 @@
     'category': 'Tools',
     'website': 'https://twitter.com/yelizariev',
     'depends': [
-        'mail', # we need this dependency to avoid test errors on --test-enabled
+        'mail',
         'ir_rule_protected',
     ],
     'data': [
