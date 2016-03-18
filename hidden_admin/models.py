@@ -8,4 +8,4 @@ class Channel(models.Model):
     @api.model
     def channel_fetch_listeners(self, uuid):
         res = super(Channel, self).channel_fetch_listeners(uuid)
-        return [p for p in res if p[0] != SUPERUSER_ID]
+        return [p for p in res if p.get('id') != SUPERUSER_ID]
