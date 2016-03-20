@@ -2,7 +2,7 @@
     'name': 'Control access to Apps',
     'version': '1.0.0',
     'author': 'IT-Projects LLC, Ivan Yelizariev',
-    'category': 'Tools',
+    'category': 'Access',
     'website': 'https://twitter.com/yelizariev',
     'price': 10.00,
     'currency': 'EUR',
