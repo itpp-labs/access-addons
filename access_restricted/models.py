@@ -47,8 +47,9 @@ class ResGroups(models.Model):
         if domain is None:
             domain = []
         domain.append(('share', '=', False))
-        if uid != SUPERUSER_ID and (context or {}).get('access_restricted'):
+        last_uid = int(self.pool['ir.config_parameter'].get_param(cr, uid, IR_CONFIG_NAME, '0', context=context))
+        if (context or {}).get('access_restricted') and last_uid != SUPERUSER_ID:
             model_data_obj = self.pool.get('ir.model.data')
             _model, group_no_one_id = model_data_obj.get_object_reference(cr, uid, 'base', 'group_no_one')
-            domain = domain + ['|', ('users', 'in', [uid]), ('id', '=', group_no_one_id)]
+            domain = domain + ['|', ('users', 'in', [last_uid]), ('id', '=', group_no_one_id)]
         return self.search(cr, uid, domain, context=context)
