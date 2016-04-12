@@ -6,7 +6,11 @@ from openerp.http import request
 class IrUiMenuExtra(models.Model):
     _inherit = 'ir.ui.menu'
 
-    extra_groups_id = fields.Many2many('res.groups', 'ir_ui_menu_extra_group_rel', 'menu_id', 'group_id', 'Extra Groups')
+    extra_groups_id = fields.Many2many(
+        'res.groups', 'ir_ui_menu_extra_group_rel', 'menu_id', 'group_id', 'Extra Groups',
+        help='Menu is visible only for users who are in the groups specified in the fields:'
+             '"groups_id" and "extra_groups_id".'
+    )
 
     @api.multi
     @api.returns('self')

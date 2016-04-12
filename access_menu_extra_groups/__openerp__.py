@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
-    "name": """Menu Access Via Groups""",
-    "summary": """Customizing menu visibility based on groups""",
+    "name": """Extra access groups for menus""",
+    "summary": """Restrict access to menus globall""",
     "category": "Access",
     "images": [],
     "version": "1.0.0",
