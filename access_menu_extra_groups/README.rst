@@ -4,6 +4,9 @@ Extra access groups for menus
 
 Menus are visible only for users who are in groups specified in the fields: "groups_id" and "extra_groups_id".
 
+It can be used to upgrade / downgrade user tiers. Need to add or remove user from group and thus it is possible
+to adjust the visibility of the menu.
+
 Usage
 =====
 
@@ -23,14 +26,15 @@ Add links to groups in the "extra_groups_id".
                         
 
 Now the "Project" menu is visible only for user who are in the following groups:
-(group_project_manager or group_project_user) and (module_name.group_1 or module_name.group_2)
+
+(``group_project_manager`` or ``group_project_user``) and (``module_name.group_1`` or ``module_name.group_2``)
 
 Credits
 =======
 
 Contributors
 ------------
-* Developer name <https://it-projects.info>
+* krotov@it-projects.info
 
 Sponsors
 --------
