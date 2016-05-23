@@ -7,8 +7,8 @@
 			<field name="inherit_id" ref="base.view_users_form"/>
 			<field name="arch" type="xml">
 				<data>
-					<xpath expr="//header" position="inside">
-						<button string="Clear access rights" type="object" name="action_clear_access_rights"/>
+					<xpath expr="//page[@name='access_rights']/group[@groups='base.group_light_multi_company']" position="before">
+						<button string="Clear access rights" type="object" name="action_clear_access_rights" style="margin-top: 10px;"/>
 					</xpath>
 				</data>
 			</field>
