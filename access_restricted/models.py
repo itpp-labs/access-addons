@@ -21,10 +21,11 @@ class ResUsers(models.Model):
 
     def fields_get(self, cr, uid, allfields=None, context=None, write_access=True, attributes=None):
         # uid is SUPERUSER_ID, so we need to change it
-        uid = self.pool['ir.config_parameter'].get_param(cr, uid, IR_CONFIG_NAME, context=context)
-        uid = int(uid)
+        last_uid = self.pool['ir.config_parameter'].get_param(cr, uid, IR_CONFIG_NAME, context=context)
         ctx = (context or {}).copy()
-        ctx['access_restricted'] = 1
+        if last_uid:
+            uid = int(last_uid)
+            ctx['access_restricted'] = 1
         return super(ResUsers, self).fields_get(cr, uid, allfields=allfields, context=ctx, write_access=write_access, attributes=attributes)
 
     @api.multi
