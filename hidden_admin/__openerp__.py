@@ -4,7 +4,9 @@
     'author': 'IT-Projects LLC, Ivan Yelizariev',
     'category': 'Tools',
     'website': 'https://twitter.com/yelizariev',
-    'depends': ['ir_rule_protected'],
+    'depends': [
+        'ir_rule_protected',
+    ],
     'data': [
         'security.xml',
     ],
