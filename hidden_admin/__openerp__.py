@@ -8,5 +8,6 @@
     'data': [
         'security.xml',
     ],
+    'post_load': 'post_load',
     'installable': True
 }
