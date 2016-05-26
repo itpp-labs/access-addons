@@ -35,7 +35,7 @@ class groups_view(osv.osv):
             for app, kind, gs in self.get_groups_by_application(cr, uid, context):
                 xml = None
                 custom = False
-                if type == 'selection' and any([g.category_id.id == custom_group_id for g in gs]) or all([g.category_id.id == custom_group_id for g in gs]):
+                if kind == 'selection' and any([g.category_id.id == custom_group_id for g in gs]) or all([g.category_id.id == custom_group_id for g in gs]):
                     xml = xml3
                     custom = True
 
