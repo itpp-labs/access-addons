@@ -7,6 +7,9 @@ from openerp.tools.translate import _
 from openerp.addons.base.res.res_users import name_boolean_group, name_selection_groups
 class groups_view(osv.osv):
     _inherit = 'res.groups'
+    _columns = {
+        'is_custom_group': fields.boolean("Custom Group", help="show group at the top of Access Rights tab in user form")
+    }
 
     def update_user_groups_view(self, cr, uid, context=None):
         # the view with id 'base.user_groups_view' inherits the user form view,
@@ -28,15 +31,10 @@ class groups_view(osv.osv):
             xml3.append(E.separator(string=_('Custom User Groups'), colspan="4"))
 
 
-            custom_group_id = None
-            try:
-                custom_group_id = self.pool['ir.model.data'].get_object_reference(cr, uid, 'access_base', 'module_category_custom')[1]
-            except:
-                pass
             for app, kind, gs in self.get_groups_by_application(cr, uid, user_context):
                 xml = None
                 custom = False
-                if kind == 'selection' and any([g.category_id.id == custom_group_id for g in gs]) or all([g.category_id.id == custom_group_id for g in gs]):
+                if kind == 'selection' and any([g.is_custom_group for g in gs]) or all([g.is_custom_group for g in gs]):
                     xml = xml3
                     custom = True
 
