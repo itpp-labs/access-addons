@@ -31,6 +31,8 @@ Now the "Project" menu is visible only for user who are in the following groups:
 
 (``group_project_manager`` or ``group_project_user``) and (``module_name.group_1`` or ``module_name.group_2``)
 
+This restriction is not applied for admin user.
+
 Credits
 =======
 
