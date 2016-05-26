@@ -13,14 +13,15 @@ class groups_view(osv.osv):
         # and introduces the reified group fields
         # we have to try-catch this, because at first init the view does not exist
         # but we are already creating some basic groups
-        if not context or context.get('install_mode'):
+        user_context = dict(context or {})
+        if user_context.get('install_mode'):
             # use installation/admin language for translatable names in the view
-            context = dict(context or {})
-            context.update(self.pool['res.users'].context_get(cr, uid))
-        view = self.pool['ir.model.data'].xmlid_to_object(cr, SUPERUSER_ID, 'base.user_groups_view', context=context)
+            user_context.update(self.pool['res.users'].context_get(cr, uid))
+        view = self.pool['ir.model.data'].xmlid_to_object(cr, SUPERUSER_ID, 'base.user_groups_view', context=user_context)
         if view and view.exists() and view._name == 'ir.ui.view':
+            group_no_one = view.env.ref('base.group_no_one')
             xml1, xml2 = [], []
-            xml1.append(E.separator(string=_('Application'), colspan="4"))
+            xml1.append(E.separator(string=_('Application'), colspan="2"))
 
 
             xml3 = []
@@ -32,15 +33,15 @@ class groups_view(osv.osv):
                 custom_group_id = self.pool['ir.model.data'].get_object_reference(cr, uid, 'access_base', 'module_category_custom')[1]
             except:
                 pass
-            for app, kind, gs in self.get_groups_by_application(cr, uid, context):
+            for app, kind, gs in self.get_groups_by_application(cr, uid, user_context):
                 xml = None
                 custom = False
-                if type == 'selection' and any([g.category_id.id == custom_group_id for g in gs]) or all([g.category_id.id == custom_group_id for g in gs]):
+                if kind == 'selection' and any([g.category_id.id == custom_group_id for g in gs]) or all([g.category_id.id == custom_group_id for g in gs]):
                     xml = xml3
                     custom = True
 
                 # hide groups in category 'Hidden' (except to group_no_one)
-                attrs = {'groups': 'base.group_no_one'} if app and app.xml_id == 'base.module_category_hidden' and not custom else {}
+                attrs = {'groups': 'base.group_no_one'} if app and (app.xml_id == 'base.module_category_hidden' or app.xml_id == 'base.module_category_extra') and not custom else {}
 
                 if kind == 'selection':
                     xml = xml or xml1
@@ -56,9 +57,14 @@ class groups_view(osv.osv):
                         xml.append(E.separator(string=app_name, colspan="4", **attrs))
                     for g in gs:
                         field_name = name_boolean_group(g.id)
-                        xml.append(E.field(name=field_name, **attrs))
+                        if g == group_no_one:
+                            # make the group_no_one invisible in the form view
+                            xml.append(E.field(name=field_name, invisible="1", **attrs))
+                        else:
+                            xml.append(E.field(name=field_name, **attrs))
 
-            xml = E.field(*(xml3 + xml2 + xml1), name="groups_id", position="replace")
+            xml2.append({'class': "o_label_nowrap"})
+            xml = E.field(E.group(*(xml3), col="2"), E.group(*(xml2), col="4"), E.group(*(xml1), col="2"), name="groups_id", position="replace")
             xml.addprevious(etree.Comment("GENERATED AUTOMATICALLY BY GROUPS"))
             xml_content = etree.tostring(xml, pretty_print=True, xml_declaration=True, encoding="utf-8")
             view.write({'arch': xml_content})
