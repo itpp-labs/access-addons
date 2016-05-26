@@ -8,5 +8,5 @@
     'images': ['images/user.png'],
     'depends' : ['base', 'res_users_clear_access_rights'],
     'data':['data.xml'],
-    'installable': False
+    'installable': True,
 }
