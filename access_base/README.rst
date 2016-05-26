@@ -1,15 +1,17 @@
 Basic module for custom security stuff
 ======================================
 
-The module creates special category "Custom User Groups" and puts access groups of that category to the top of "Access Rights" tab of user form. It helps to manage user roles via creating custom group that is collection of a technical groups.
+The module add checkbox "Custom Group" and puts such access groups to the top of "Access Rights" tab of user form. It helps to manage user roles via creating custom group that is collection of a technical groups.
 
 How to create or edit custom groups:
 
 * open Settings->Users->Groups
-* select some group "Custom User Groups / ..." or create new one and set value "Custom User Groups" for  "Application" field
-* click "edit"
-* add or delete inherited groups in "Inherited" tab
-* click "save"
+* choose some group or create new
+
+  * set checkbox "Custom Group"
+  * set Application
+
+To create "Application groups", i.e. it get Selection field in Access Rights tab, groups must belong to the same Application inherit each other.
 
 How to apply groups for some users:
 
