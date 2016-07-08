@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="action_check_records_number" model="ir.actions.server">
+            <field name="name">Check Records Number</field>
+            <field name="condition">True</field>
+            <field name="model_id" ref="access_limit_records_number.model_base_limit_records_number"/>
+            <field name="code">
+self.verify_table(cr, uid, context=context)
+            </field>
+            <field name="state">code</field>
+            <field name="type">ir.actions.server</field>
+        </record>
+    </data>
+</openerp>
