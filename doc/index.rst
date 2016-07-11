@@ -1,24 +1,17 @@
-=============================
- Limit records of the tables
-=============================
-
-Installation
-============
-
-Nothing special is needed to install this module.
+=============================================
+ Limit number of records for arbitrary model
+=============================================
 
 Usage
 =====
 
-* Зайдите в меню ``Settings / Technical / Security / Records Number Limits``
-* Создайте новую запись, например:
-** Model: res.users
-** Domain: [('active', ...)]
-** Ограничить количество записей в таблице значением 3
-** Создать записи в таблице users
-** При превышении будет эксепшн.
+* Open ``Settings / Technical / Security / Records Number Limits`` menu
+* Create new recorod. For exapmle:
 
-Uninstallation
-==============
+** Model: Users 
+** Domain: [('active', '=', True)]
+** Maximum Users: 3
 
-Nothing special is needed to uninstall this module.
+* Save the record
+* Try to create more users from ``Settings / Users``. When you try to create more than three users then you see an exception message.
+The system doesn't allow you create more than three users.
