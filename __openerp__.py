@@ -19,6 +19,8 @@
     "data": [
         'views/base_limit.xml',
         'data/data.xml',
+        'security/records_number_security.xml',
+        'security/ir.model.access.csv',
     ],
     "qweb": [],
     "demo": [],
