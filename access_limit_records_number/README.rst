@@ -1,12 +1,16 @@
-=============================
- Limit records of the tables
-=============================
+=============================================
+ Limit number of records for arbitrary model
+=============================================
 
-Приложение предоставляет возможность ограничить количество записей в любой таблице. Осуществляется путем установки правил в моделе base.actions.rule. Настройки ограничений для каждой таблицы делаются в новой моделе base.limit.records_number.
+With this module you can limit number of records for any model in specified domain.
+For examle, you can restrict number of vehicles in fleet_vehicle, say by three.
+If users try to create more then three vehicles then exception occurs.
 
-При создании или обновлении записи происходит проверка првышен ли лимит. Если лимит первышен, будет вызываться эксепшн.
+This module uses base.action.rule to restrict number of records.
+And also there is new model base.limit.records_number to strore the settings.
 
-Изменять правила и менять настройки могут только те, у кого есть на это доступ. Этот доступ предоставляется для пользователя, который имеет доступ Control Records Number Limits.
+To do new settings to restrict number of records in any model
+the user should be a member of ``Control limits on records number`` security group.
 
 Credits
 =======

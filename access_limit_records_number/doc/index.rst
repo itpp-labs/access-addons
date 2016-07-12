@@ -1,24 +1,19 @@
-=============================
- Limit records of the tables
-=============================
-
-Installation
-============
-
-Nothing special is needed to install this module.
+=============================================
+ Limit number of records for arbitrary model
+=============================================
 
 Usage
 =====
 
-* Зайдите в меню ``Settings / Technical / Security / Records Number Limits``
-* Создайте новую запись, например:
-** Model: res.users
-** Domain: [('active', ...)]
-** Ограничить количество записей в таблице значением 3
-** Создать записи в таблице users
-** При превышении будет эксепшн.
+* In debug mode open ``Settings / Users / Groups``
+* Find there ``Limit records number / Control limits on records number`` group and add your user in the group.
+* Open ``Settings / Technical / Security / Records Number Limits`` menu
+* Create new recorod. For exapmle:
 
-Uninstallation
-==============
+** Model: Information on a vehicle 
+** Domain: []
+** Maximum Records: 3
 
-Nothing special is needed to uninstall this module.
+* Save the record
+* Try to create more than three vehicles from ``Fleet / Vehicles / Vehicles``. When you try to create more than three vehicles then you see an exception message.
+The system doesn't allow you create more than three records.
