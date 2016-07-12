@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
-    "name": """Limited number of records""",
-    "summary": """e.g. limit number of users by three""",
+    "name": """Limit number of records""",
+    "summary": """e.g. allow to create maximum 10 users. Similar restriction can be applied to any table.""",
     "category": "Extra tools",
     "images": [],
     "version": "1.0.0",
