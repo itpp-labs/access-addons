@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
-    "name": """Limit for tables""",
-    "summary": """Module allow limit records of the table""",
+    "name": """Limited number of records""",
+    "summary": """e.g. limit number of users by three""",
     "category": "Extra tools",
     "images": [],
     "version": "1.0.0",
@@ -9,8 +9,8 @@
     "author": "IT-Projects LLC, Pavel Romanchenko",
     "website": "https://it-projects.info",
     "license": "LGPL-3",
-    #"price": 9.00,
-    #"currency": "EUR",
+    "price": 30.00,
+    "currency": "EUR",
 
     "depends": [
         'base_action_rule',

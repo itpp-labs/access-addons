@@ -15,7 +15,7 @@ class BaseLimitRecordsNumber(models.Model):
 
     _defaults = {
         'kind': 'on_create_or_write',
-        'domain': "[('active','=',True)]"
+        'domain': "[]"
     }
 
     @api.model
@@ -33,4 +33,4 @@ class BaseLimitRecordsNumber(models.Model):
             records_count = self.env[model_name].search_count(safe_eval(rule.domain))
             if records_count > rule.max_records:
                 raise exceptions.Warning(
-                    _('Maximimum allowed records in table %(model_name)s is %(max_records)s, while after this update you would have %(records_count)s') % {'model_name': rule.model_id.name, 'max_records': rule.max_records, 'records_count': records_count - 1})
+                    _('Maximimum allowed records in table %(model_name)s is %(max_records)s, while after this update you would have %(records_count)s') % {'model_name': rule.model_id.name, 'max_records': rule.max_records, 'records_count': records_count})
