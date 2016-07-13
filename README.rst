@@ -26,7 +26,7 @@ Sponsors
 Further information
 ===================
 
-.. Demo: http://runbot.it-projects.info/demo/REPO-NAME/BRANCH
+Demo: http://runbot.it-projects.info/demo/access-addons/9.0
 
 HTML Description: https://apps.odoo.com/apps/modules/9.0/access_limit_records_number/
 
