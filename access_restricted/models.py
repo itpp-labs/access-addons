@@ -12,27 +12,16 @@ class ResUsers(models.Model):
     def fields_view_get(self, cr, uid, view_id=None, view_type='form', context=None, toolbar=False, submenu=False):
         if view_type == 'form':
             last_uid = self.pool['ir.config_parameter'].get_param(cr, uid, IR_CONFIG_NAME, context=context)
-            if int(last_uid) != uid and self.pool.get('res.users').has_group(cr, uid, 'base.group_system'):
-                ctx = (context or {}).copy()
-                ctx['access_restricted'] = 1
-                self.pool['res.groups'].update_user_groups_view(cr, uid, context=ctx)
+            if int(last_uid) != uid:
+                self.pool['res.groups'].update_user_groups_view(cr, SUPERUSER_ID, context=context)
 
         return super(ResUsers, self).fields_view_get(cr, uid, view_id, view_type, context, toolbar, submenu)
-
-    def fields_get(self, cr, uid, allfields=None, context=None, write_access=True, attributes=None):
-        # uid is SUPERUSER_ID, so we need to change it
-        last_uid = self.pool['ir.config_parameter'].get_param(cr, uid, IR_CONFIG_NAME, context=context)
-        ctx = (context or {}).copy()
-        if last_uid:
-            uid = int(last_uid)
-            ctx['access_restricted'] = 1
-        return super(ResUsers, self).fields_get(cr, uid, allfields=allfields, context=ctx, write_access=write_access, attributes=attributes)
 
     @api.multi
     def write(self, vals):
         for key in vals:
             if is_reified_group(key):
-                self.env['ir.config_parameter'].set_param(IR_CONFIG_NAME, '0')
+                self.env['ir.config_parameter'].sudo().set_param(IR_CONFIG_NAME, '0')
                 break
         return super(ResUsers, self).write(vals)
 
@@ -41,21 +30,20 @@ class ResGroups(models.Model):
     _inherit = 'res.groups'
 
     def update_user_groups_view(self, cr, uid, context=None):
-        self.pool['ir.config_parameter'].set_param(cr, uid, IR_CONFIG_NAME, uid, context=context)
-        ctx = (context or {}).copy()
-        ctx['access_restricted'] = 1
-        return super(ResGroups, self).update_user_groups_view(cr, uid, context=ctx)
+        real_uid = (context or {}).get('uid', uid)
+        self.pool['ir.config_parameter'].set_param(cr, SUPERUSER_ID, IR_CONFIG_NAME, real_uid, context=context)
+        return super(ResGroups, self).update_user_groups_view(cr, SUPERUSER_ID, context=context)
 
     def get_application_groups(self, cr, uid, domain=None, context=None):
         if domain is None:
             domain = []
         domain.append(('share', '=', False))
-        last_uid = int(self.pool['ir.config_parameter'].get_param(cr, uid, IR_CONFIG_NAME, '0', context=context))
-        if (context or {}).get('access_restricted') and last_uid != SUPERUSER_ID:
+        real_uid = (context or {}).get('uid') or int(self.pool['ir.config_parameter'].get_param(cr, uid, IR_CONFIG_NAME, '0', context=context))
+        if real_uid and real_uid != SUPERUSER_ID:
             model_data_obj = self.pool.get('ir.model.data')
             _model, group_no_one_id = model_data_obj.get_object_reference(cr, uid, 'base', 'group_no_one')
-            domain = domain + ['|', ('users', 'in', [last_uid]), ('id', '=', group_no_one_id)]
-        return self.search(cr, uid, domain, context=context)
+            domain = domain + ['|', ('users', 'in', [real_uid]), ('id', '=', group_no_one_id)]
+        return self.search(cr, SUPERUSER_ID, domain, context=context)
 
 
 class res_config_settings(models.TransientModel):
