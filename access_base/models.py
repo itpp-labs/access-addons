@@ -12,6 +12,9 @@ class groups_view(osv.osv):
     }
 
     def update_user_groups_view(self, cr, uid, context=None):
+        # call super to make module compatible with other modules (e.g. access_restricted)
+        super(groups_view, self).update_user_groups_view(cr, uid, context=context)
+
         # the view with id 'base.user_groups_view' inherits the user form view,
         # and introduces the reified group fields
         # we have to try-catch this, because at first init the view does not exist
