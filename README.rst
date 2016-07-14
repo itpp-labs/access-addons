@@ -21,7 +21,7 @@ Contributors
 
 Sponsors
 --------
-* `IT-Projects LLC <https://it-projects.info>`_
+* `Mattobell <https://www.mattobell.com>`_
 
 Further information
 ===================
