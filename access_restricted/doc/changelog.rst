@@ -1,6 +1,11 @@
 Changelog
 =========
 
+`1.2.0`
+-------
+
+- [REF] clean and simplify code
+
 `1.1.0`
 -------
 
