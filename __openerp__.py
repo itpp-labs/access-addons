@@ -17,13 +17,15 @@
     ],
     "external_dependencies": {"python": [], "bin": []},
     "data": [
-        'views/base_limit.xml',
-        'data/data.xml',
         'security/records_number_security.xml',
         'security/ir.model.access.csv',
+        'views/base_limit.xml',
+        'data/data.xml',
     ],
     "qweb": [],
-    "demo": [],
+    "demo": [
+        'demo/demo.xml',
+    ],
 
     "post_load": None,
     "pre_init_hook": None,

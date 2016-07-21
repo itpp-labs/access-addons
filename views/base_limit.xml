@@ -44,6 +44,6 @@
             <field name="view_id" ref="base_limit_view_tree"/>
             <field name="search_view_id" ref="base_limit_view_search"/>
         </record>
-        <menuitem action="base_limit_act" id="menu_base_limit_act" parent="base.menu_security"/>
+        <menuitem action="base_limit_act" id="menu_base_limit_act" parent="base.menu_security" groups="access_limit_records_number.group_control_limits_on_records_number"/>
     </data>
 </openerp>
