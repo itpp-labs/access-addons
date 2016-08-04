@@ -2,7 +2,7 @@
     'name': 'Restricted administration rights',
     'version': '1.2.0',
     'author': 'IT-Projects LLC, Ivan Yelizariev',
-    'category': 'Tools',
+    "category": "Access",
     'website': 'https://twitter.com/yelizariev',
     'price': 30.00,
     'currency': 'EUR',
