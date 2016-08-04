@@ -2,7 +2,7 @@
     'name': 'Protect ir.rule records',
     'version': '1.0.0',
     'author': 'IT-Projects LLC, Ivan Yelizariev',
-    'category': 'Tools',
+    "category": "Access",
     'website': 'https://twitter.com/yelizariev',
     'depends': [],
     'data': [
