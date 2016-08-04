@@ -4,8 +4,8 @@
     'version' : '1.0.0',
     'author' : 'IT-Projects LLC, Ivan Yelizariev',
     'license': 'LGPL-3',
-    'category' : 'Tools',
     'website' : 'https://it-projects.info',
+    "category": "Access",
     'depends' : ['base'],
     "external_dependencies": {"python": [], "bin": []},
     'data':[

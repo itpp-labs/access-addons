@@ -3,7 +3,7 @@
     'version': '1.0.0',
     'author': 'Cesar Lage',
     'license': 'LGPL-3',
-    'category': 'Tools',
+    "category": "Access",
     'website': 'https://yelizariev.github.io',
     'description': """
             Custom security groups 2
