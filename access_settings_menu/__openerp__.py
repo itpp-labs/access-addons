@@ -2,7 +2,7 @@
     'name': 'Show settings menu for non-admin',
     'version': '1.0.1',
     'author': 'IT-Projects LLC, Ivan Yelizariev',
-    'category': 'Tools',
+    "category": "Access",
     'website': 'https://twitter.com/yelizariev',
     'price': 10.00,
     'currency': 'EUR',

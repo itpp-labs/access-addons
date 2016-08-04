@@ -23,7 +23,7 @@
 {
     'name': 'Group Menu No Access',
     'version': '0.1',
-    'category': 'Base',
+    "category": "Access",
     'description': """
         Group Menu No Access
     """,
