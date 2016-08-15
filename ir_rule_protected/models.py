@@ -1,6 +1,8 @@
+# -*- coding: utf-8 -*-
 from openerp import models, api, fields, exceptions, SUPERUSER_ID
 
 MODULE_NAME = 'ir_rule_protected'
+
 
 class IRRule(models.Model):
     _inherit = 'ir.rule'
