@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 {
     'name': 'Hide admin from user and partner lists',
     'version': '1.0.0',
