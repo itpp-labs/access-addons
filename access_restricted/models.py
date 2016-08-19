@@ -61,7 +61,6 @@ class res_config_settings(models.TransientModel):
         classified['group'] = group
         return classified
 
-
     def fields_get(self, cr, uid, fields=None, context=None, write_access=True, attributes=None):
         fields = super(res_config_settings, self).fields_get(
             cr, uid, fields, context, write_access, attributes)
@@ -78,6 +77,6 @@ class res_config_settings(models.TransientModel):
 
             fields[name].update(
                 readonly=True,
-                help= ustr(fields[name].get('help', '')) +
-                     _('\n\nYou don\'t have access to change this settings, because you administration rights are restricted'))
+                help=ustr(fields[name].get('help', '')) +
+                _('\n\nYou don\'t have access to change this settings, because you administration rights are restricted'))
         return fields

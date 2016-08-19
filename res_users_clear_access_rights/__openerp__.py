@@ -1,16 +1,16 @@
 {
-    'name' : 'Clear access rights button',
+    'name': 'Clear access rights button',
     "summary": """Useful tool to reset user rights""",
-    'version' : '1.0.0',
-    'author' : 'IT-Projects LLC, Ivan Yelizariev',
+    'version': '1.0.0',
+    'author': 'IT-Projects LLC, Ivan Yelizariev',
     'license': 'LGPL-3',
-    'website' : 'https://it-projects.info',
+    'website': 'https://it-projects.info',
     "category": "Access",
-    'depends' : ['base'],
+    'depends': ['base'],
     "external_dependencies": {"python": [], "bin": []},
-    'data':[
+    'data': [
         'views.xml',
-        ],
+    ],
     "demo": [
     ],
     'installable': True,

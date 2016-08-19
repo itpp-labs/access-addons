@@ -5,6 +5,7 @@ from openerp import SUPERUSER_ID
 
 
 class WebSettingsDashboardCustom(WebSettingsDashboard):
+
     @http.route('/web_settings_dashboard/data', type='json', auth='user')
     def web_settings_dashboard_data(self, **kw):
         has_access_to_apps = request.registry['res.users'].has_group(request.cr, request.uid, 'access_apps.group_show_modules_menu')

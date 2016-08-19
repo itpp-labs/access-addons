@@ -13,6 +13,6 @@
         'views.xml',
         'security.xml',
         #'ir.model.access.csv',
-        ],
+    ],
     'installable': False
 }

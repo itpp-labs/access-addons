@@ -6,6 +6,7 @@ from openerp import SUPERUSER_ID
 from openerp.tools.translate import _
 from openerp.exceptions import AccessError
 
+
 class hr_employee(models.Model):
     '''
     Employee
@@ -16,7 +17,7 @@ class hr_employee(models.Model):
     def _payslip_count(self, cr, uid, ids, field_name, arg, context=None):
         try:
             res = super(hr_employee, self)._payslip_count(cr, uid, ids, field_name, arg, context)
-        except AccessError, e:
+        except AccessError as e:
             res = {
                 employee_id: 0
                 for employee_id in ids
@@ -54,6 +55,7 @@ class res_partner(models.Model):
 
     access_to_private_information = fields.Boolean('Access to private information', compute=_get_access_to_private_information, store=False)
 
+
 class crm_lead(models.Model):
     _inherit = 'crm.lead'
 
@@ -65,8 +67,8 @@ class project_project(models.Model):
 
     archived = fields.Boolean('Archived', help='Only users with special rights have access to archived records. Untick "Active" field to hide record', default=False)
 
+
 class project_task(models.Model):
     _inherit = 'project.task'
 
     archived = fields.Boolean('Archived', help='Only users with special rights have access to archived records. Untick "Active" field to hide record', related='project_id.archived')
-

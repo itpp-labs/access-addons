@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
-from openerp.osv import osv,fields
+from openerp.osv import osv, fields
 from openerp import SUPERUSER_ID
 from lxml import etree
 from lxml.builder import E
 from openerp.tools.translate import _
 from openerp.addons.base.res.res_users import name_boolean_group, name_selection_groups
+
+
 class groups_view(osv.osv):
     _inherit = 'res.groups'
     _columns = {
@@ -29,10 +31,8 @@ class groups_view(osv.osv):
             xml1, xml2 = [], []
             xml1.append(E.separator(string=_('Application'), colspan="2"))
 
-
             xml3 = []
             xml3.append(E.separator(string=_('Custom User Groups'), colspan="4"))
-
 
             for app, kind, gs in self.get_groups_by_application(cr, uid, user_context):
                 xml = None
