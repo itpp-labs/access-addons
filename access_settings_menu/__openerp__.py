@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 {
     'name': 'Show settings menu for non-admin',
     'version': '1.0.1',

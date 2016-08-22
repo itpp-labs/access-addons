@@ -1,4 +1,6 @@
-from openerp import models, api, exceptions, SUPERUSER_ID
+# -*- coding: utf-8 -*-
+from openerp import SUPERUSER_ID
+from openerp import models
 
 
 class ResUsers(models.Model):

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from openerp.osv import osv, fields
+from openerp.osv import osv
 
 
 class res_users(osv.Model):

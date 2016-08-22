@@ -1,4 +1,7 @@
-from openerp import models, api, exceptions, SUPERUSER_ID
+# -*- coding: utf-8 -*-
+from openerp import SUPERUSER_ID
+from openerp import api
+from openerp import models
 from openerp.addons.base.res.res_users import is_reified_group
 from openerp.tools.translate import _
 from openerp.tools import ustr

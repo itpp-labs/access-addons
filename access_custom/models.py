@@ -1,9 +1,6 @@
 # -*- coding: utf-8 -*-
 from openerp.osv import fields as old_fields
-from openerp.osv import osv
 from openerp import api, models, fields
-from openerp import SUPERUSER_ID
-from openerp.tools.translate import _
 from openerp.exceptions import AccessError
 
 

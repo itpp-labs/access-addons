@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 {
     'name': 'Control access to Apps',
     'version': '1.0.1',

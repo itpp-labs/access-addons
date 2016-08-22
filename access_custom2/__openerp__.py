@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 {
     'name': 'Custom security groups 2',
     'version': '1.0.0',
@@ -12,7 +13,7 @@
     'data': [
         'views.xml',
         'security.xml',
-        #'ir.model.access.csv',
+        # 'ir.model.access.csv',
     ],
     'installable': False
 }
