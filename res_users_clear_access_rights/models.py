@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-from openerp.osv import osv,fields
+from openerp.osv import osv
+
 
 class res_users(osv.Model):
     _inherit = 'res.users'
@@ -18,9 +19,9 @@ class res_users(osv.Model):
 
         groups_id = []
         for g in user.groups_id:
-            if uid==user.id and g.id in admin_groups:
+            if uid == user.id and g.id in admin_groups:
                 # don't allow for Administrator to clear his admin rights
                 continue
-            groups_id.append((3,g.id))
-        user.write({'groups_id':groups_id})
+            groups_id.append((3, g.id))
+        user.write({'groups_id': groups_id})
         return True

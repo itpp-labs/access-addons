@@ -33,4 +33,3 @@
         'views/groups.xml'
     ],
 }
-

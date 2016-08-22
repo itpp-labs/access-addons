@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 {
     'name': 'Restricted administration rights',
     'version': '1.2.0',
