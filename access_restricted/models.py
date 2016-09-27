@@ -12,13 +12,14 @@ IR_CONFIG_NAME = 'access_restricted.fields_view_get_uid'
 class ResUsers(models.Model):
     _inherit = 'res.users'
 
-    def fields_view_get(self, cr, uid, view_id=None, view_type='form', context=None, toolbar=False, submenu=False):
+    @api.model
+    def fields_view_get(self, view_id=None, view_type='form', **kwargs):
         if view_type == 'form':
-            last_uid = self.pool['ir.config_parameter'].get_param(cr, uid, IR_CONFIG_NAME, context=context)
-            if int(last_uid) != uid:
-                self.pool['res.groups'].update_user_groups_view(cr, SUPERUSER_ID, context=context)
+            last_uid = self.env['ir.config_parameter'].get_param(IR_CONFIG_NAME)
+            if int(last_uid) != self.env.uid:
+                self.env['res.groups'].sudo().update_user_groups_view()
 
-        return super(ResUsers, self).fields_view_get(cr, uid, view_id, view_type, context, toolbar, submenu)
+        return super(ResUsers, self).fields_view_get(view_id=view_id, view_type=view_type, **kwargs)
 
     @api.multi
     def write(self, vals):
@@ -32,42 +33,48 @@ class ResUsers(models.Model):
 class ResGroups(models.Model):
     _inherit = 'res.groups'
 
-    def update_user_groups_view(self, cr, uid, context=None):
-        real_uid = (context or {}).get('uid', uid)
-        self.pool['ir.config_parameter'].set_param(cr, SUPERUSER_ID, IR_CONFIG_NAME, real_uid, context=context)
-        return super(ResGroups, self).update_user_groups_view(cr, SUPERUSER_ID, context=context)
+    @api.model
+    def update_user_groups_view(self):
+        real_uid = (self.env.context or {}).get('uid', self.env.uid)
+        self.env['ir.config_parameter'].sudo().set_param(IR_CONFIG_NAME, real_uid)
+        return super(ResGroups, self.sudo()).update_user_groups_view()
 
-    def get_application_groups(self, cr, uid, domain=None, context=None):
+    @api.model
+    @api.returns('res.groups')
+    def get_application_groups(self, domain=None):
         if domain is None:
             domain = []
         domain.append(('share', '=', False))
 
-        real_uid = (context or {}).get('uid') or int(self.pool['ir.config_parameter'].get_param(cr, uid, IR_CONFIG_NAME, '0', context=context))
+        real_uid = (self.env.context or {}).get('uid') or int(self.env['ir.config_parameter'].get_param(IR_CONFIG_NAME, '0'))
         if real_uid and real_uid != SUPERUSER_ID:
-            model_data_obj = self.pool.get('ir.model.data')
-            _model, group_no_one_id = model_data_obj.get_object_reference(cr, uid, 'base', 'group_no_one')
+            group_no_one_id = self.env.ref('base.group_no_one').id
             domain = domain + ['|', ('users', 'in', [real_uid]), ('id', '=', group_no_one_id)]
-        return self.search(cr, SUPERUSER_ID, domain, context=context)
+        return self.sudo().search(domain)
 
 
-class res_config_settings(models.TransientModel):
+class ResConfigSettings(models.TransientModel):
     _inherit = 'res.config.settings'
 
-    def _get_classified_fields(self, cr, uid, context=None):
-        classified = super(res_config_settings, self)._get_classified_fields(cr, uid, context=context)
+    @api.model
+    def _get_classified_fields(self):
+        uid = self.env.uid
+        classified = super(ResConfigSettings, self)._get_classified_fields()
         if uid == SUPERUSER_ID:
             return classified
 
         group = []
         for name, groups, implied_group in classified['group']:
-            if self.pool['res.users'].search_count(cr, uid, [('id', '=', uid), ('groups_id', 'in', [implied_group.id])]):
+            if self.env['res.users'].search_count([('id', '=', uid), ('groups_id', 'in', [implied_group.id])]):
                 group.append((name, groups, implied_group))
         classified['group'] = group
         return classified
 
-    def fields_get(self, cr, uid, fields=None, context=None, write_access=True, attributes=None):
-        fields = super(res_config_settings, self).fields_get(
-            cr, uid, fields, context, write_access, attributes)
+    @api.model
+    def fields_get(self, fields=None, **kwargs):
+        uid = self.env.uid
+        fields = super(ResConfigSettings, self).fields_get(
+            fields, **kwargs)
 
         if uid == SUPERUSER_ID:
             return fields
@@ -76,7 +83,7 @@ class res_config_settings(models.TransientModel):
             if not name.startswith('group_'):
                 continue
             f = self._columns[name]
-            if self.pool['res.users'].has_group(cr, uid, f.implied_group):
+            if self.env['res.users'].has_group(f.implied_group):
                 continue
 
             fields[name].update(

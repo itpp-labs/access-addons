@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-from openerp import SUPERUSER_ID
-from openerp import models
+from openerp import models, api
 
 
 class ResUsers(models.Model):
     _inherit = 'res.users'
 
-    def fields_get(self, cr, uid, allfields=None, context=None, write_access=True, attributes=None):
+    @api.model
+    def fields_get(self, **kwargs):
         # switch to superuser to get access to virtual fields
-        return super(ResUsers, self).fields_get(cr, SUPERUSER_ID, allfields=allfields, context=context, write_access=write_access, attributes=attributes)
+        return super(ResUsers, self.sudo()).fields_get(**kwargs)
