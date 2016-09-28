@@ -1,5 +1,5 @@
+# -*- coding: utf-8 -*-
 from openerp.tests import common
-import json
 
 
 @common.at_install(False)
