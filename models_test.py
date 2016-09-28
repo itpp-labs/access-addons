@@ -1,4 +1,6 @@
-from openerp import models, fields, api, exceptions
+# -*- coding: utf-8 -*-
+from openerp import fields
+from openerp import models
 
 
 class BaseLimitRecordsNumber(models.Model):
