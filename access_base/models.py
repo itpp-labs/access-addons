@@ -1,31 +1,28 @@
 # -*- coding: utf-8 -*-
-from openerp.osv import osv, fields
-from openerp import SUPERUSER_ID
+from openerp import fields, api, models
 from lxml import etree
 from lxml.builder import E
 from openerp.tools.translate import _
 from openerp.addons.base.res.res_users import name_boolean_group, name_selection_groups
 
 
-class groups_view(osv.osv):
+class GroupsView(models.Model):
     _inherit = 'res.groups'
-    _columns = {
-        'is_custom_group': fields.boolean("Custom Group", help="show group at the top of Access Rights tab in user form")
-    }
+    is_custom_group = fields.Boolean("Custom Group", help="show group at the top of Access Rights tab in user form")
 
-    def update_user_groups_view(self, cr, uid, context=None):
+    @api.model
+    def update_user_groups_view(self):
         # call super to make module compatible with other modules (e.g. access_restricted)
-        super(groups_view, self).update_user_groups_view(cr, uid, context=context)
+        super(GroupsView, self).update_user_groups_view()
 
-        # the view with id 'base.user_groups_view' inherits the user form view,
-        # and introduces the reified group fields
-        # we have to try-catch this, because at first init the view does not exist
-        # but we are already creating some basic groups
-        if not context or context.get('install_mode'):
+        if self._context.get('install_mode'):
             # use installation/admin language for translatable names in the view
-            context = dict(context or {})
-            context.update(self.pool['res.users'].context_get(cr, uid))
-        view = self.pool['ir.model.data'].xmlid_to_object(cr, SUPERUSER_ID, 'base.user_groups_view', context=context)
+            user_context = self.env['res.users'].context_get()
+            self = self.with_context(**user_context)
+
+        # We have to try-catch this, because at first init the view does not
+        # exist but we are already creating some basic groups.
+        view = self.env.ref('base.user_groups_view', raise_if_not_found=False)
         if view and view.exists() and view._name == 'ir.ui.view':
             xml1, xml2 = [], []
             xml1.append(E.separator(string=_('Application'), colspan="4"))
@@ -33,7 +30,7 @@ class groups_view(osv.osv):
             xml3 = []
             xml3.append(E.separator(string=_('Custom User Groups'), colspan="4"))
 
-            for app, kind, gs in self.get_groups_by_application(cr, uid, context):
+            for app, kind, gs in self.get_groups_by_application():
                 xml = None
                 custom = False
                 if kind == 'selection' and any([g.is_custom_group for g in gs]) or all([g.is_custom_group for g in gs]):

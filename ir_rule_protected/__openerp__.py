@@ -5,6 +5,7 @@
     'author': 'IT-Projects LLC, Ivan Yelizariev',
     "category": "Access",
     'website': 'https://twitter.com/yelizariev',
+    "license": "GPL-3",
     'depends': [],
     'data': [
         'views.xml',

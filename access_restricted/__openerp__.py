@@ -5,6 +5,7 @@
     'author': 'IT-Projects LLC, Ivan Yelizariev',
     "category": "Access",
     'website': 'https://twitter.com/yelizariev',
+    "license": "GPL-3",
     'price': 30.00,
     'currency': 'EUR',
     'depends': ['ir_rule_protected', 'share'],
