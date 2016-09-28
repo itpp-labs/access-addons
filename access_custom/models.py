@@ -4,7 +4,7 @@ from openerp import api, models, fields
 from openerp.exceptions import AccessError
 
 
-class hr_employee(models.Model):
+class HrEmployee(models.Model):
     '''
     Employee
     '''
@@ -13,7 +13,7 @@ class hr_employee(models.Model):
 
     def _payslip_count(self, cr, uid, ids, field_name, arg, context=None):
         try:
-            res = super(hr_employee, self)._payslip_count(cr, uid, ids, field_name, arg, context)
+            res = super(HrEmployee, self)._payslip_count(cr, uid, ids, field_name, arg, context)
         except AccessError as e:
             res = {
                 employee_id: 0
@@ -32,12 +32,12 @@ class hr_employee(models.Model):
     access_to_employee_information = fields.Boolean('Access to employee information', compute=_get_access_to_employee_information, store=False)
 
 
-class res_partner(models.Model):
+class ResPartner(models.Model):
     _inherit = 'res.partner'
 
     @api.multi
     def read(self, fields=None, load='_classic_read'):
-        result = super(res_partner, self).read(fields=fields, load=load)
+        result = super(ResPartner, self).read(fields=fields, load=load)
         for res in result:
             if not res.get('access_to_private_information', True):
                 for k in ['street', 'street2', 'zip', 'city', 'state_id', 'country_id']:
@@ -53,19 +53,19 @@ class res_partner(models.Model):
     access_to_private_information = fields.Boolean('Access to private information', compute=_get_access_to_private_information, store=False)
 
 
-class crm_lead(models.Model):
+class CrmLead(models.Model):
     _inherit = 'crm.lead'
 
     archived = fields.Boolean('Archived', help='Only users with special rights have access to archived records. Untick "Active" field to hide record', default=False)
 
 
-class project_project(models.Model):
+class ProjectProject(models.Model):
     _inherit = 'project.project'
 
     archived = fields.Boolean('Archived', help='Only users with special rights have access to archived records. Untick "Active" field to hide record', default=False)
 
 
-class project_task(models.Model):
+class ProjectTask(models.Model):
     _inherit = 'project.task'
 
     archived = fields.Boolean('Archived', help='Only users with special rights have access to archived records. Untick "Active" field to hide record', related='project_id.archived')

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from openerp import models, api, fields, exceptions, SUPERUSER_ID
+from openerp.tools.translate import _
 
 MODULE_NAME = 'ir_rule_protected'
 
@@ -15,7 +16,7 @@ class IRRule(models.Model):
             return
         for r in self:
             if r.protected:
-                raise exceptions.Warning("The Rule is protected. You don't have access for this operation")
+                raise exceptions.Warning(_("The Rule is protected. You don't have access for this operation"))
 
     @api.multi
     def write(self, vals):
@@ -31,8 +32,9 @@ class IRRule(models.Model):
 class Module(models.Model):
     _inherit = "ir.module.module"
 
-    def button_uninstall(self, cr, uid, ids, context=None):
-        for r in self.browse(cr, uid, ids):
-            if r.name == MODULE_NAME and uid != SUPERUSER_ID:
-                raise exceptions.Warning("Only admin can uninstall the module")
-        return super(Module, self).button_uninstall(cr, uid, ids, context=context)
+    @api.multi
+    def button_uninstall(self):
+        for r in self:
+            if r.name == MODULE_NAME and self.env.uid != SUPERUSER_ID:
+                raise exceptions.Warning(_("Only admin can uninstall the module"))
+        return super(Module, self).button_uninstall()

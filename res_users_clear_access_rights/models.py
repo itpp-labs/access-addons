@@ -1,27 +1,24 @@
 # -*- coding: utf-8 -*-
-from openerp.osv import osv
+from openerp import models, api
 
 
-class res_users(osv.Model):
+class ResUsers(models.Model):
     _inherit = 'res.users'
 
-    _columns = {
-    }
-
-    def action_clear_access_rights(self, cr, uid, ids, context=None):
-        assert len(ids) == 1, 'This option should only be used for a single id at a time.'
-        user = self.browse(cr, uid, ids[0], context=context)
+    @api.multi
+    def action_clear_access_rights(self):
+        self.ensure_one()
         admin_groups = [
-            self.pool.get('ir.model.data').get_object_reference(cr, uid, 'base', 'group_user')[1],
-            self.pool.get('ir.model.data').get_object_reference(cr, uid, 'base', 'group_erp_manager')[1],
-            self.pool.get('ir.model.data').get_object_reference(cr, uid, 'base', 'group_system')[1]
+            self.env.ref('base.group_user').id,
+            self.env.ref('base.group_erp_manager').id,
+            self.env.ref('base.group_system').id,
         ]
 
         groups_id = []
-        for g in user.groups_id:
-            if uid == user.id and g.id in admin_groups:
+        for g in self.groups_id:
+            if self.env.uid == self.id and g.id in admin_groups:
                 # don't allow for Administrator to clear his admin rights
                 continue
             groups_id.append((3, g.id))
-        user.write({'groups_id': groups_id})
+        self.write({'groups_id': groups_id})
         return True
