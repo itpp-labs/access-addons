@@ -4,7 +4,7 @@ from openerp.tests.common import TransactionCase
 IR_CONFIG_NAME = 'access_restricted.fields_view_get_uid'
 
 
-class test_fields_view_get(TransactionCase):
+class TestFieldsViewGet(TransactionCase):
     post_install = True
 
     def clear_config(self):
@@ -21,7 +21,7 @@ class test_fields_view_get(TransactionCase):
 
     def _view_form(self, user, view_xmlid):
         view_id = self.env.ref(view_xmlid).id
-        context = {'lang': "en_US", 'tz': "Europe/Brussels", 'uid': user.id}
+        # context = {'lang': "en_US", 'tz': "Europe/Brussels", 'uid': user.id}
         self.env['res.users'].sudo(user.id).fields_view_get(view_id=view_id)
 
     def view_preference_form(self, user):

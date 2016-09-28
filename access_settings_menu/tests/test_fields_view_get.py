@@ -2,7 +2,7 @@
 from openerp.addons.access_restricted.tests.test_fields_view_get import test_fields_view_get as test_fields_view_get_base
 
 
-class test_fields_view_get(test_fields_view_get_base):
+class TestFieldsViewGet(test_fields_view_get_base):
     post_install = True
 
     def test_access_settings_menu(self):
