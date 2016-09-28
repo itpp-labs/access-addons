@@ -1,2 +1,3 @@
-import models
-import models_test
+# -*- coding: utf-8 -*-
+from . import models
+from . import models_test

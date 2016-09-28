@@ -1,1 +1,2 @@
-import groups
+# -*- coding: utf-8 -*-
+from . import groups

@@ -5,7 +5,7 @@ odoo.define('access_apps.dashboard', function (require) {
 
     dashboard.Dashboard.include({
         load_apps: function(data){
-            if(data['has_access_to_apps']) {
+            if(data.has_access_to_apps) {
                 return this._super(data);
             } else {
                 this.$('.o_web_settings_dashboard_apps').parent().remove();

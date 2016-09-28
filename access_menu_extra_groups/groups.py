@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 from openerp import models, fields, api, SUPERUSER_ID
-from openerp.http import request
 
 
 class IrUiMenuExtra(models.Model):
