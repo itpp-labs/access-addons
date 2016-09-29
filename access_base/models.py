@@ -11,9 +11,9 @@ class GroupsView(models.Model):
     is_custom_group = fields.Boolean("Custom Group", help="show group at the top of Access Rights tab in user form")
 
     @api.model
-    def update_user_groups_view(self):
+    def _update_user_groups_view(self):
         # call super to make module compatible with other modules (e.g. access_restricted)
-        super(GroupsView, self).update_user_groups_view()
+        super(GroupsView, self)._update_user_groups_view()
 
         if self._context.get('install_mode'):
             # use installation/admin language for translatable names in the view
