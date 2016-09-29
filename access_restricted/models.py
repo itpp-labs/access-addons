@@ -17,7 +17,7 @@ class ResUsers(models.Model):
         if view_type == 'form':
             last_uid = self.env['ir.config_parameter'].get_param(IR_CONFIG_NAME)
             if int(last_uid) != self.env.uid:
-                self.env['res.groups'].sudo().update_user_groups_view()
+                self.env['res.groups'].sudo()._update_user_groups_view()
 
         return super(ResUsers, self).fields_view_get(view_id=view_id, view_type=view_type, **kwargs)
 
@@ -34,10 +34,10 @@ class ResGroups(models.Model):
     _inherit = 'res.groups'
 
     @api.model
-    def update_user_groups_view(self):
+    def _update_user_groups_view(self):
         real_uid = (self.env.context or {}).get('uid', self.env.uid)
         self.env['ir.config_parameter'].sudo().set_param(IR_CONFIG_NAME, real_uid)
-        return super(ResGroups, self.sudo()).update_user_groups_view()
+        return super(ResGroups, self.sudo())._update_user_groups_view()
 
     @api.model
     @api.returns('res.groups')
