@@ -6,7 +6,7 @@
             <field name="condition">True</field>
             <field name="model_id" ref="access_limit_records_number.model_base_limit_records_number"/>
             <field name="code">
-self.verify_table(cr, uid, context=context)
+model.verify_table()
             </field>
             <field name="state">code</field>
             <field name="type">ir.actions.server</field>

@@ -11,7 +11,7 @@ class BaseLimitRecordsNumber(models.Model):
 
     action_rule_id = fields.Many2one('base.action.rule', 'Base Action Rule', required=True, ondelete='cascade')
     max_records = fields.Integer(string='Maximum Records')
-    domain = fields.Char(string='Domain', domain='[]')
+    domain = fields.Char(string='Domain', default='[]')
 
     @api.model
     def default_get(self, default_fields):
