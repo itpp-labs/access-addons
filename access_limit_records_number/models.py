@@ -11,12 +11,13 @@ class BaseLimitRecordsNumber(models.Model):
 
     action_rule_id = fields.Many2one('base.action.rule', 'Base Action Rule', required=True, ondelete='cascade')
     max_records = fields.Integer(string='Maximum Records')
-    domain = fields.Char(string='Domain')
+    domain = fields.Char(string='Domain', domain='[]')
 
-    _defaults = {
-        'kind': 'on_create_or_write',
-        'domain': "[]"
-    }
+    @api.model
+    def default_get(self, default_fields):
+        res = super(BaseLimitRecordsNumber, self).default_get(default_fields)
+        res['kind'] = 'on_create_or_write'
+        return res
 
     @api.model
     def create(self, vals):
