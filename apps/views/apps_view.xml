@@ -11,11 +11,6 @@
                         'ilike', self)]" string="Module"/>
                     <filter name="installed" string="Installed" domain="[('state', 'in', ['installed', 'to upgrade', 'to remove'])]"/>
                     <filter string="Not Installed" domain="[('state', 'in', ['uninstalled', 'uninstallable', 'to install'])]"/>
-                    <field name="category_id"/>
-                    <group expand="0" string="Group By">
-                        <filter string="Author" domain="[]" context="{'group_by':'author'}"/>
-                        <filter string="Category" domain="[]" context="{'group_by':'category_id'}"/>
-                    </group>
                </search>
             </field>
         </record>
@@ -33,7 +28,7 @@
             </field>
         </record>
 
-        <menuitem sequence="309" id="menu_apps" name="Apps" action="open_client_open_module_tree" groups="base.group_system"/>
+        <menuitem sequence="309" id="menu_apps" name="Apps" action="open_client_open_module_tree" groups="base.group_system" web_icon="apps,static/description/modules.png"/>
         <menuitem id="base.menu_management" name="All Apps" />
 
     </data>
