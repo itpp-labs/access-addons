@@ -4,7 +4,7 @@
 
         <record id="super_app_prefix" model="ir.config_parameter">
             <field name="key">apps.super_app_prefix</field>
-            <field name="value">super_</field>
+            <field name="value">super_app_</field>
         </record>
 
     </data>
