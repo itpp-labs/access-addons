@@ -82,7 +82,7 @@ class ResConfigSettings(models.TransientModel):
         for name in fields:
             if not name.startswith('group_'):
                 continue
-            f = self._columns[name]
+            f = self._fields[name]
             if self.env['res.users'].has_group(f.implied_group):
                 continue
 
