@@ -5,6 +5,7 @@
     'version': '1.0.0',
     'author': 'IT-Projects LLC, Ivan Yelizariev',
     'license': 'LGPL-3',
+    "support": "apps@it-projects.info",
     'website': 'https://it-projects.info',
     "category": "Access",
     'depends': ['base'],
