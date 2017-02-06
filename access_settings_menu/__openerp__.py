@@ -4,6 +4,7 @@
     'version': '1.0.1',
     'author': 'IT-Projects LLC, Ivan Yelizariev',
     "category": "Access",
+    "support": "apps@it-projects.info",
     'website': 'https://twitter.com/yelizariev',
     "license": "LGPL-3",
     'price': 10.00,
