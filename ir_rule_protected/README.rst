@@ -5,4 +5,4 @@ The module allows protect ir.rule from modifying and deleting. Once a rule is ma
 
 Also, the module protect itself from uninstalling by non-superuser.
 
-Tested on 9.0 2ec9a9c99294761e56382bdcd766e90b8bc1bb38
+Tested on 10.0 1be57f2825af4f3ade20a658c6f97f6cf93cc866
