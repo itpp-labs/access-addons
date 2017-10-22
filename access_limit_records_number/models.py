@@ -7,9 +7,9 @@ from openerp.tools.translate import _
 
 class BaseLimitRecordsNumber(models.Model):
     _name = 'base.limit.records_number'
-    _inherits = {'base.action.rule': 'action_rule_id'}
+    _inherits = {'base.automation': 'action_rule_id'}
 
-    action_rule_id = fields.Many2one('base.action.rule', 'Base Action Rule', required=True, ondelete='cascade')
+    action_rule_id = fields.Many2one('base.automation', 'Base Automation', required=True, ondelete='cascade')
     max_records = fields.Integer(string='Maximum Records')
     domain = fields.Char(string='Domain', default='[]')
 
