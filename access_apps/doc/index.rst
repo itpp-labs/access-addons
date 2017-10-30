@@ -1,0 +1,31 @@
+========================
+ Control access to Apps
+========================
+
+Installation
+============
+
+* `Install <https://odoo-development.readthedocs.io/en/latest/odoo/usage/install-module.html>`__ this module in a usual way
+
+Configuration
+=============
+
+After the installation of this module by default no one has access to install modules.
+To control such permission follow the steps below.
+
+
+* Open menu ``[[ Settings ]] >> Users >> Users``, select the user you want to grant the access to
+* On ``Access Rights`` tab, ``Application`` settings group there is an ``Apps access`` security category
+
+** Select ``Allow to install apps`` - to allow apps installation from everywhere
+** Select ``Allow to install apps only from settings`` - to allow apps installation only from other module's ``Configuration >> Settings`` menu, there is no ``[[ Apps ]]`` menu available
+** Select blank line - to restrict application installion
+
+Usage
+=====
+
+* If you don't select anything in ``Apps access``: there is no ``[[ Apps ]]`` menu - even if your user is in ``Administration: Settings`` security group
+* If you have ``Allow to install apps`` selected: there is ``[[ Apps ]]`` menu
+* If you have ``Allow to install apps only from settings``: from other module's ``Configuration >> Settings`` menu, e.g. from ``[[ Sales ]] >> Configuration >> Settigns`` see that
+  you have the ability to check the ``Digital Products`` checkbox that actually installs the `website_sale_digital` module after clicking on ``[Apply]`` button.
+
