@@ -26,8 +26,8 @@ Usage
 
 * Be sure that you don't test the functionality under the ``Administrator`` (superuser with id=1) user - he is immune to any access restriction except of hiding menus or buttons in UI
 * If you don't select anything in ``Apps access``: there is no ``[[ Apps ]]`` menu - even if your user is in ``Administration: Settings`` security group. Also note that you
-  have no ability to include yourself in groups allowing to install apps - this is what `access_restricted` module does (`access_apps` depends on it)
+  have no ability to include yourself in groups allowing to install apps - this is what ``access_restricted`` module does (``access_apps`` depends on it)
 * If you have ``Allow to install apps`` selected: there is ``[[ Apps ]]`` menu
 * If you have ``Allow to install apps only from settings``: from other module's ``Configuration >> Settings`` menu, e.g. from ``[[ Sales ]] >> Configuration >> Settigns`` see that
-  you have the ability to check the ``Digital Products`` checkbox that actually installs the `website_sale_digital` module after clicking on ``[Apply]`` button.
+  you have the ability to check the ``Digital Products`` checkbox that actually installs the ``website_sale_digital`` module after clicking on ``[Apply]`` button.
 
