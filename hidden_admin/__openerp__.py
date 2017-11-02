@@ -13,5 +13,5 @@
     'data': [
         'security.xml',
     ],
-    'installable': True
+    'installable': False
 }
