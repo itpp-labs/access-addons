@@ -15,7 +15,7 @@ class ResUsers(models.Model):
     @api.model
     def fields_view_get(self, view_id=None, view_type='form', **kwargs):
         if view_type == 'form':
-            last_uid = self.env['ir.config_parameter'].get_param(IR_CONFIG_NAME)
+            last_uid = self.env['ir.config_parameter'].sudo().get_param(IR_CONFIG_NAME)
             if int(last_uid) != self.env.uid:
                 self.env['res.groups'].sudo()._update_user_groups_view()
 
