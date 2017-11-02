@@ -15,5 +15,5 @@
     'data': [
         'security/access_settings_menu_security.xml',
     ],
-    'installable': True
+    'installable': False
 }
