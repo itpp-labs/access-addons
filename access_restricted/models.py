@@ -52,6 +52,22 @@ class ResGroups(models.Model):
             domain = domain + ['|', ('users', 'in', [real_uid]), ('id', '=', group_no_one_id)]
         return self.sudo().search(domain)
 
+    @api.multi
+    def write(self, vals):
+        context = dict(self.env.context)
+        if context.get('config') and self.env['res.users'].has_group('access_restricted.group_allow_add_implied_from_settings'):
+            classified = context['config']._get_classified_fields()
+            implied_ids = vals.get('implied_ids')
+            users = vals.get('users')
+            if classified['group']:
+                allowed_implied = [group[2].id for group in classified['group']]
+            if implied_ids and implied_ids[0][1] in allowed_implied:
+                self = self.sudo()
+            elif users:
+                if not [u[1] for u in users if u[1] in self.users.ids]:
+                    self = self.sudo()
+        return super(ResGroups, self).write(vals)
+
 
 class ResConfigSettings(models.TransientModel):
     _inherit = 'res.config.settings'
@@ -94,3 +110,8 @@ class ResConfigSettings(models.TransientModel):
                 help=ustr(fields[name].get('help', '')) +
                 _('\n\nYou don\'t have access to change this settings, because you administration rights are restricted'))
         return fields
+
+    @api.multi
+    def execute(self):
+        res = super(ResConfigSettings, self.with_context({'access_restricted': True, 'config': self})).execute()
+        return res
