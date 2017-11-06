@@ -9,7 +9,7 @@ class Module(models.Model):
 
     @api.model
     def get_super_app_prefix(self):
-        return self.env['ir.config_parameter'].get_param('apps.super_app_prefix', 'super_app_')
+        return self.env['ir.config_parameter'].sudo().get_param('apps.super_app_prefix', 'super_app_')
 
     @api.depends('name')
     def _compute_is_super_app(self):

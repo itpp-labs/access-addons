@@ -46,7 +46,7 @@ class ResGroups(models.Model):
             domain = []
         domain.append(('share', '=', False))
 
-        real_uid = (self.env.context or {}).get('uid') or int(self.env['ir.config_parameter'].get_param(IR_CONFIG_NAME, '0'))
+        real_uid = (self.env.context or {}).get('uid') or int(self.env['ir.config_parameter'].sudo().get_param(IR_CONFIG_NAME, '0'))
         if real_uid and real_uid != SUPERUSER_ID:
             group_no_one_id = self.env.ref('base.group_no_one').id
             domain = domain + ['|', ('users', 'in', [real_uid]), ('id', '=', group_no_one_id)]
