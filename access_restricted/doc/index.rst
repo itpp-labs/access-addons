@@ -11,7 +11,7 @@ Configuration
 =============
 
 * By default all users except a superuser restricted to escalate the privileges
-* There is only one option. Open menu ``[[ Settings  ]] >> Users >> Users``
+* There is only one configuration option this module provide. Open menu ``[[ Settings  ]] >> Users >> Users``
 * In ``Access Rights`` tab you can select 'Allow add implied groups from settings' -
   to allow some users to configurate modules by means of ``group_XXX`` fields from ``Settings`` menus
 
