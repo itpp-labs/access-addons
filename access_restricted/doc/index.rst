@@ -28,7 +28,7 @@ Without this module installed:
 
 With this module installed:
 
-* The user from previous example cannot increase his privileges. There is no ``Sales: Manager`` option for him, an also no ``Display 3 fields on sales orders: customer, invoice address, delivery address``
+* The user from previous example cannot increase his privileges. There is no ``Sales: Manager`` option for him, and also no ``Display 3 fields on sales orders: customer, invoice address, delivery address``
   option in mudule configuration
 * The only exception is done for users who are in special group 'Allow add implied groups from settings' - if your user is included in this group by the superuser then you may select
   ``Display 3 fields on sales orders: customer, invoice address, delivery address`` from ``Sale`` module ``Configuration >> Settings`` menu
