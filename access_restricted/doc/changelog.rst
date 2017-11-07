@@ -1,6 +1,11 @@
 Updates
 =======
 
+`1.3.0`
+-------
+
+- [ADD] security group that allows increasing rights from settings menu (by checking ``res.config.settings`` 'group_XXX' boolean fields)
+
 `1.2.0`
 -------
 
