@@ -10,7 +10,6 @@ odoo.define('access_apps.dashboard', function (require) {
 	    this.has_access_to_apps = data.has_access_to_apps;
             if(!this.has_access_to_apps) {
                 this.all_dashboards = _.without(this.all_dashboards, 'apps');
-                this.$('.o_web_settings_dashboard_apps').parent().remove();
 	    }
             return ret;
         },
@@ -19,7 +18,7 @@ odoo.define('access_apps.dashboard', function (require) {
             if(!this.has_access_to_apps) {
                 this.$('.o_web_settings_dashboard_apps').parent().remove();
 	    }
-        return this._super();
+            return this._super();
         }
 
    });
