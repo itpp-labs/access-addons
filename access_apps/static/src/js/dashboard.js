@@ -1,5 +1,5 @@
 odoo.define('access_apps.dashboard', function (require) {
-"use strict";
+    "use strict";
 
     var dashboard = require('web_settings_dashboard');
     var Model = require('web.Model');
@@ -9,9 +9,9 @@ odoo.define('access_apps.dashboard', function (require) {
     dashboard.Dashboard.include({
 
         start: function(){
-	    return this._super().then(function() {
-		def.resolve();
-	    });
+            return this._super().then(function() {
+                def.resolve();
+            });
         },
 
         load_apps: function(data){
