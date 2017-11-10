@@ -12,4 +12,4 @@ class TestUi(odoo.tests.HttpCase):
         allow_apps_group = self.env.ref('access_apps.group_allow_apps')
         demo_user.write({'groups_id': [(4, system_group.id)]})
         demo_user.write({'groups_id': [(3, allow_apps_group.id)]})
-        self.phantom_js("/", "odoo.__DEBUG__.services['web_tour.tour'].run('removed_apps_dashboard')", "odoo.__DEBUG__.services['web_tour.tour'].tours.removed_apps_dashboard.ready", login="demo")
+        self.phantom_js("/", "odoo.__DEBUG__.services['web_tour.tour'].run('removed_apps_dashboard')", "odoo.__DEBUG__.services['access_apps.dashboard'].ready.state() == 'resolved'", login="demo")
