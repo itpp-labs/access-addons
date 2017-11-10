@@ -18,5 +18,8 @@
         'security/access_apps_security.xml',
         'security/ir.model.access.csv',
     ],
+    "demo": [
+        "demo/demo_assets.xml",
+    ],
     'installable': True
 }
