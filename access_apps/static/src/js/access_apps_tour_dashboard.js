@@ -9,7 +9,7 @@ odoo.define('access_apps.tour', function (require) {
     },
         [
             {
-                trigger: '.o_app[data-menu-xmlid="base.menu_administration"], .oe_menu_toggler[data-menu="base.menu_administration"]',
+                trigger: '.o_app[data-menu-xmlid="base.menu_administration"], .oe_menu_toggler[data-menu-xmlid="base.menu_administration"]',
                 content: "Configuration options are available in the Settings app.",
                 position: "bottom"
             },
