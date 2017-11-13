@@ -19,6 +19,7 @@ odoo.define('access_apps.dashboard', function (require) {
                 return this._super(data);
             }
             this.$('.o_web_settings_dashboard_apps').parent().remove();
+            return $.when();
         }
     });
     return {'ready': def};
