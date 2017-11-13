@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import odoo.tests
+from odoo import api
 
 
 @odoo.tests.common.at_install(False)
