@@ -20,7 +20,7 @@ class TestUi(odoo.tests.HttpCase):
                     if ($('.o_web_settings_dashboard_apps').length) {
                         console.log("error", "The apps dashboard is not removed");
                     } else {
-                        console.log('ok', "The apps dashboard is removed");
+                        console.log('ok');
                     }
         """
         self.phantom_js(url, code, "odoo.__DEBUG__.services['access_apps.dashboard'].ready.state()=='resolved'", login="demo")
