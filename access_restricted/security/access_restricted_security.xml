@@ -2,6 +2,7 @@
 <odoo>
   <record id="group_allow_add_implied_from_settings" model="res.groups">
     <field name="name">Allow add implied groups from settings</field>
+    <field name="implied_ids" eval="[(4, ref('base.group_system'))]"/>
   </record>
   <record id="not_admin_tenant_rule" model="ir.rule">
     <field name="name">Only admin can edit admin</field>
