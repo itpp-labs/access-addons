@@ -4,6 +4,7 @@ from odoo.addons.base.res.res_users import name_selection_groups
 
 
 class TestFieldsGet(TransactionCase):
+    at_install = True
     post_install = True
 
     def test_base(self):
@@ -11,14 +12,15 @@ class TestFieldsGet(TransactionCase):
         group_erp_manager = self.env.ref('base.group_erp_manager')
         group_system = self.env.ref('base.group_system')
 
+        demo_user.write({'groups_id': [(3, group_system.id)]})
         demo_user.write({'groups_id': [(4, group_erp_manager.id)]})
         self.env['res.groups'].sudo(demo_user.id)._update_user_groups_view()
         sel_groups = name_selection_groups([group_erp_manager.id])
-        res = demo_user.fields_get()
+        res = self.env['res.users'].sudo(demo_user).fields_get()
         self.assertTrue(res.get(sel_groups))
 
         demo_user.write({'groups_id': [(4, group_system.id)]})
         self.env['res.groups'].sudo(demo_user.id)._update_user_groups_view()
         sel_groups = name_selection_groups([group_erp_manager.id, group_system.id])
-        res = demo_user.fields_get()
+        res = self.env['res.users'].sudo(demo_user).fields_get()
         self.assertTrue(res.get(sel_groups))
