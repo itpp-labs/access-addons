@@ -21,7 +21,6 @@
         'security/records_number_security.xml',
         'security/ir.model.access.csv',
         'views/base_limit.xml',
-        'data/data.xml',
     ],
     "qweb": [],
     "demo": [
@@ -31,6 +30,6 @@
     "post_load": None,
     "pre_init_hook": None,
     "post_init_hook": None,
-    "installable": False,
+    "installable": True,
     "auto_install": False,
 }

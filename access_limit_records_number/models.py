@@ -16,15 +16,10 @@ class BaseLimitRecordsNumber(models.Model):
     @api.model
     def default_get(self, default_fields):
         res = super(BaseLimitRecordsNumber, self).default_get(default_fields)
-        res['kind'] = 'on_create_or_write'
+        res['trigger'] = 'on_create_or_write'
+        res['state'] = 'code'
+        res['code'] = "env['base.limit.records_number'].verify_table()"
         return res
-
-    @api.model
-    def create(self, vals):
-        record = super(BaseLimitRecordsNumber, self).create(vals)
-        server_actions_ids = [(4, self.env.ref('access_limit_records_number.action_check_records_number').id, False)]
-        record.write({'server_action_ids': server_actions_ids})
-        return record
 
     @api.model
     def verify_table(self):
