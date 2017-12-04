@@ -1,10 +1,8 @@
 # -*- coding: utf-8 -*-
-from openerp import SUPERUSER_ID
-from openerp import api
-from openerp import models
-from openerp.addons.base.res.res_users import is_reified_group
-from openerp.tools.translate import _
-from openerp.tools import ustr
+from odoo import SUPERUSER_ID
+from odoo import api
+from odoo import models
+from odoo.addons.base.res.res_users import is_reified_group
 
 IR_CONFIG_NAME = 'access_restricted.fields_view_get_uid'
 
@@ -67,51 +65,3 @@ class ResGroups(models.Model):
                 if not [u[1] for u in users if u[1] in self.users.ids]:
                     self = self.sudo()
         return super(ResGroups, self).write(vals)
-
-
-class ResConfigSettings(models.TransientModel):
-    _inherit = 'res.config.settings'
-
-    @api.model
-    def _get_classified_fields(self):
-        uid = self.env.uid
-        classified = super(ResConfigSettings, self)._get_classified_fields()
-        if uid == SUPERUSER_ID:
-            return classified
-
-        group = []
-        ResUsers = self.env['res.users']
-        for name, groups, implied_group in classified['group']:
-            if ResUsers.search_count([('id', '=', uid), ('groups_id', 'in', [implied_group.id])]) or \
-               ResUsers.has_group('access_restricted.group_allow_add_implied_from_settings'):
-                group.append((name, groups, implied_group))
-        classified['group'] = group
-        return classified
-
-    @api.model
-    def fields_get(self, fields=None, **kwargs):
-        uid = self.env.uid
-        fields = super(ResConfigSettings, self).fields_get(
-            fields, **kwargs)
-
-        if uid == SUPERUSER_ID:
-            return fields
-
-        for name in fields:
-            if not name.startswith('group_'):
-                continue
-            f = self._fields[name]
-            ResUsers = self.env['res.users']
-            if ResUsers.has_group(f.implied_group) or ResUsers.has_group('access_restricted.group_allow_add_implied_from_settings'):
-                continue
-
-            fields[name].update(
-                readonly=True,
-                help=ustr(fields[name].get('help', '')) +
-                _('\n\nYou don\'t have access to change this settings, because you administration rights are restricted'))
-        return fields
-
-    @api.multi
-    def execute(self):
-        res = super(ResConfigSettings, self.with_context({'access_restricted': True, 'config': self})).execute()
-        return res
