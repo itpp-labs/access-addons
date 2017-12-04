@@ -16,7 +16,8 @@ class TestFieldsGet(TransactionCase):
         group_system.write({'users': [(3, demo_user.id)]})
         demo_user.write({'groups_id': [(4, group_erp_manager.id)]})
 
-        res = self.env['res.users'].sudo(demo_user).with_context({'uid': demo_user.id, 'search_default_no_share': 1, 'params': {'action': 71}}).load_views([[153, "list"], [152, "form"], [154, "search"]])
+        view_users_form = self.env.ref('base.view_users_form')
+        res = self.env['res.users'].sudo(demo_user).with_context({'uid': demo_user.id}).load_views([[view_users_form.id, "form"]])
 
         sel_groups = name_selection_groups([group_erp_manager.id])
         res = self.env['res.users'].sudo(demo_user).fields_get()
