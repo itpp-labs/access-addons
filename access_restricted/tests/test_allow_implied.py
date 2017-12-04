@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from openerp.tests.common import TransactionCase
-from odoo.exceptions import AccessError
+# from odoo.exceptions import AccessError
 
 
 class TestAllowImplied(TransactionCase):
