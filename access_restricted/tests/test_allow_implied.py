@@ -15,6 +15,7 @@ class TestAllowImplied(TransactionCase):
 
         demo_user.write({'groups_id': [(3, group_user.id)]})
         group_user.write({'users': [(3, demo_user.id)]})
+        self.assertFalse(self.env['res.users'].sudo(demo_user.id).has_group('base.group_user'))
 
         demo_user.write({'groups_id': [(4, group_system.id)]})
 
