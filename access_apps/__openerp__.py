@@ -6,6 +6,7 @@
     'category': 'Access',
     "support": "apps@it-projects.info",
     'website': 'https://twitter.com/yelizariev',
+    "license": "LGPL-3",
     'price': 10.00,
     'currency': 'EUR',
     'depends': [
@@ -16,6 +17,8 @@
         'views/access_apps.xml',
         'security/access_apps_security.xml',
         'security/ir.model.access.csv',
+    ],
+    "demo": [
     ],
     'installable': True
 }
