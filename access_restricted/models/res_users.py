@@ -1,10 +1,8 @@
 # -*- coding: utf-8 -*-
-from openerp import SUPERUSER_ID
-from openerp import api
-from openerp import models
-from openerp.addons.base.res.res_users import is_reified_group
-from openerp.tools.translate import _
-from openerp.tools import ustr
+from odoo import SUPERUSER_ID
+from odoo import api
+from odoo import models
+from odoo.addons.base.res.res_users import is_reified_group
 
 IR_CONFIG_NAME = 'access_restricted.fields_view_get_uid'
 
@@ -52,42 +50,18 @@ class ResGroups(models.Model):
             domain = domain + ['|', ('users', 'in', [real_uid]), ('id', '=', group_no_one_id)]
         return self.sudo().search(domain)
 
-
-class ResConfigSettings(models.TransientModel):
-    _inherit = 'res.config.settings'
-
-    @api.model
-    def _get_classified_fields(self):
-        uid = self.env.uid
-        classified = super(ResConfigSettings, self)._get_classified_fields()
-        if uid == SUPERUSER_ID:
-            return classified
-
-        group = []
-        for name, groups, implied_group in classified['group']:
-            if self.env['res.users'].search_count([('id', '=', uid), ('groups_id', 'in', [implied_group.id])]):
-                group.append((name, groups, implied_group))
-        classified['group'] = group
-        return classified
-
-    @api.model
-    def fields_get(self, fields=None, **kwargs):
-        uid = self.env.uid
-        fields = super(ResConfigSettings, self).fields_get(
-            fields, **kwargs)
-
-        if uid == SUPERUSER_ID:
-            return fields
-
-        for name in fields:
-            if not name.startswith('group_'):
-                continue
-            f = self._fields[name]
-            if self.env['res.users'].has_group(f.implied_group):
-                continue
-
-            fields[name].update(
-                readonly=True,
-                help=ustr(fields[name].get('help', '')) +
-                _('\n\nYou don\'t have access to change this settings, because you administration rights are restricted'))
-        return fields
+    @api.multi
+    def write(self, vals):
+        context = dict(self.env.context)
+        if context.get('config') and self.env['res.users'].has_group('access_restricted.group_allow_add_implied_from_settings'):
+            classified = context['config']._get_classified_fields()
+            implied_ids = vals.get('implied_ids')
+            users = vals.get('users')
+            if classified['group']:
+                allowed_implied = [group[2].id for group in classified['group']]
+            if implied_ids and implied_ids[0][1] in allowed_implied:
+                self = self.sudo()
+            elif users:
+                if not [u[1] for u in users if u[1] in self.users.ids]:
+                    self = self.sudo()
+        return super(ResGroups, self).write(vals)
