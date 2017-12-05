@@ -2,7 +2,6 @@ odoo.define('access_apps.dashboard', function (require) {
     "use strict";
 
     var dashboard = require('web_settings_dashboard');
-    var Model = require('web.Model');
 
     var def = $.Deferred();
 
