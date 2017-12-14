@@ -2,8 +2,13 @@
  Control access to Apps
 ========================
 
-Adds "Apps access" selection in user's access rights tab. Two options are available: "Allow install apps" and "Allow install apps only from settings".
-You can configure administrators which don't have access to Apps.
+
+Allows to configure administrators which don't have access to Apps.
+
+Adds **Apps access** selection in user's access rights tab. Two options are available: 
+
+* *Allow install apps*
+* *Allow install apps only from settings*
 
 Credits
 =======
