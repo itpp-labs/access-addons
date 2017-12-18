@@ -3,6 +3,11 @@
 Updates
 =======
 
+`1.3.0`
+-------
+
+- ADD: the "Allow install apps" group is now implies "Administration: Settings" ("base.group_system") since in Odoo 11.0 only group_system users can install apps
+
 `1.2.0`
 -------
 
