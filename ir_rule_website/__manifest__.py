@@ -20,6 +20,7 @@
     ],
     "external_dependencies": {"python": [], "bin": []},
     "data": [
+        "views/ir_rule_views.xml",
     ],
     "qweb": [
     ],
