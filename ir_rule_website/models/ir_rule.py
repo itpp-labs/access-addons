@@ -2,6 +2,7 @@
 
 from odoo import api, models, tools, fields
 from odoo.addons.base.ir.ir_rule import IrRule as IrRuleOriginal
+from odoo.tools.safe_eval import safe_eval
 
 
 class IrRule(models.Model):
@@ -21,7 +22,8 @@ class IrRule(models.Model):
         if not eval_context.get('website_id'):
             website_rules = self.filtered(lambda r: r.backend_behaviour)
             for rule in website_rules:
-                rule.domain = "[(1, '=', 1)]" if rule.backend_behaviour == 'true' else "[(0, '=', 1)]"
+                domain = "[(1, '=', 1)]" if rule.backend_behaviour == 'true' else "[(0, '=', 1)]"
+                rule.domain = safe_eval(domain)
             super(IrRule, self - website_rules)._force_domain()
         else:
             super(IrRule, self)._force_domain()
