@@ -21,7 +21,7 @@ class IrRule(models.Model):
         if not eval_context.get('website_id'):
             website_rules = self.filtered(lambda r: r.backend_behaviour)
             for rule in website_rules:
-                rule.domain = "([1, '=', 1)" if rule.backend_behaviour == 'true' else "([0, '=', 1])"
+                rule.domain = "([1, '=', 1)]" if rule.backend_behaviour == 'true' else "([0, '=', 1])"
             super(IrRule, self - website_rules)._force_domain()
         else:
             super(IrRule, self)._force_domain()
