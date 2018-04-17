@@ -14,16 +14,16 @@ Configuration
 * As usual open ``[[ Settings ]] >> Technical >> Security >> Record Rules`` to create a new rule or edit existing one
 * You should see on rule form a new group named ``Multi-website extension`` with the ``Backend behaviour`` setting in it
 * Leave this field empty if your rule has nothing to do with websites
-* Select ``give access`` if you want to give access to model from backend, or ``restrict access`` - if you want to restrict
-* Note: if you leave this fields empty for a rule that is using ``website_id`` parameter - you will have this kind of exception when trying to access data from odoo backend:
+* Select ``Grant access`` if you want to give access to model from backend, or ``Deny access`` - if you want to restrict
+* Note: if you leave this fields empty for a rule that is using ``website_id`` parameter - you may have this kind of exception when trying to access data from odoo backend:
 
 ::
 
  ProgrammingError: syntax error at or near ")"
  ...duct_template_website_rel" WHERE "website_id" IN ()))
 
-This is so because in backend there is no ``website_id`` available in rule evaluation context.
-In other words the setting is mandatory and not optional for website rules.
+This is so because in backend rules work in non-website context.
+In other words the setting is mandatory for website rules.
 
 Usage
 =====
