@@ -23,8 +23,8 @@ Configuration
  ProgrammingError: syntax error at or near ")"
  ...duct_template_website_rel" WHERE "website_id" IN ()))
 
-This is so because in backend there is no ``website_id`` available in rule evaluation context
-In other words the setting is required for website rules.
+This is so because in backend there is no ``website_id`` available in rule evaluation context.
+In other words the setting is mandatory and not optional for website rules.
 
 Usage
 =====
