@@ -7,7 +7,7 @@
     <field name="arch" type="xml">
       <xpath expr="//field[@name='domain_force']" position="after">
         <group string="Multi-website extension">
-          <field name="backend_replacement"/>
+          <field name="backend_behaviour"/>
         </group>
       </xpath>
     </field>
