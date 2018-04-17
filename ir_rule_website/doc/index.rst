@@ -15,8 +15,7 @@ Configuration
 * You should see on rule form a new group named ``Multi-website extension`` with the ``Backend behaviour`` setting in it
 * Leave this field empty if your rule has nothing to do with websites
 * Select ``give access`` if you want to give access to model from backend, or ``restrict access`` - if you want to restrict
-* Note: if you leave this fields empty for a rule that is using ``website_id`` parameter - you will have this kind of exception
- when trying to access data from odoo backend:
+* Note: if you leave this fields empty for a rule that is using ``website_id`` parameter - you will have this kind of exception when trying to access data from odoo backend:
 
 ::
 
