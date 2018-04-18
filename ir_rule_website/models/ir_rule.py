@@ -2,7 +2,6 @@
 
 from odoo import api, models, tools, fields
 from odoo.addons.base.ir.ir_rule import IrRule as IrRuleOriginal
-from odoo.tools.safe_eval import safe_eval
 
 
 class IrRule(models.Model):
