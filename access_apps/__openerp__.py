@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Control access to Apps',
-    'version': '1.0.1',
+    'version': '11.0.1.0.1',
     'author': 'IT-Projects LLC, Ivan Yelizariev',
     'category': 'Access',
     "support": "apps@it-projects.info",
