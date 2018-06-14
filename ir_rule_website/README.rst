@@ -19,7 +19,7 @@ Known issues / Roadmap
 
 * There is no `webisite_id` attribute in a rule evaluation context when working from Odoo backend.
   In this module we've introduced a new setting in ``ir.rule`` model to bypass website_id-rules in backend.
-  To be able to take in account the setting we have to redefine ``ir.rule`` ``_compute_domain`` base method.
+  To take in account the setting we have to redefine ``ir.rule`` ``_compute_domain`` base method.
   The module may be not compatible with others that redefine the method too.
 
 Odoo 12.0+
