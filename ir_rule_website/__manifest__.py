@@ -5,7 +5,7 @@
     "category": "Access",
     # "live_test_url": "",
     "images": [],
-    "version": "1.0.0",
+    "version": "11.0.1.1.0",
     "application": False,
 
     "author": "IT-Projects LLC, Ildar Nasyrov",
@@ -20,6 +20,7 @@
     ],
     "external_dependencies": {"python": [], "bin": []},
     "data": [
+        "views/ir_rule_views.xml",
     ],
     "qweb": [
     ],
