@@ -17,7 +17,7 @@ Example of usage:
 Known issues
 ============
 
-* This module redefines ``ir.rule`` ``_compute_domain`` base method. The module may be not compatible with others that redefine the method too.
+* This module redefines ``ir.rule`` ``_compute_domain`` base method and may be not compatible with others that redefine the method too.
 
 Odoo 12.0+
 ==========
