@@ -14,13 +14,10 @@ Example of usage:
 * Show an event on specific websites only (TODO: add link to the module)
 * Show a product on specific websites only (TODO: add link to the module)
 
-Known issues / Roadmap
-======================
+Known issues
+============
 
-* There is no `webisite_id` attribute in a rule evaluation context when working from Odoo backend.
-  In this module we've introduced a new setting in ``ir.rule`` model to bypass website_id-rules in backend.
-  To take in account the setting we have to redefine ``ir.rule`` ``_compute_domain`` base method.
-  The module may be not compatible with others that redefine the method too.
+* This module redefines ``ir.rule`` ``_compute_domain`` base method. The module may be not compatible with others that redefine the method too.
 
 Odoo 12.0+
 ==========

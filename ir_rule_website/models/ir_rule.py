@@ -49,7 +49,7 @@ class IrRule(models.Model):
         global_domains = []                     # list of domains
         group_domains = []                      # list of domains
         for rule in self.browse(rule_ids).sudo():
-            # begin redefined part of original _compute_domain of odoo/base/addons/ir/ir_rule.
+            # BEGIN redefined part of original _compute_domain of odoo/base/addons/ir/ir_rule.
             # have to redefine all method to take in account new ir.rule ``backend_behaviour`` setting
             dom = []
             if not eval_context.get('website_id') and rule.backend_behaviour:
@@ -58,7 +58,7 @@ class IrRule(models.Model):
             # evaluate the domain for the current user
                 dom = safe_eval(rule.domain_force, eval_context) if rule.domain_force else []
                 dom = expression.normalize_domain(dom)
-            # end redefined part of original _compute_domain
+            # END redefined part of original _compute_domain
             if not rule.groups:
                 global_domains.append(dom)
             elif rule.groups & user_groups:

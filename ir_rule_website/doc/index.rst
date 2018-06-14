@@ -23,9 +23,6 @@ Configuration
 
  (Document type: product.template, Operation: read)
 
- This is so because in backend rules work in non-website context.
- In other words the setting is mandatory for website rules.
-
 from web-interface, or
 
 ::
@@ -33,6 +30,10 @@ from web-interface, or
  INFO rw odoo.models: The requested operation cannot be completed due to record rules: Document type: product.template, Operation: read, Records: 47, User: 5
 
 in odoo logs
+
+This is so because in backend rules work in non-website context.
+In other words the setting is mandatory for website rules.
+
 
 Usage
 =====
