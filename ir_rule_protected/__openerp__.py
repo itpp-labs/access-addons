@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 {
     'name': 'Protect ir.rule records',
     'version': '1.0.0',
