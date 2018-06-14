@@ -55,7 +55,7 @@ class IrRule(models.Model):
             if not eval_context.get('website_id') and rule.backend_behaviour:
                 dom = [(1, '=', 1)] if rule.backend_behaviour == 'true' else [(0, '=', 1)]
             else:
-            # evaluate the domain for the current user
+                # evaluate the domain for the current user
                 dom = safe_eval(rule.domain_force, eval_context) if rule.domain_force else []
                 dom = expression.normalize_domain(dom)
             # END redefined part of original _compute_domain
