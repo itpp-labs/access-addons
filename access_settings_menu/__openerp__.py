@@ -1,7 +1,6 @@
-# -*- coding: utf-8 -*-
 {
     'name': 'Show settings menu for non-admin',
-    'version': '1.0.1',
+    'version': '11.0.1.0.1',
     'author': 'IT-Projects LLC, Ivan Yelizariev',
     "category": "Access",
     "support": "apps@it-projects.info",

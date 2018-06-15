@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 {
     'name': 'Basic module for custom security stuff',
     'version': '1.0.0',

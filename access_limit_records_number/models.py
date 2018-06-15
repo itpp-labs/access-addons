@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 from openerp import models, fields, api, exceptions
 from openerp.tools.safe_eval import safe_eval

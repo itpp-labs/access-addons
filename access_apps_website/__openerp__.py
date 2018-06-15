@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 {
     "name": """Restrict access to "Install Apps" in Website""",
     "summary": """Only users with "Show Apps Menu" access see "Install Apps" menu.""",

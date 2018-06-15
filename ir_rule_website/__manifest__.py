@@ -1,11 +1,10 @@
-# -*- coding: utf-8 -*-
 {
     "name": """Multi-website support in Security Rules""",
     "summary": """Provide access depending on current website""",
     "category": "Access",
     # "live_test_url": "",
     "images": [],
-    "version": "1.0.0",
+    "version": "11.0.1.0.0",
     "application": False,
 
     "author": "IT-Projects LLC, Ildar Nasyrov",

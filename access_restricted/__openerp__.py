@@ -1,7 +1,6 @@
-# -*- coding: utf-8 -*-
 {
     'name': 'Restricted administration rights',
-    'version': '1.2.0',
+    'version': '11.0.1.2.0',
     'author': 'IT-Projects LLC, Ivan Yelizariev',
     "category": "Access",
     "support": "apps@it-projects.info",
