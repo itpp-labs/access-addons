@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="view_rule_form_inherit_ir_rule_website" model="ir.ui.view">
+    <field name="name">ir.rule.form.inherit.ir_rule_website</field>
+    <field name="model">ir.rule</field>
+    <field name="inherit_id" ref="base.view_rule_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//field[@name='domain_force']" position="after">
+        <group string="Multi-website extension">
+          <field name="backend_behaviour"/>
+        </group>
+      </xpath>
+    </field>
+  </record>
+</odoo>

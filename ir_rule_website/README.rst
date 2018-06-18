@@ -8,11 +8,16 @@ Allows to use ``website_id`` (current website) in ``domain_force`` field of Reco
 * ``[('website_id', '=', website_id)]``
 
 
-Example of usage: 
+Example of usage:
 
 * Show a blog on specific websites only (TODO: add link to the module)
 * Show an event on specific websites only (TODO: add link to the module)
 * Show a product on specific websites only (TODO: add link to the module)
+
+Known issues
+============
+
+* This module redefines ``ir.rule`` ``_compute_domain`` base method and may be not compatible with others that redefine the method too.
 
 Odoo 12.0+
 ==========
