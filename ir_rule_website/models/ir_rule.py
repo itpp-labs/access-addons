@@ -18,11 +18,15 @@ class IrRule(models.Model):
     @api.depends('domain_force')
     def _force_domain(self):
         eval_context = self._eval_context()
-        if not eval_context.get('website_id'):
-            website_rules = self.filtered(lambda r: r.backend_behaviour)
+        website_rules = self.filtered(lambda r: r.backend_behaviour)
+        if not eval_context.get('website_id') and not self.env.user.backend_website_id:
             for rule in website_rules:
                 rule.domain = [(1, '=', 1)] if rule.backend_behaviour == 'true' else [(0, '=', 1)]
             super(IrRule, self - website_rules)._force_domain()
+        elif self.env.user.backend_website_id:
+            for rule in website_rules:
+                rule.domain_force = rule.domain_force.replace('[website_id]', '[user.backend_website_id.id]')
+            super(IrRule, self)._force_domain()
         else:
             super(IrRule, self)._force_domain()
 
