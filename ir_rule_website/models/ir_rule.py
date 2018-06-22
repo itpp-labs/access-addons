@@ -29,7 +29,7 @@ class IrRule(models.Model):
     @api.model
     def _eval_context(self):
         context = super(IrRule, self)._eval_context()
-        context['website_id'] = self._context.get('website_id')
+        context['website_id'] = self._context.get('website_id') or self.env.user.backend_website_id.id
         return context
 
     @api.model
