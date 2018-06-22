@@ -16,7 +16,7 @@
     "currency": "EUR",
 
     "depends": [
-        "web_website",
+        "base",
     ],
     "external_dependencies": {"python": [], "bin": []},
     "data": [
