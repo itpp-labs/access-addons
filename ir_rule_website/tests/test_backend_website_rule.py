@@ -10,8 +10,8 @@ class TestBackendWebsiteRule(TransactionCase):
         super(TestBackendWebsiteRule, self).setUp()
         self.demo_user = self.env.ref('base.user_demo')
         self.demo_user.write({
-            backend_website_id: self.enf.ref('website.default_website').id,
-        }
+            'backend_website_id': self.env.ref('website.default_website').id,
+        })
 
         model_res_partner = self.env.ref('base.model_res_partner')
         self.env['ir.rule'].create({'name': 'test backend website rule',
@@ -24,4 +24,4 @@ class TestBackendWebsiteRule(TransactionCase):
         self.assertTrue(test_domain in domain)
 
     def test_backend_website_rule(self):
-        self._cached_compute_domain(self.enf.ref('website.default_website').id)
+        self._cached_compute_domain(self.env.ref('website.default_website').id)
