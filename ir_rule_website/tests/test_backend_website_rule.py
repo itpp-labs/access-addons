@@ -8,20 +8,32 @@ class TestBackendWebsiteRule(TransactionCase):
 
     def setUp(self):
         super(TestBackendWebsiteRule, self).setUp()
-        self.demo_user = self.env.ref('base.user_demo')
-        self.demo_user.write({
+        self.user1 = self.env.ref('base.user_demo')
+        self.user1.write({
             'backend_website_id': self.env.ref('website.default_website').id,
         })
 
-        model_res_partner = self.env.ref('base.model_res_partner')
-        self.env['ir.rule'].create({'name': 'test backend website rule',
-                                    'model_id': model_res_partner.id,
-                                    'domain_force': "[('parent_id', 'in', [website_id])]"})
+        model_res_users = self.env.ref('base.model_res_users')
+        self.env['ir.rule'].create({
+            'name': 'test backend website rule',
+            'model_id': model_res_users.id,
+            'domain_force': "[('backend_website_id', 'in', [website_id])]",
+            'backend_behaviour': 'true',
+        })
 
-    def _cached_compute_domain(self, website_id):
-        test_domain = ('parent_id', 'in', [website_id])
-        domain = self.env['ir.rule'].sudo(user=self.demo_user.id)._compute_domain('res.partner')
-        self.assertTrue(test_domain in domain)
+        User = self.env['res.users']
+        self.user2 = User.create({
+            'name': 'user2',
+            'login': 'user2',
+        })
+        self.user3 = User.create({
+            'name': 'user3',
+            'login': 'user3',
+            'backend_website_id': self.env.ref('website.default_website').id,
+        })
 
     def test_backend_website_rule(self):
-        self._cached_compute_domain(self.env.ref('website.default_website').id)
+        users = self.env['res.users'].sudo(user=self.user3.id).search([])
+        self.assertTrue(self.user2 not in users)
+        users = self.env['res.users'].sudo(user=self.user2.id).search([])
+        self.assertTrue(self.user2 in users)
