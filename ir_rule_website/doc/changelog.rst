@@ -1,7 +1,7 @@
 `1.2.0`
 -------
 
-- **ADD:** Use the ``it-projects-llc/misc-addons/web_website`` module ``Current Backend Website`` User setting to evaluate website rules in Odoo backend
+- **ADD:** Use user's **Current Backend Website** from ``web_website`` module  on evaluating website rules in Odoo backend
 
 `1.1.0`
 -------
