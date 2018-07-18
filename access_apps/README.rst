@@ -10,6 +10,8 @@ Adds **Apps access** selection in user's access rights tab. Two options are avai
 * *Allow install apps*
 * *Allow install apps only from settings*
 
+Note: During porting to 12 version, a bug was detected with the selected option "Allow to install apps only from settings" (A user could not open a menu [[ Sales ]] >> Configuration >> Settigns). The error has not been fixed yet.
+
 Credits
 =======
 
@@ -33,4 +35,4 @@ Usage instructions: `<doc/index.rst>`_
 
 Changelog: `<doc/changelog.rst>`_
 
-Tested on 10.0 5f0b7942d551f441aa41e75ee06f2dd163a9c6f6
+Tested on 12.0 edd8bad5d97ee489e85504791c807f0099ef24b5

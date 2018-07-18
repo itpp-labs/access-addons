@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="res_users_view_form" model="ir.ui.view">
+        <field name="name">res.users.form.sale.inherit</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+            <group name="extra" position="after">
+                <group string="Other" name="other" groups="base.group_no_one">
+                    <field name='has_group_allow_add_implied_from_settings' class="oe_inline"/>
+                </group>
+            </group>
+        </field>
+    </record>
+</odoo>

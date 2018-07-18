@@ -23,12 +23,12 @@ Let's take ``Sale`` module as an example.
 Without this module installed:
 
 * Say you have a user with administration rights ``Administration: Access Rights``. This user thus may increase his own rights in ``Application > Sales`` from ``Sales: User: All Documents``
-  to ``Sales: Manager``. Also he can open menu ``[[ Sales ]] >> Configuration >> Settings`` and select ``Display 3 fields on sales orders: customer, invoice address, delivery address`` there
+  to ``Sales: Manager``. Also he can open menu ``[[ Sales ]] >> Configuration >> Settings`` and select ``Customer Addresses`` there
   and then click ``[Apply]`` button (adding ``group_sale_delivery_address``)
 
 With this module installed:
 
-* The user from previous example cannot increase his privileges. There is no ``Sales: Manager`` option for him, and also no ``Display 3 fields on sales orders: customer, invoice address, delivery address``
+* The user from previous example cannot increase his privileges. There is no ``Sales: Manager`` option for him, and also no ``Customer Addresses``
   option in mudule configuration
 * The only exception is done for users who are in special group 'Allow add implied groups from settings' - if your user is included in this group by the superuser then you may select
-  ``Display 3 fields on sales orders: customer, invoice address, delivery address`` from ``Sale`` module ``Configuration >> Settings`` menu
+  ``Customer Addresses`` from ``Sale`` module ``Configuration >> Settings`` menu
