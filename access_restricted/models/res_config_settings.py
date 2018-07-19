@@ -53,3 +53,8 @@ class ResConfigSettings(models.TransientModel):
     def execute(self):
         res = super(ResConfigSettings, self.with_context({'access_restricted': True, 'config': self})).execute()
         return res
+
+    @api.model
+    def default_get(self, fields):
+        res = super(ResConfigSettings, self.sudo()).default_get(fields)
+        return res
