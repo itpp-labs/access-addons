@@ -56,5 +56,7 @@ class ResConfigSettings(models.TransientModel):
 
     @api.model
     def default_get(self, fields):
+        # TODO: this solution may lead to unexpected result 
+        # if some of default methods uses self self.env.user to compute default value
         res = super(ResConfigSettings, self.sudo()).default_get(fields)
         return res
