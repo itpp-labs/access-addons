@@ -53,12 +53,3 @@ class ResConfigSettings(models.TransientModel):
     def execute(self):
         res = super(ResConfigSettings, self.with_context({'access_restricted': True, 'config': self})).execute()
         return res
-
-    @api.model
-    def default_get(self, fields):
-        # As user may not have Administration rights, we need to use sudo() to grant it
-        
-        # TODO: this solution may lead to unexpected result 
-        # if some of default methods uses self self.env.user to compute default value
-        res = super(ResConfigSettings, self.sudo()).default_get(fields)
-        return res
