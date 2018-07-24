@@ -1,5 +1,8 @@
-Updates
-=======
+`1.0.2`
+-------
+
+- FIX: make compatible with CI-tests of other modules
+
 
 `1.0.1`
 -------

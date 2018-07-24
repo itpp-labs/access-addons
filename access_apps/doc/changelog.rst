@@ -1,7 +1,12 @@
-.. _changelog:
+`1.3.1`
+-------
 
-Updates
-=======
+- FIX: `Access Error` when administrators without access to apps trying to open ``[[ Website Admin ]] >> Configuratiion >> Settings``
+
+`1.3.0`
+-------
+
+- FIX: the "Allow install apps" group is now implies "Administration: Settings" ("base.group_system") since in Odoo 11.0 only group_system users can install apps
 
 `1.2.0`
 -------

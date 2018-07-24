@@ -34,7 +34,6 @@ in odoo logs
 This is so because in backend rules work in non-website context.
 In other words the setting is mandatory for website rules.
 
-
 Usage
 =====
 

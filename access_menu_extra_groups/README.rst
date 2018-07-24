@@ -13,19 +13,19 @@ Usage
 =====
 
 The menu record is as follows by default:
+
 ::
 
     <menuitem name="Project" id="base.menu_main_pm" groups="group_project_manager,group_project_user"
         icon="fa-calendar" web_icon="project,static/description/icon.png" sequence="50"/>
-            
-            
+
 Add links to groups in the "extra_groups_id".
+
 ::
 
     <record model='ir.ui.menu' id='base.menu_main_pm'>
         <field name="extra_groups_id" eval="[(4, ref('module_name.group_1')), (4, ref('module_name.group_2'))]"/>
     </record>
-                        
 
 Now the "Project" menu is visible only for user who are in the following groups:
 
