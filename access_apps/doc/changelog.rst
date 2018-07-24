@@ -1,7 +1,7 @@
-.. _changelog:
+`1.3.1`
+-------
 
-Updates
-=======
+- FIX: `Access Error` when administrators without access to apps trying to open ``[[ Website Admin ]] >> Configuratiion >> Settings``
 
 `1.3.0`
 -------
