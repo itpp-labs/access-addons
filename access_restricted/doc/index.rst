@@ -28,7 +28,6 @@ Without this module installed:
 
 With this module installed:
 
-* The user from previous example cannot increase his privileges. There is no ``Sales: Manager`` option for him, and also no ``Customer Addresses``
-  option in mudule configuration
+* The user from previous example cannot increase his privileges (he will get an error if he tries). Also he can't select ``Customer Addresses``  on the ``[[ Sales ]] >> Configuration >> Settings`` page.
 * The only exception is done for users who are in special group 'Allow add implied groups from settings' - if your user is included in this group by the superuser then you may select
   ``Customer Addresses`` from ``Sale`` module ``Configuration >> Settings`` menu

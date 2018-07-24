@@ -1,7 +1,7 @@
 Restricted administration rights
 ================================
 
-The module makes impossible for administrator to set (and see) more access rights (groups) than he already has.
+The module makes impossible for administrator to set more access rights (groups) than he already has.
 The only partial exception of this rule is made if you are already a member of the 'Allow add implied groups from settings' security group.
 Then you are allowed to escalate your privileges but just from ``Settings`` menus (by means of ``group_XXX`` boolean fields of ``res.config.settings`` models views).
 
