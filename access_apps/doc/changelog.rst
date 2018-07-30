@@ -6,9 +6,9 @@ Updates
 `1.2.0`
 -------
 
-- REF: rename "Show Apps Menu" to "Allow install apps"
+- REF: rename "Show Apps Menu" to "Allow installing apps"
 - ADD: "Allow install apps only from settings"
-- IMP: group "Show Apps Menu" and "Allow install apps only from settings" under "Apps access" security category
+- IMP: group "Show Apps Menu" and "Allow installing apps only from settings" under "Apps access" security category
 
 `1.0.1`
 -------
