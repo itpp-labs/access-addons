@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Show settings menu for non-admin',
-    'version': '1.0.1',
+    "summary": """Set up non-admin users rights so they can see the ``[[ Settings ]]`` menu""",
+    'version': '12.0.1.0.1',
     'author': 'IT-Projects LLC, Ivan Yelizariev',
     "category": "Access",
     "support": "apps@it-projects.info",
@@ -14,6 +15,7 @@
     ],
     'data': [
         'security/access_settings_menu_security.xml',
+        'views/res_users_views.xml',
     ],
-    'installable': False
+    'installable': True
 }
