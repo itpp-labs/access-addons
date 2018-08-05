@@ -1,6 +1,11 @@
 Updates
 =======
 
+`1.3.1`
+-------
+
+- **Fix:** a user, if he has ``Allow add implied groups from settings`` group access right, should be able to uncheck **group_XXX** fields from a settings menu to exit from implied groups (all other users that are in implying group also quit from the implied group)
+
 `1.3.0`
 -------
 

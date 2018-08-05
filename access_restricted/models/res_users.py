@@ -59,9 +59,10 @@ class ResGroups(models.Model):
             users = vals.get('users')
             if classified['group']:
                 allowed_implied = [group[2].id for group in classified['group']]
-            if implied_ids and implied_ids[0][1] in allowed_implied:
+            if implied_ids and implied_ids[0][1] in allowed_implied or users and all(u[0] == 3 for u in users):
+                # allow to add implied groups from `res.config.settings` or
+                # to remove users from a group when a user uncheck group_XXX field in settings
+                # ``all(u[0] == 3 for u in users)`` is to be sure that all operations are for removing.
+                # `(3, id)` tuple removes the record from the set (the Many2many field `users`)
                 self = self.sudo()
-            elif users:
-                if not [u[1] for u in users if u[1] in self.users.ids]:
-                    self = self.sudo()
         return super(ResGroups, self).write(vals)
