@@ -66,10 +66,11 @@ class TestBackendWebsiteRule(TransactionCase):
         # case when in a rule the `website` object references another object (`res.company` in that case)
         companies = self.env['res.company'].sudo(user=self.user1.id).search([])
         self.assertFalse(self.company2 in companies)
+        self.assertNotIn(self.company2, companies)
         with self.assertRaises(AccessError):
             self.env['res.company'].sudo(user=self.user1.id).browse(self.company2.id).name
 
         companies = self.env['res.company'].sudo(user=self.user1.id).with_context(website_id=self.website2.id).search([])
-        self.assertTrue(self.company2 in companies)
+        self.assertIn(self.company2, companies)
         name = self.env['res.company'].sudo(user=self.user1.id).with_context(website_id=self.website2.id).browse(self.company2.id).name
         self.assertEqual(name, self.company2.name)
