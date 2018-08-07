@@ -54,11 +54,12 @@ class ResGroups(models.Model):
     def write(self, vals):
         context = dict(self.env.context)
         config = context.get('config')
-        # when `res.config.settings`'s execute method writes the `users` field to group,
-        # it is always to remove users and the `users` field is the only key in the write op dict
+        # when `res.config.settings`'s `execute` method writes the `users` field to group,
+        # it is always to remove users and the `users` field is the only key in the write dict
         users = vals.get('users')
-        if config and isinstance(config, self.env['res.config.settings']) and \
+        if config and isinstance(config, models.Model) and \
            users and len(vals) == 1 and all(u[0] == 3 for u in users):
+            # `isinsnance` check is a non-xmplrpc proof.
             # allow to remove users from a group when a user uncheck group_XXX field in settings
             # ``all(u[0] == 3 for u in users)`` is to be sure that all operations are for removing.
             # `(3, id)` tuple removes the record from the set (the Many2many field `users`)
