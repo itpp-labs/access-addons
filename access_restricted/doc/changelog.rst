@@ -1,6 +1,11 @@
 Updates
 =======
 
+`1.3.3`
+-------
+
+- **Fix:** when edit settings - only allow to exclude users from groups if there is no permission. Allow add implied groups only if a user in a special group
+
 `1.3.2`
 -------
 
