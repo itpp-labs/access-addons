@@ -61,8 +61,9 @@ class ResGroups(models.Model):
             # when `res.config.settings`'s `execute` method writes the `users` field to group,
             # it is always to remove users and the `users` field is the only key in the write dict
             users = vals.get('users')
+            implied_group = implied_ids and implied_ids[0][1]
             if users and len(vals) == 1 and all(u[0] == 3 for u in users) or \
-               implied_ids and implied_ids[0][1] in [group[2].id for group in classified_group] and \
+               implied_group in [group[2].id for group in classified_group] and \
                self.env['res.users'].has_group('access_restricted.group_allow_add_implied_from_settings'):
                 # allow to remove users from a group when a user uncheck group_XXX field in settings
                 # ``all(u[0] == 3 for u in users)`` is to be sure that all operations are for removing.
