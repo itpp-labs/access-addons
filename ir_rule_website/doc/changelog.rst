@@ -1,3 +1,8 @@
+`1.3.0`
+-------
+
+- **New:** add ``website`` object to a rule evaluation context - to be able to use rules as such ``[('id','=', website.company_id.id)]``
+
 `1.2.0`
 -------
 
