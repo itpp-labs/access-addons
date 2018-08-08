@@ -53,16 +53,23 @@ class ResGroups(models.Model):
     @api.multi
     def write(self, vals):
         context = dict(self.env.context)
-        if context.get('config') and self.env['res.users'].has_group('access_restricted.group_allow_add_implied_from_settings'):
-            classified = context['config']._get_classified_fields()
+        config = context.get('config')
+        # when `res.config.settings`'s `execute` method writes the `users` field to group,
+        # it is always to remove users and the `users` field is the only key in the write dict
+        users = vals.get('users')
+        if config and isinstance(config, models.Model) and \
+           users and len(vals) == 1 and all(u[0] == 3 for u in users):
+            # `isinsnance` check is a non-xmplrpc proof.
+            # allow to remove users from a group when a user uncheck group_XXX field in settings
+            # ``all(u[0] == 3 for u in users)`` is to be sure that all operations are for removing.
+            # `(3, id)` tuple removes the record from the set (the Many2many field `users`)
+            self = self.sudo()
+        if config and self.env['res.users'].has_group('access_restricted.group_allow_add_implied_from_settings'):
+            classified = config._get_classified_fields()
             implied_ids = vals.get('implied_ids')
-            users = vals.get('users')
             if classified['group']:
                 allowed_implied = [group[2].id for group in classified['group']]
-            if implied_ids and implied_ids[0][1] in allowed_implied or users and all(u[0] == 3 for u in users):
-                # allow to add implied groups from `res.config.settings` or
-                # to remove users from a group when a user uncheck group_XXX field in settings
-                # ``all(u[0] == 3 for u in users)`` is to be sure that all operations are for removing.
-                # `(3, id)` tuple removes the record from the set (the Many2many field `users`)
+            if implied_ids and implied_ids[0][1] in allowed_implied:
+                # allow to add implied groups from `res.config.settings`
                 self = self.sudo()
         return super(ResGroups, self).write(vals)

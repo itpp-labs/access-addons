@@ -1,6 +1,11 @@
 Updates
 =======
 
+`1.3.2`
+-------
+
+- **Fix:** regardless of ``Allow add implied groups from settings`` always allow to uncheck **group_XXX** fields from settings menu. This makes possible for ``access_apps`` module to independently install apps from settings menu. Otherwise users of ``access_apps`` need always be in ``Allow add implied...`` to install from settings
+
 `1.3.1`
 -------
 
