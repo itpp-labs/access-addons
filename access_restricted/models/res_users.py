@@ -54,7 +54,7 @@ class ResGroups(models.Model):
     def write(self, vals):
         config = self.env.context.get('config')
 
-        # `isinsnance` check is a non-xmplrpc proof.
+        # `isinstance` check is a non-xmplrpc proof.
         if config and isinstance(config, models.Model):
             implied_ids = vals.get('implied_ids')
             classified_group = config._get_classified_fields()['group']
