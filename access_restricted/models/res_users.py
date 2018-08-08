@@ -62,16 +62,13 @@ class ResGroups(models.Model):
             # it is always to remove users and the `users` field is the only key in the write dict
             users = vals.get('users')
             implied_group = implied_ids and implied_ids[0][1]
-            if users and len(vals) == 1 and all(u[0] == 3 for u in users) or \
-               implied_group in [group[2].id for group in classified_group] and \
-               self.env['res.users'].has_group('access_restricted.group_allow_add_implied_from_settings'):
-                # allow to remove users from a group when a user uncheck group_XXX field in settings
-                # ``all(u[0] == 3 for u in users)`` is to be sure that all operations are for removing.
-                # `(3, id)` tuple removes the record from the set (the Many2many field `users`)
-                # or
-                # allow to add implied groups from `res.config.settings` for users in special group
+            users_exclude_operation = users and len(vals) == 1 and all(u[0] == 3 for u in users)
+            # ``all(u[0] == 3 for u in users)`` is to be sure that all operations are for removing.
+            # `(3, id)` tuple removes the record from the set (the Many2many field `users`)
+            add_implied_group_operation = implied_group in [group[2].id for group in classified_group]
+            if users_exclude_operation or add_implied_group_operation and self.env['res.users'].has_group('access_restricted.group_allow_add_implied_from_settings'):
                 self = self.sudo()
             else:
-                # do nothing if there is no permission to change groups from settings
+                # do nothing with groups if there is no permission to add from settings
                 return
         return super(ResGroups, self).write(vals)
