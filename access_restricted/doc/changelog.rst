@@ -4,7 +4,7 @@ Updates
 `1.3.3`
 -------
 
-- **Fix:** when edit settings - only allow to exclude users from groups if there is no permission. If no permission to add groups then hust ignore write operations to groups model records from settings but apply any other valid settings. In other words - do not block rest of the settings from applying if there is only no permission to add groups
+- **Fix:** If no permission to add groups then just ignore write operations to groups model records but apply any other valid settings. In other words - do not block rest of the settings from applying if there is only no permission to add groups
 
 `1.3.2`
 -------
