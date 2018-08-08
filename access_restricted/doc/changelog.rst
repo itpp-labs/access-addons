@@ -1,6 +1,11 @@
 Updates
 =======
 
+`1.3.3`
+-------
+
+- **Fix:** If no permission to add groups then just ignore write operations to groups model records but apply any other valid settings. In other words - do not block rest of the settings from applying if there is only no permission to add groups
+
 `1.3.2`
 -------
 
