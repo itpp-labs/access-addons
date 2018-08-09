@@ -61,7 +61,7 @@ class ResConfigSettings(models.TransientModel):
         res = super(ResConfigSettings, self).execute()
         # uninstall modules if needed and a user has access
         to_uninstall = self._get_classified_fields()['to_uninstall']
-        if to_uninstall and self.env['res.users'].has_group('access_apps.grgup_allow_apps_only_from_settings'):
+        if to_uninstall and self.env['res.users'].has_group('access_apps.group_allow_apps_only_from_settings'):
             to_uninstall_modules = self.env['ir.module.module']
             for name, module in to_uninstall:
                 to_uninstall_modules += module
