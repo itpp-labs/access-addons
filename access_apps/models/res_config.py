@@ -26,4 +26,42 @@ class ResConfigSettings(models.TransientModel):
         # TODO: this solution may lead to unexpected result
         # if some of default methods uses self self.env.user to compute default value
         res = super(ResConfigSettings, self.sudo()).default_get(fields)
+
+        # modules: which modules are installed/to install
+        classified = self._get_classified_fields()
+        for name, module in classified['to_uninstall']:
+            res[name] = module.state in ('installed', 'to install', 'to upgrade')
+            if self._fields[name].type == 'selection':
+                res[name] = int(res[name])
+
+        return res
+
+    @api.model
+    def _get_classified_fields(self):
+        # import wdb; wdb.set_trace()
+        res = super(ResConfigSettings, self)._get_classified_fields()
+
+        to_uninstall_modules = []
+
+        for name, module in res['module']:
+            if not self[name]:
+                if module and module.state in ('installed', 'to upgrade'):
+                    to_uninstall_modules.append((name, module))
+
+        modules = list(set(res['module']).difference(set(to_uninstall_modules)))
+
+        res['module'] = modules
+        res['to_uninstall'] = to_uninstall_modules
+
+        return res
+
+    @api.multi
+    def execute(self):
+        res = super(ResConfigSettings, self).execute()
+        if self.env['res.users'].has_group('access_apps.group_allow_apps_only_from_settings'):
+            to_uninstall = self._get_classified_fields()['to_uninstall']
+            to_uninstall_modules = self.env['ir.module.module']
+            for name, module in to_uninstall:
+                to_uninstall_modules += module
+            to_uninstall_modules.sudo().button_immediate_uninstall()
         return res
