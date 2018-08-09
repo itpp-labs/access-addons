@@ -38,7 +38,7 @@ class ResConfigSettings(models.TransientModel):
 
     @api.model
     def _get_classified_fields(self):
-        # import wdb; wdb.set_trace()
+        # classify mudules to install and uninstall independently
         res = super(ResConfigSettings, self)._get_classified_fields()
 
         to_uninstall_modules = []
@@ -57,9 +57,11 @@ class ResConfigSettings(models.TransientModel):
 
     @api.multi
     def execute(self):
+        # base `exectute` doesn't know about new classification - it only has a list of modules to install now
         res = super(ResConfigSettings, self).execute()
-        if self.env['res.users'].has_group('access_apps.group_allow_apps_only_from_settings'):
-            to_uninstall = self._get_classified_fields()['to_uninstall']
+        # uninstall modules if needed and a user has access
+        to_uninstall = self._get_classified_fields()['to_uninstall']
+        if to_uninstall and self.env['res.users'].has_group('access_apps.grgup_allow_apps_only_from_settings'):
             to_uninstall_modules = self.env['ir.module.module']
             for name, module in to_uninstall:
                 to_uninstall_modules += module
