@@ -8,7 +8,7 @@
     "category": "Access",
     # "live_test_url": "",
     "images": [],
-    "version": "10.0.1.3.1",
+    "version": "10.0.1.3.2",
     "application": False,
 
     "author": "IT-Projects LLC, Ivan Yelizariev",
