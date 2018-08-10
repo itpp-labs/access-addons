@@ -51,16 +51,23 @@ class ResGroups(models.Model):
 
     @api.multi
     def write(self, vals):
-        context = dict(self.env.context)
-        if context.get('config') and self.env['res.users'].has_group('access_restricted.group_allow_add_implied_from_settings'):
-            classified = context['config']._get_classified_fields()
+        config = self.env.context.get('config')
+
+        # `isinstance` check is a non-xmplrpc proof.
+        if config and isinstance(config, models.Model):
             implied_ids = vals.get('implied_ids')
+            classified_group = config._get_classified_fields()['group']
+            # when `res.config.settings`'s `execute` method writes the `users` field to group,
+            # it is always to remove users and the `users` field is the only key in the write dict
             users = vals.get('users')
-            if classified['group']:
-                allowed_implied = [group[2].id for group in classified['group']]
-            if implied_ids and implied_ids[0][1] in allowed_implied:
+            implied_group = implied_ids and implied_ids[0][1]
+            users_exclude_operation = users and len(vals) == 1 and all(u[0] == 3 for u in users)
+            # ``all(u[0] == 3 for u in users)`` is to be sure that all operations are for removing.
+            # `(3, id)` tuple removes the record from the set (the Many2many field `users`)
+            add_implied_group_operation = implied_group in [group[2].id for group in classified_group]
+            if users_exclude_operation or add_implied_group_operation and self.env['res.users'].has_group('access_restricted.group_allow_add_implied_from_settings'):
                 self = self.sudo()
-            elif users:
-                if not [u[1] for u in users if u[1] in self.users.ids]:
-                    self = self.sudo()
+            else:
+                # do nothing with groups if there is no permission to add from settings
+                return
         return super(ResGroups, self).write(vals)

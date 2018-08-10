@@ -1,6 +1,21 @@
 Updates
 =======
 
+`1.3.3`
+-------
+
+- **Fix:** If no permission to add groups then just ignore write operations to groups model records but apply any other valid settings. In other words - do not block rest of the settings from applying if there is only no permission to add groups
+
+`1.3.2`
+-------
+
+- **Fix:** regardless of ``Allow add implied groups from settings`` always allow to uncheck **group_XXX** fields from settings menu. This makes possible for ``access_apps`` module to independently install apps from settings menu. Otherwise users of ``access_apps`` need always be in ``Allow add implied...`` to install from settings
+
+`1.3.1`
+-------
+
+- **Fix:** a user, if he has ``Allow add implied groups from settings`` group access right, should be able to uncheck **group_XXX** fields from a settings menu to exit from implied groups (all other users that are in implying group also quit from the implied group)
+
 `1.3.0`
 -------
 
