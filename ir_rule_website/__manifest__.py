@@ -4,7 +4,7 @@
     "category": "Access",
     # "live_test_url": "",
     "images": [],
-    "version": "11.0.1.3.0",
+    "version": "11.0.1.3.1",
     "application": False,
 
     "author": "IT-Projects LLC, Ildar Nasyrov",
