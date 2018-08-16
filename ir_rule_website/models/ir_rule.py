@@ -16,12 +16,24 @@ class IrRule(models.Model):
         and rules that using 'website_id' evaluated as False which is not always desirable""")
 
     @api.model
+    def _get_website_id(self):
+        return self._context.get('website_id') or self.env.user.backend_website_id.id
+
+    @api.model
     def _eval_context(self):
         context = super(IrRule, self)._eval_context()
-        website_id = self._context.get('website_id') or self.env.user.backend_website_id.id
+        website_id = self._get_website_id()
         context['website_id'] = website_id
         context['website'] = self.env['website'].browse(website_id)
         return context
+
+    @api.model
+    def domain_get(self, model_name, mode='read'):
+        """Workaround while web_website doesn't update context.
+        Without this, domain_get may use wrong cache of _compute_domain in backend"""
+        return super(IrRule, self.with_context(
+            website_id=self._get_website_id()
+        )).domain_get(model_name, mode=mode)
 
     @api.model
     @tools.ormcache_context('self._uid', 'model_name', 'mode', keys=["website_id"])
