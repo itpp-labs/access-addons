@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from odoo import SUPERUSER_ID, models, fields, api, _
 from odoo.addons.base.models.res_users import is_boolean_group, is_selection_groups
 from odoo.exceptions import UserError

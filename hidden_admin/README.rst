@@ -4,7 +4,7 @@ Hide admin from user and partner lists
 Warning
 -------
 
-As usual user doesn't see admin user it could lead to ignoring Admin user\partner. E.g. Admin could not get notification, because some mail functions are not executed via sudo. 
+As usual user doesn't see admin user it could lead to ignoring Admin user\partner. E.g. Admin could not get notification, because some mail functions are not executed via sudo.
 
 Unittests could raise errors, because they assume that admin user is available for other users.
 

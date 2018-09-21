@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 {
     'name': 'Custom Apps',
     'summary': """Simplify Apps Interface""",

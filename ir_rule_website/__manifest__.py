@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 {
     "name": """Multi-website support in Security Rules""",
     "summary": """Provide access depending on current website""",

@@ -1,7 +1,7 @@
 access-addons
 ===============
 
-Odoo access addons 
+Odoo access addons
 
 List of repositories:
 ---------------------

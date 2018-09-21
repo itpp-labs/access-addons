@@ -8,7 +8,7 @@ Allows to use ``website_id`` (current website) in ``domain_force`` field of Reco
 * ``[('website_id', '=', website_id)]``
 
 
-Example of usage: 
+Example of usage:
 
 * Show a blog on specific websites only (TODO: add link to the module)
 * Show an event on specific websites only (TODO: add link to the module)

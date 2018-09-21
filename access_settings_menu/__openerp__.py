@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 {
     'name': 'Show settings menu for non-admin',
     "summary": """Set up non-admin users rights so they can see the ``[[ Settings ]]`` menu""",
