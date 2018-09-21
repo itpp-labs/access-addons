@@ -13,5 +13,5 @@
         'security/access_restricted_security.xml',
         'views/res_users_views.xml',
     ],
-    'installable': True
+    'installable': False
 }
