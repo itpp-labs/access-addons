@@ -16,5 +16,5 @@
         'security/access_settings_menu_security.xml',
         'views/res_users_views.xml',
     ],
-    'installable': True
+    'installable': False
 }
