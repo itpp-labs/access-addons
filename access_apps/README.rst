@@ -5,7 +5,7 @@
 
 Allows to configure administrators which don't have access to Apps.
 
-Adds **Apps access** selection in user's access rights tab. Two options are available: 
+Adds **Apps access** selection in user's access rights tab. Two options are available:
 
 * *Allow installing apps*
 * *Allow installing apps only from settings*
