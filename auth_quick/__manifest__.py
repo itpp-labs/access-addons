@@ -2,7 +2,7 @@
 # License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl.html).
 {
     "name": """Quick Authentication""",
-    "summary": """{SHORT_DESCRIPTION_OF_THE_MODULE}""",
+    "summary": """Odoo Authentication for developers / testers / support team""",
     "category": "Extra Tools",
     # "live_test_url": "http://apps.it-projects.info/shop/product/DEMO-URL?version=12.0",
     "images": [],
