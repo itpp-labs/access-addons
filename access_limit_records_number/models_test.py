@@ -3,7 +3,7 @@ from odoo import models
 
 
 class BaseLimitRecordsNumber(models.Model):
-    '''Test model to test access'''
     _name = 'base.limit.records_number.test'
+    _description = 'Test model to test access'
 
     name = fields.Char('Name')
