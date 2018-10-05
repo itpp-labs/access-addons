@@ -4,9 +4,12 @@ import json
 import requests
 import werkzeug
 import urllib.parse
+import logging
 
 from odoo import http
 from odoo.http import request
+
+_logger = logging.getLogger(__name__)
 
 
 class AuthQuickMaster(http.Controller):
@@ -31,6 +34,7 @@ class AuthQuickMaster(http.Controller):
             user = request.env['res.users'].sudo().search([('login', '=', build_login)])
             build_user_id = user.id
 
+        _logger.debug('Authentication request for %s (id %s)', build_login, build_user_id)
         build_url = self.get_build_url()
         build = request.env['ir.config_parameter'].sudo().get_param('auth_quick.build', 'unknown')
         master_url = self.get_master_url()
@@ -52,7 +56,7 @@ class AuthQuickMaster(http.Controller):
             url,
             data=json.dumps({"params": {"token": token}}),
             headers={"Content-Type": "application/json"})
-        print ('text', res.text)
+        _logger.debug('Response from master odoo: %s', res.text)
         result = res.json().get('result')
         if not result.get('success'):
             return "Wrong token"
@@ -60,6 +64,7 @@ class AuthQuickMaster(http.Controller):
         build_login = result['data']['build_login']
         user = request.env['res.users'].sudo().search([('login', '=', build_login)])
         user.write({'auth_quick_token': token})
+        _logger.info('Successful Authentication as %s via token %s', build_login, token)
 
         if test_cr is False:
             # A new cursor is used to authenticate the user and it cannot see the
