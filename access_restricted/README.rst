@@ -12,4 +12,4 @@ Typical usage of the module.
 
 The superuser creates an administrator user without access group "Show Apps Menu" (see **access_apps** module). Then the administrator has access to settings, but not able to install new apps (without this module he can add himself to "Show Apps Menu" and get access to apps).
 
-Tested on 10.0 5f0b7942d551f441aa41e75ee06f2dd163a9c6f6
+Tested on 11.0 9e9d8e3632e566de22e4971aea5c7f2ad74aa043
