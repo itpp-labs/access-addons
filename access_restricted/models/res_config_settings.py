@@ -50,5 +50,5 @@ class ResConfigSettings(models.TransientModel):
 
     @api.multi
     def execute(self):
-        res = super(ResConfigSettings, self.with_context({'access_restricted': True, 'config': self})).execute()
+        res = super(ResConfigSettings, self.with_context({'config': self})).execute()
         return res

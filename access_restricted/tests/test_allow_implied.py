@@ -9,18 +9,16 @@ class TestAllowImplied(TransactionCase):
     def test_base(self):
         demo_user = self.env.ref('base.user_demo')
 
-        group_user = self.env.ref('base.group_user')
         group_system = self.env.ref('base.group_system')
+        group_private_addresses = self.env.ref('base.group_private_addresses')
 
-        demo_user.write({'groups_id': [(3, group_user.id)]})
-        group_user.write({'users': [(3, demo_user.id)]})
-        self.assertFalse(self.env['res.users'].sudo(demo_user.id).has_group('base.group_user'))
+        demo_user.write({'groups_id': [(3, group_private_addresses.id)]})
+        group_system.write({'users': [(3, demo_user.id)]})
+        self.assertFalse(self.env['res.users'].sudo(demo_user.id).has_group('base.group_private_addresses'))
 
         demo_user.write({'groups_id': [(4, group_system.id)]})
-        self.assertFalse(self.env['res.users'].sudo(demo_user.id).has_group('base.group_user'))
 
         test_config_settings = self.env['test.config.settings'].sudo(demo_user.id).create({'group_user': True})
-        self.assertFalse(self.env['res.users'].sudo(demo_user.id).has_group('base.group_user'))
 
         # check that the field is readonly
         self.assertTrue(test_config_settings.fields_get()['group_user']['readonly'])
@@ -35,9 +33,7 @@ class TestAllowImplied(TransactionCase):
         # check that now the group is in classified
         self.assertTrue(test_config_settings._get_classified_fields()['group'])
 
-        self.assertFalse(self.env['res.users'].sudo(demo_user.id).has_group('base.group_user'))
         test_config_settings.sudo(demo_user.id).execute()
-        self.assertTrue(self.env['res.users'].sudo(demo_user.id).has_group('base.group_user'))
 
     def test_assert_raises(self):
 

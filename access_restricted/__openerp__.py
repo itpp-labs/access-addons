@@ -1,17 +1,16 @@
 {
     'name': 'Restricted administration rights',
-    'version': '12.0.1.3.0',
+    'version': '12.0.1.3.3',
     'author': 'IT-Projects LLC, Ivan Yelizariev',
     "category": "Access",
     "support": "apps@it-projects.info",
-    'website': 'https://twitter.com/yelizariev',
+    'website': 'https://apps.odoo.com/apps/modules/12.0/access_restricted/',
     "license": "LGPL-3",
     'price': 30.00,
     'currency': 'EUR',
     'depends': ['ir_rule_protected'],
     'data': [
         'security/access_restricted_security.xml',
-        'views/res_users_views.xml',
     ],
-    'installable': False
+    'installable': True
 }
