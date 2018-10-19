@@ -1,1 +1,1 @@
-from . import res_config, res_users
+from . import res_config

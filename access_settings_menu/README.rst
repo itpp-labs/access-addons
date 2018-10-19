@@ -6,6 +6,6 @@ Adds "Show Settings Menu" tick in user's access rights tab.
 Uninstallation
 --------------
 
-After uninstalling, you need to update ``base`` module to return restriction to ``Settings`` menu back.
+After uninstallating, you need to update ``base`` module to return restriction to ``Settings`` menu back.
 
-Tested on 12.0 edd8bad5d97ee489e85504791c807f0099ef24b5
+Tested on 10.0 1be57f2825af4f3ade20a658c6f97f6cf93cc866
