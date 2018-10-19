@@ -1,13 +1,11 @@
 import odoo.tests
-from odoo import api
 
 
-@odoo.tests.common.at_install(True)
-@odoo.tests.common.post_install(True)
+@odoo.tests.tagged('post_install', 'at_install')
 class TestUi(odoo.tests.HttpCase):
 
     def test_01_dashboard_remove(self):
-        phantom_env = api.Environment(self.registry.test_cr, self.uid, {})
+        phantom_env = self.env
         demo_user = phantom_env.ref('base.user_demo')
         system_group = phantom_env.ref('base.group_system')
         allow_apps_group = phantom_env.ref('access_apps.group_allow_apps')
