@@ -10,6 +10,7 @@ Installation
 Usage
 =====
 
+* `Log in as SUPERUSER <https://odoo-development.readthedocs.io/en/latest/odoo/usage/login-as-superuser.html>`__
 * `Activate Developer Mode <https://odoo-development.readthedocs.io/en/latest/odoo/usage/debug-mode.html>`__
 * Open menu ``[[ Settings ]]>> Technical >> Security >> Record Rules``
 * Select or create some record
