@@ -5,6 +5,7 @@
     "category": "Access",
     "support": "apps@it-projects.info",
     'website': 'https://twitter.com/yelizariev',
+    "license": "LGPL-3",
     'depends': [
         'mail',
         'ir_rule_protected',
