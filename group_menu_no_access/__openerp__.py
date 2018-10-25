@@ -23,11 +23,9 @@
     'name': 'Group Menu No Access',
     'version': '0.1',
     "category": "Access",
-    'description': """
-        Group Menu No Access
-    """,
     'author': 'Cesar Lage',
     'depends': ['base'],
+    "license": "AGPL-3",
     'data': [
         'views/groups.xml'
     ],

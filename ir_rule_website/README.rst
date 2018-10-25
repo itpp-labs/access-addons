@@ -14,6 +14,11 @@ Example of usage:
 * Show an event on specific websites only (TODO: add link to the module)
 * Show a product on specific websites only (TODO: add link to the module)
 
+Known issues
+============
+
+* This module redefines ``ir.rule`` ``_compute_domain`` base method and may be not compatible with others that redefine the method too.
+
 Odoo 12.0+
 ==========
 

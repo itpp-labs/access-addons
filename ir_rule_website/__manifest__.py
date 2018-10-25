@@ -4,7 +4,7 @@
     "category": "Access",
     # "live_test_url": "",
     "images": [],
-    "version": "1.0.0",
+    "version": "12.0.1.3.1",
     "application": False,
 
     "author": "IT-Projects LLC, Ildar Nasyrov",
@@ -15,10 +15,11 @@
     "currency": "EUR",
 
     "depends": [
-        "base",
+        "web_website",
     ],
     "external_dependencies": {"python": [], "bin": []},
     "data": [
+        "views/ir_rule_views.xml",
     ],
     "qweb": [
     ],
