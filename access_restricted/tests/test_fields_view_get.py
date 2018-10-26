@@ -1,10 +1,10 @@
-from openerp.tests.common import TransactionCase
+from openerp.tests.common import TransactionCase, tagged
 
 IR_CONFIG_NAME = 'access_restricted.fields_view_get_uid'
 
 
+@tagged('post_install', '-at_install')
 class TestFieldsViewGet(TransactionCase):
-    post_install = True
 
     def clear_config(self):
         self.env['ir.config_parameter'].search([('key', '=', IR_CONFIG_NAME)]).unlink()
