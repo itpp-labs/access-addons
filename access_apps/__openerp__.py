@@ -12,7 +12,7 @@
 
     "author": "IT-Projects LLC, Ivan Yelizariev",
     "support": "apps@it-projects.info",
-    "website": "https://it-projects.info/team/yelizariev",
+    "website": "https://apps.odoo.com/apps/modules/12.0/access_apps/",
     "license": "LGPL-3",
     'price': 10.00,
     'currency': 'EUR',
@@ -38,5 +38,5 @@
     "uninstall_hook": None,
 
     "auto_install": False,
-    "installable": False,
+    "installable": True,
 }

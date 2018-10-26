@@ -10,7 +10,7 @@ Installation
 Configuration
 =============
 
-After the installation of this module by default no one has access to install modules.
+After the installation of this module by default no one has access to installing modules.
 To control such permission follow the steps below.
 
 
@@ -26,7 +26,7 @@ Usage
 
 * Be sure that you don't test the functionality under the ``Administrator`` (superuser with id=1) user - he is immune to any access restriction except of hiding menus or buttons in UI
 * If you don't select anything in ``Apps access``: there is no ``[[ Apps ]]`` menu - even if your user is in ``Administration: Settings`` security group. Also note that you
-  have no ability to include yourself in groups allowing to install apps - this is what ``access_restricted`` module does (``access_apps`` depends on it)
+  have no ability to include yourself in groups allowing to installing apps - this is what ``access_restricted`` module does (``access_apps`` depends on it)
 * If you have ``Allow installing apps`` selected: there is ``[[ Apps ]]`` menu
 * If you have ``Allow installing apps only from settings``: from other module's ``Configuration >> Settings`` menu, e.g. from ``[[ Website ]] >> Configuration >> Settings`` see that
   you have the ability to check the ``Digital Content`` checkbox that actually installs the ``website_sale_digital`` module after clicking on ``[Apply]`` button.
