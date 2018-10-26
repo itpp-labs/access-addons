@@ -4,7 +4,7 @@
     'author': 'IT-Projects LLC, Ivan Yelizariev',
     "category": "Access",
     "support": "apps@it-projects.info",
-    'website': 'https://twitter.com/yelizariev',
+    'website': 'https://apps.odoo.com/apps/modules/12.0/access_restricted/',
     "license": "LGPL-3",
     'price': 30.00,
     'currency': 'EUR',
@@ -12,5 +12,5 @@
     'data': [
         'security/access_restricted_security.xml',
     ],
-    'installable': False
+    'installable': True
 }
