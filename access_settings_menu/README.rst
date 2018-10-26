@@ -8,4 +8,4 @@ Uninstallation
 
 After uninstalling, you need to update ``base`` module to return restriction to ``Settings`` menu back.
 
-Tested on 12.0 edd8bad5d97ee489e85504791c807f0099ef24b5
+Tested on 12.0 b34b7d4270eda98ee8e87516c044161232b335ae
