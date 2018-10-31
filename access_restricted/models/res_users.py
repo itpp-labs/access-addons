@@ -65,7 +65,8 @@ class ResGroups(models.Model):
             # ``all(u[0] == 3 for u in users)`` is to be sure that all operations are for removing.
             # `(3, id)` tuple removes the record from the set (the Many2many field `users`)
             add_implied_group_operation = implied_group in [group[2].id for group in classified_group]
-            if users_exclude_operation or add_implied_group_operation and self.env['res.users'].has_group('access_restricted.group_allow_add_implied_from_settings'):
+            curr_user_allowed = self.env.user._is_superuser() or self.env['res.users'].has_group('access_restricted.group_allow_add_implied_from_settings')
+            if users_exclude_operation or add_implied_group_operation and curr_user_allowed:
                 self = self.sudo()
             else:
                 # do nothing with groups if there is no permission to add from settings
