@@ -1,6 +1,11 @@
 Updates
 =======
 
+`1.3.4`
+-------
+
+- **Fix:** Allow superuser to write groups via settings menu
+
 `1.3.3`
 -------
 
