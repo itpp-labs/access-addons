@@ -1,10 +1,10 @@
 {
     'name': 'Protect ir.rule records',
-    'version': '11.0.1.0.0',
+    'version': '12.0.1.0.0',
     'author': 'IT-Projects LLC, Ivan Yelizariev',
     "category": "Access",
     "support": "apps@it-projects.info",
-    'website': 'https://twitter.com/yelizariev',
+    'website': 'https://www.odoo.com/apps/modules/12.0/ir_rule_protected/',
     "license": "LGPL-3",
     'depends': [],
     'data': [

@@ -25,7 +25,7 @@ msgstr "Acceder a Módulos"
 
 #. module: access_apps
 #: model:res.groups,name:access_apps.group_allow_apps_only_from_settings
-msgid "Allow install apps only from settings"
+msgid "Allow installing apps only from settings"
 msgstr "Permitir instalar aplicaciones sólo desde ajustes"
 
 #. module: access_apps

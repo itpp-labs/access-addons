@@ -4,7 +4,7 @@
     "category": "Access",
     # "live_test_url": "",
     "images": [],
-    "version": "11.0.1.3.1",
+    "version": "12.0.1.3.1",
     "application": False,
 
     "author": "IT-Projects LLC, Ildar Nasyrov",
@@ -32,5 +32,5 @@
     "uninstall_hook": None,
 
     "auto_install": False,
-    "installable": True,
+    "installable": False,
 }

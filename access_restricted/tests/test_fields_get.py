@@ -1,10 +1,9 @@
-from openerp.tests.common import TransactionCase
-from odoo.addons.base.res.res_users import name_selection_groups
+from openerp.tests.common import TransactionCase, tagged
+from odoo.addons.base.models.res_users import name_selection_groups
 
 
+@tagged('at_install', 'post_install')
 class TestFieldsGet(TransactionCase):
-    at_install = True
-    post_install = True
 
     def test_base(self):
         demo_user = self.env.ref('base.user_demo')

@@ -6,6 +6,7 @@ from openerp.tools.translate import _
 
 class BaseLimitRecordsNumber(models.Model):
     _name = 'base.limit.records_number'
+    _description = 'Restrictions for number of records'
     _inherits = {'base.automation': 'action_rule_id'}
 
     action_rule_id = fields.Many2one('base.automation', 'Base Automation', required=True, ondelete='cascade')

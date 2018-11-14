@@ -7,13 +7,15 @@ sudo: false
 cache: pip
 
 addons:
+  # odoo 12.0+ uses command "INSERT ... ON CONFLICT ...", which is available in 9.5+ only
+  postgresql: "9.5"
   apt:
     packages:
       - expect-dev  # provides unbuffer utility
       - python-lxml  # because pip installation is slow
 env:
   global:
-  - VERSION="11.0" TESTS="0" LINT_CHECK="0" TRANSIFEX="0" UNIT_TEST="0"
+  - VERSION="12.0" TESTS="0" LINT_CHECK="0" TRANSIFEX="0" UNIT_TEST="0"
   - PYLINT_ODOO_JSLINTRC="/home/travis/maintainer-quality-tools/travis/cfg/.jslintrc"
   - TRANSIFEX_USER='i18n-bot@it-projects.info'
   - secure: "I5us0cu0r/tccObiKUaHbjYUvKAk6Oj7IkUIey9yycRfNGlgNQlgbDEAwjbZScNaJlqFfSnPlzDkBG9WXYhHiTZ2Nszk+ajHHiqu0vz6V61nSR+4ME61OL/NI4tGQxxixA/yVedDDeR5XeIHMyQI77YAy/iZauYSxlRojcLKKJaLokv9D1ONAh9VfhZpyMCwxxq6jfqGCg264D9RXYH1R+QGz3tDOgrcPwqxNB8Xd0F/Qursv6mqpQUvzv14G1ig2aoOraOH3zzm5YRAJNzz6RmbIBhjc0VjwvRSMmUz6ZBpnBI6org2soY90IvHpDc8VqAPVxGhJKDq+yxPII627VKPqOqPaPVyHvbrZqujqSDahciTjysdSlGNwrap0CzRUDCRYPje3oUWc1BTvaiF+SpVbeFuSLQFp6f2afkHI2y0U1gssbdkT4xWYQ1Q5wip3cc90x9n6h3UXFhFEe1JBxtsegXPyeNn6PAEtr7TZF5TcZwSQ1ad0CCanyXTXFDdeXxSS4xtfF3uDAWbEY1o0hcyV+O5dkctbG3V2OPUHloXKVbyhs5giqT164+23R2dgW+K1SFFRuPR6TBQ0g4bc9kaNZF0ytMKuS5OLrxAKzZhFoKMPQkal2jIc3Flz1voU8zWBOf5rOA7rPJJIEwARDi/vVgFqI9XRp8sQQuB/tA="
