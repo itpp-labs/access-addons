@@ -1,6 +1,6 @@
 {
     'name': 'Restricted administration rights',
-    'version': '12.0.1.3.3',
+    'version': '12.0.1.3.4',
     'author': 'IT-Projects LLC, Ivan Yelizariev',
     "category": "Access",
     "support": "apps@it-projects.info",
