@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from openerp.tests.common import TransactionCase
 from odoo.addons.base.res.res_users import name_selection_groups
 

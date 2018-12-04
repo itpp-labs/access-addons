@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * access_apps
+# * access_settings_menu
 # 
 # Translators:
 # Sergej Briesin <20bs18@gmail.com>, 2018
@@ -18,22 +18,12 @@ msgstr ""
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#. module: access_apps
-#: model:res.groups,name:access_apps.group_allow_apps
-msgid "Allow install apps"
-msgstr "Erlaube Apps zu installieren"
+#. module: access_settings_menu
+#: model:res.groups,name:access_settings_menu.group_show_settings_menu
+msgid "Show Settings Menu"
+msgstr "Einstellungsmenü anzeigen"
 
-#. module: access_apps
-#: model:res.groups,name:access_apps.group_allow_apps_only_from_settings
-msgid "Allow install apps only from settings"
-msgstr "Erlaube Apps nur vom Einstellungen zu installieren"
-
-#. module: access_apps
-#: model:ir.module.category,name:access_apps.module_category_access_apps
-msgid "Apps access"
-msgstr "Apps Zugriff"
-
-#. module: access_apps
-#: model:ir.model,name:access_apps.model_res_config_settings
-msgid "res.config.settings"
-msgstr ""
+#. module: access_settings_menu
+#: model:ir.model,name:access_settings_menu.model_res_users
+msgid "Users"
+msgstr "Nutzer"

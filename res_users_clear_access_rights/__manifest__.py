@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 {
     'name': 'Clear access rights button',
     "summary": """Useful tool to reset user rights""",
@@ -15,6 +14,6 @@
     ],
     "demo": [
     ],
-    'installable': True,
+    'installable': False,
     'auto_install': False,
 }

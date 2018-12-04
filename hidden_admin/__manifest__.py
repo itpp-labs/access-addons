@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 {
     'name': 'Hide admin from user and partner lists',
     'version': '1.0.1',
@@ -14,5 +13,5 @@
     'data': [
         'security.xml',
     ],
-    'installable': True
+    'installable': False
 }

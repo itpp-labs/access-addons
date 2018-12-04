@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 from openerp import models, fields, api, exceptions
 from openerp.tools.safe_eval import safe_eval
@@ -7,24 +6,19 @@ from openerp.tools.translate import _
 
 class BaseLimitRecordsNumber(models.Model):
     _name = 'base.limit.records_number'
-    _inherits = {'base.action.rule': 'action_rule_id'}
+    _inherits = {'base.automation': 'action_rule_id'}
 
-    action_rule_id = fields.Many2one('base.action.rule', 'Base Action Rule', required=True, ondelete='cascade')
+    action_rule_id = fields.Many2one('base.automation', 'Base Automation', required=True, ondelete='cascade')
     max_records = fields.Integer(string='Maximum Records')
     domain = fields.Char(string='Domain', default='[]')
 
     @api.model
     def default_get(self, default_fields):
         res = super(BaseLimitRecordsNumber, self).default_get(default_fields)
-        res['kind'] = 'on_create_or_write'
+        res['trigger'] = 'on_create_or_write'
+        res['state'] = 'code'
+        res['code'] = "env['base.limit.records_number'].verify_table()"
         return res
-
-    @api.model
-    def create(self, vals):
-        record = super(BaseLimitRecordsNumber, self).create(vals)
-        server_actions_ids = [(4, self.env.ref('access_limit_records_number.action_check_records_number').id, False)]
-        record.write({'server_action_ids': server_actions_ids})
-        return record
 
     @api.model
     def verify_table(self):

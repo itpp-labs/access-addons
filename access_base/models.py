@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from openerp import fields, api, models
 from lxml import etree
 from lxml.builder import E

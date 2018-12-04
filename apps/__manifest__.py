@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 {
     'name': 'Custom Apps',
     'summary': """Simplify Apps Interface""",
@@ -25,5 +24,5 @@
     'post_init_hook': None,
 
     'auto_install': False,
-    'installable': True
+    'installable': False
 }

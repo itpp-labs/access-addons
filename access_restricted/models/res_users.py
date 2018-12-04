@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from odoo import SUPERUSER_ID
 from odoo import api
 from odoo import models
@@ -13,7 +12,7 @@ class ResUsers(models.Model):
     @api.model
     def fields_view_get(self, view_id=None, view_type='form', **kwargs):
         if view_type == 'form':
-            last_uid = self.env['ir.config_parameter'].get_param(IR_CONFIG_NAME)
+            last_uid = self.env['ir.config_parameter'].sudo().get_param(IR_CONFIG_NAME)
             if int(last_uid) != self.env.uid:
                 self.env['res.groups'].sudo()._update_user_groups_view()
 
@@ -44,7 +43,7 @@ class ResGroups(models.Model):
             domain = []
         domain.append(('share', '=', False))
 
-        real_uid = (self.env.context or {}).get('uid') or int(self.env['ir.config_parameter'].get_param(IR_CONFIG_NAME, '0'))
+        real_uid = (self.env.context or {}).get('uid') or int(self.env['ir.config_parameter'].sudo().get_param(IR_CONFIG_NAME, '0'))
         if real_uid and real_uid != SUPERUSER_ID:
             group_no_one_id = self.env.ref('base.group_no_one').id
             domain = domain + ['|', ('users', 'in', [real_uid]), ('id', '=', group_no_one_id)]
@@ -66,7 +65,8 @@ class ResGroups(models.Model):
             # ``all(u[0] == 3 for u in users)`` is to be sure that all operations are for removing.
             # `(3, id)` tuple removes the record from the set (the Many2many field `users`)
             add_implied_group_operation = implied_group in [group[2].id for group in classified_group]
-            if users_exclude_operation or add_implied_group_operation and self.env['res.users'].has_group('access_restricted.group_allow_add_implied_from_settings'):
+            curr_user_allowed = self.env.user._is_superuser() or self.env['res.users'].has_group('access_restricted.group_allow_add_implied_from_settings')
+            if users_exclude_operation or add_implied_group_operation and curr_user_allowed:
                 self = self.sudo()
             else:
                 # do nothing with groups if there is no permission to add from settings

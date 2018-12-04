@@ -1,7 +1,7 @@
-# -*- coding: utf-8 -*-
 
-from odoo import api, models, tools, fields
-from odoo.addons.base.ir.ir_rule import IrRule as IrRuleOriginal
+from odoo import api, fields, models, tools, SUPERUSER_ID
+from odoo.osv import expression
+from odoo.tools.safe_eval import safe_eval
 
 
 class IrRule(models.Model):
@@ -13,18 +13,11 @@ class IrRule(models.Model):
     ], string='Backend behaviour',
         help="""This is bypass for main rule definition.
         When working from backend there is usually no 'website_id' value in the rule evaluation context
-        what leads to SQL syntax error such as 'WHERE website_id IN ()' in rules that using 'website_id'""")
+        and rules that using 'website_id' evaluated as False which is not always desirable""")
 
-    @api.depends('domain_force')
-    def _force_domain(self):
-        eval_context = self._eval_context()
-        if not eval_context.get('website_id'):
-            website_rules = self.filtered(lambda r: r.backend_behaviour)
-            for rule in website_rules:
-                rule.domain = [(1, '=', 1)] if rule.backend_behaviour == 'true' else [(0, '=', 1)]
-            super(IrRule, self - website_rules)._force_domain()
-        else:
-            super(IrRule, self)._force_domain()
+    @api.model
+    def _get_website_id(self):
+        return self._context.get('website_id') or self.env.user.backend_website_id.id
 
     @api.model
     def _get_website_id(self):
@@ -49,4 +42,44 @@ class IrRule(models.Model):
     @api.model
     @tools.ormcache_context('self._uid', 'model_name', 'mode', keys=["website_id"])
     def _compute_domain(self, model_name, mode="read"):
-        return IrRuleOriginal._compute_domain.__wrapped__(self, model_name, mode=mode)
+        if mode not in self._MODES:
+            raise ValueError('Invalid mode: %r' % (mode,))
+
+        if self._uid == SUPERUSER_ID:
+            return None
+
+        query = """ SELECT r.id FROM ir_rule r JOIN ir_model m ON (r.model_id=m.id)
+                    WHERE m.model=%s AND r.active AND r.perm_{mode}
+                    AND (r.id IN (SELECT rule_group_id FROM rule_group_rel rg
+                                  JOIN res_groups_users_rel gu ON (rg.group_id=gu.gid)
+                                  WHERE gu.uid=%s)
+                         OR r.global)
+                """.format(mode=mode)
+        self._cr.execute(query, (model_name, self._uid))
+        rule_ids = [row[0] for row in self._cr.fetchall()]
+        if not rule_ids:
+            return []
+
+        # browse user and rules as SUPERUSER_ID to avoid access errors!
+        eval_context = self._eval_context()
+        user_groups = self.env.user.groups_id
+        global_domains = []                     # list of domains
+        group_domains = []                      # list of domains
+        for rule in self.browse(rule_ids).sudo():
+            # BEGIN redefined part of original _compute_domain of odoo/base/addons/ir/ir_rule.
+            # have to redefine all method to take in account new ir.rule ``backend_behaviour`` setting
+            dom = []
+            if not eval_context.get('website_id') and rule.backend_behaviour:
+                dom = [(1, '=', 1)] if rule.backend_behaviour == 'true' else [(0, '=', 1)]
+            else:
+                # evaluate the domain for the current user
+                dom = safe_eval(rule.domain_force, eval_context) if rule.domain_force else []
+                dom = expression.normalize_domain(dom)
+            # END redefined part of original _compute_domain
+            if not rule.groups:
+                global_domains.append(dom)
+            elif rule.groups & user_groups:
+                group_domains.append(dom)
+
+        # combine global domains and group domains
+        return expression.AND(global_domains + [expression.OR(group_domains)])

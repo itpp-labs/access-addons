@@ -1,10 +1,9 @@
-# -*- coding: utf-8 -*-
 from openerp.tests import common
 
 
 @common.at_install(False)
 @common.post_install(True)
-class test_base(common.TransactionCase):
+class TestBase(common.TransactionCase):
 
     def test_users(self):
         demo_user = self.env.ref('base.user_demo')
