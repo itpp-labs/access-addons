@@ -20,10 +20,6 @@ class IrRule(models.Model):
         return self._context.get('website_id') or self.env.user.backend_website_id.id
 
     @api.model
-    def _get_website_id(self):
-        return self._context.get('website_id') or self.env.user.backend_website_id.id
-
-    @api.model
     def _eval_context(self):
         context = super(IrRule, self)._eval_context()
         website_id = self._get_website_id()
