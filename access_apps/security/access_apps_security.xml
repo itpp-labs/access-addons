@@ -13,7 +13,7 @@
   <record id="group_allow_apps" model="res.groups">
     <field name="name">Allow installing apps</field>
     <field name="category_id" ref="module_category_access_apps"/>
-    <field name="users" eval="[(4, ref('base.user_root'))]"/>
+    <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
     <field name="implied_ids" eval="[(4, ref('group_allow_apps_only_from_settings'))]"/>
   </record>
   <record model="ir.ui.menu" id="base.menu_management">
