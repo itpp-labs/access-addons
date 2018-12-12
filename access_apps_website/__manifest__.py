@@ -1,13 +1,13 @@
 {
-    "name": """Restrict access to "Install Apps" in Website""",
-    "summary": """Only users with "Show Apps Menu" access see "Install Apps" menu.""",
+    "name": """Restrict access to buttons that install the modules in Website""",
+    "summary": """Only users with "Allow install apps" access see/use buttons that install the modules.""",
     "category": "Access",
     "images": ["images/install_apps.png"],
-    "version": "1.0.0",
+    "version": "12.0.1.0.0",
 
     "author": "IT-Projects LLC",
     "support": "apps@it-projects.info",
-    "website": "https://it-projects.info",
+    "website": "https://apps.odoo.com/apps/modules/12.0/access_apps_website/",
     "license": "LGPL-3",
     "price": 20.00,
     "currency": "EUR",
@@ -19,9 +19,10 @@
     "external_dependencies": {"python": [], "bin": []},
     "data": [
         "views/access_apps.xml",
+        "views/assets.xml",
     ],
     "demo": [
     ],
-    "installable": False,
+    "installable": True,
     "auto_install": True,
 }
