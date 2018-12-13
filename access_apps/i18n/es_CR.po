@@ -3,14 +3,15 @@
 # * access_apps
 # 
 # Translators:
-# Randall Castro <randall_castro@me.com>, 2018
+# Randall <randall_castro@me.com>, 2018
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0\n"
+"Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-26 19:17+0000\n"
-"PO-Revision-Date: 2018-04-26 19:17+0000\n"
-"Last-Translator: Randall Castro <randall_castro@me.com>, 2018\n"
+"POT-Creation-Date: 2018-04-21 00:17+0000\n"
+"PO-Revision-Date: 2017-11-28 13:02+0000\n"
+"Last-Translator: Randall <randall_castro@me.com>, 2018\n"
 "Language-Team: Spanish (Costa Rica) (https://www.transifex.com/it-projects-llc/teams/76080/es_CR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,8 +21,8 @@ msgstr ""
 
 #. module: access_apps
 #: model:res.groups,name:access_apps.group_allow_apps
-msgid "Access to Modules"
-msgstr "Acceder a Módulos"
+msgid "Allow install apps"
+msgstr "Permitir instalar aplicaciones"
 
 #. module: access_apps
 #: model:res.groups,name:access_apps.group_allow_apps_only_from_settings
@@ -31,7 +32,7 @@ msgstr "Permitir instalar aplicaciones sólo desde ajustes"
 #. module: access_apps
 #: model:ir.module.category,name:access_apps.module_category_access_apps
 msgid "Apps access"
-msgstr "Acceso Aplicaciones"
+msgstr "Acceso aplicaciones"
 
 #. module: access_apps
 #: model:ir.model,name:access_apps.model_res_config_settings
