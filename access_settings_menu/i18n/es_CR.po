@@ -4,12 +4,13 @@
 # 
 # Translators:
 # Randall <randall_castro@me.com>, 2018
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0\n"
+"Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-26 19:17+0000\n"
-"PO-Revision-Date: 2018-04-26 19:17+0000\n"
+"POT-Creation-Date: 2018-04-21 00:17+0000\n"
+"PO-Revision-Date: 2017-11-28 13:02+0000\n"
 "Last-Translator: Randall <randall_castro@me.com>, 2018\n"
 "Language-Team: Spanish (Costa Rica) (https://www.transifex.com/it-projects-llc/teams/76080/es_CR/)\n"
 "MIME-Version: 1.0\n"
@@ -21,7 +22,7 @@ msgstr ""
 #. module: access_settings_menu
 #: model:res.groups,name:access_settings_menu.group_show_settings_menu
 msgid "Show Settings Menu"
-msgstr "Menú Mostrar Ajustes"
+msgstr "Mostrar Menu de Ajustes"
 
 #. module: access_settings_menu
 #: model:ir.model,name:access_settings_menu.model_res_users

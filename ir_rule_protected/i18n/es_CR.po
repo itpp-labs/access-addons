@@ -4,12 +4,13 @@
 # 
 # Translators:
 # Randall <randall_castro@me.com>, 2018
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0\n"
+"Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-26 19:17+0000\n"
-"PO-Revision-Date: 2018-04-26 19:17+0000\n"
+"POT-Creation-Date: 2018-04-21 00:17+0000\n"
+"PO-Revision-Date: 2017-11-28 13:02+0000\n"
 "Last-Translator: Randall <randall_castro@me.com>, 2018\n"
 "Language-Team: Spanish (Costa Rica) (https://www.transifex.com/it-projects-llc/teams/76080/es_CR/)\n"
 "MIME-Version: 1.0\n"
@@ -21,7 +22,7 @@ msgstr ""
 #. module: ir_rule_protected
 #: model:ir.model.fields,help:ir_rule_protected.field_ir_rule_protected
 msgid "Make rule editable only for superuser"
-msgstr "Convertir regla editable sólo para superusuario"
+msgstr "Hacer que la regla sea editable sólo para Superusuario"
 
 #. module: ir_rule_protected
 #: model:ir.model,name:ir_rule_protected.model_ir_module_module
@@ -32,7 +33,7 @@ msgstr "Módulo"
 #: code:addons/ir_rule_protected/models.py:39
 #, python-format
 msgid "Only admin can uninstall the module"
-msgstr "Solo el Administrador puede desinstalar el modulo"
+msgstr "Sólo admin puede desinstalar el módulo"
 
 #. module: ir_rule_protected
 #: model:ir.model.fields,field_description:ir_rule_protected.field_ir_rule_protected
