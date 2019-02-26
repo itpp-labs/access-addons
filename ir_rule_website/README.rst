@@ -40,7 +40,7 @@ Maintainers
 -----------
 * `IT-Projects LLC <https://it-projects.info>`__
 
-      To get a guaranteed support you are kindly requested to purchase the module at `odoo apps store <https://apps.odoo.com/apps/modules/11.0/ir_rule_website/>`__.
+      To get a guaranteed support you are kindly requested to purchase the module at `odoo apps store <https://apps.odoo.com/apps/modules/12.0/ir_rule_website/>`__.
 
       Thank you for understanding!
 
@@ -49,12 +49,12 @@ Maintainers
 Further information
 ===================
 
-Demo: http://runbot.it-projects.info/demo/access-addons/11.0
+Demo: http://runbot.it-projects.info/demo/access-addons/12.0
 
-HTML Description: https://apps.odoo.com/apps/modules/11.0/ir_rule_website
+HTML Description: https://apps.odoo.com/apps/modules/12.0/ir_rule_website
 
 Usage instructions: `<doc/index.rst>`_
 
 Changelog: `<doc/changelog.rst>`_
 
-Tested on Odoo 11.0 dc61861f90d15797b19f8ebddfb0c8a66d0afa88
+Tested on Odoo 12.0 4b22f1ff5e7c350fa37459c106f52305e26f2ec9
