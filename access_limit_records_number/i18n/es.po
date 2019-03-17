@@ -4,13 +4,15 @@
 # 
 # Translators:
 # charles paul requena palomino <rcharles84@gmail.com>, 2018
+# Danny Rolffot <100250830dr@gmail.com>, 2019
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-26 19:17+0000\n"
-"PO-Revision-Date: 2018-04-26 19:17+0000\n"
-"Last-Translator: charles paul requena palomino <rcharles84@gmail.com>, 2018\n"
+"PO-Revision-Date: 2017-12-05 05:26+0000\n"
+"Last-Translator: Danny Rolffot <100250830dr@gmail.com>, 2019\n"
 "Language-Team: Spanish (https://www.transifex.com/it-projects-llc/teams/76080/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -210,53 +212,53 @@ msgstr ""
 #: model:ir.ui.view,arch_db:access_limit_records_number.base_limit_view_search
 #: model:ir.ui.view,arch_db:access_limit_records_number.base_limit_view_tree
 msgid "Records Number"
-msgstr ""
+msgstr "Numero de Archivos"
 
 #. module: access_limit_records_number
 #: model:ir.actions.act_window,name:access_limit_records_number.base_limit_act
 #: model:ir.ui.menu,name:access_limit_records_number.menu_base_limit_act
 msgid "Records Number Limits"
-msgstr ""
+msgstr "Limite de Número de Archivos"
 
 #. module: access_limit_records_number
 #: model:ir.model.fields,field_description:access_limit_records_number.field_base_limit_records_number_model_id
 msgid "Related Document Model"
-msgstr ""
+msgstr "Modelo de documento relacionado"
 
 #. module: access_limit_records_number
 #: model:ir.model.fields,field_description:access_limit_records_number.field_base_limit_records_number_name
 msgid "Rule Name"
-msgstr ""
+msgstr "Nombre de la regla"
 
 #. module: access_limit_records_number
 #: model:ir.model.fields,field_description:access_limit_records_number.field_base_limit_records_number_sequence
 msgid "Sequence"
-msgstr ""
+msgstr "Secuencia"
 
 #. module: access_limit_records_number
 #: model:ir.model.fields,field_description:access_limit_records_number.field_base_limit_records_number_server_action_ids
 msgid "Server Actions"
-msgstr ""
+msgstr "Acciones del Servidor"
 
 #. module: access_limit_records_number
 #: model:ir.model.fields,field_description:access_limit_records_number.field_base_limit_records_number_act_user_id
 msgid "Set Responsible"
-msgstr ""
+msgstr "Responsabilizarse"
 
 #. module: access_limit_records_number
 #: model:ir.model.fields,field_description:access_limit_records_number.field_base_limit_records_number_trg_date_id
 msgid "Trigger Date"
-msgstr ""
+msgstr "Fecha de Activación"
 
 #. module: access_limit_records_number
 #: model:ir.ui.view,arch_db:access_limit_records_number.base_limit_view_search
 msgid "Unlimited Table"
-msgstr ""
+msgstr "Tabla Ilimitada"
 
 #. module: access_limit_records_number
 #: model:ir.model.fields,field_description:access_limit_records_number.field_base_limit_records_number_trg_date_calendar_id
 msgid "Use Calendar"
-msgstr ""
+msgstr "Usar Calendario"
 
 #. module: access_limit_records_number
 #: model:ir.model.fields,help:access_limit_records_number.field_base_limit_records_number_trg_date_calendar_id
@@ -264,6 +266,8 @@ msgid ""
 "When calculating a day-based timed condition, it is possible to use a "
 "calendar to compute the date based on working days."
 msgstr ""
+"Al calcular una condición de tiempo basada en el día, es posible utilizar un"
+" calendario para calcular la fecha en función de los días laborables."
 
 #. module: access_limit_records_number
 #: model:ir.model.fields,help:access_limit_records_number.field_base_limit_records_number_trg_date_id
@@ -271,16 +275,18 @@ msgid ""
 "When should the condition be triggered.\n"
 "                                  If present, will be checked by the scheduler. If empty, will be checked at creation and update."
 msgstr ""
+"Cuándo debe activarse la condición. Si está presente, será verificado por el"
+" programador. Si está vacío, se comprobará en la creación y actualización."
 
 #. module: access_limit_records_number
 #: model:ir.model.fields,field_description:access_limit_records_number.field_base_limit_records_number_kind
 msgid "When to Run"
-msgstr ""
+msgstr "Cuando Ejecutar"
 
 #. module: access_limit_records_number
 #: model:ir.model.fields,help:access_limit_records_number.field_base_limit_records_number_active
 msgid "When unchecked, the rule is hidden and will not be executed."
-msgstr ""
+msgstr "Cuando no está marcada, la regla está oculta y no se ejecutará."
 
 #. module: access_limit_records_number
 #: model:ir.model,name:access_limit_records_number.model_base_limit_records_number
