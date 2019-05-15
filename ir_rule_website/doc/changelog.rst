@@ -1,3 +1,8 @@
+`1.3.2`
+-------
+
+- **Fix**: Models without group binded rules were then wrongly reduced to an 'AND FALSE' condition. After https://github.com/odoo/odoo/commit/023dfaeb6b9499943315358edaa01c8f823ee695
+
 `1.3.1`
 -------
 
