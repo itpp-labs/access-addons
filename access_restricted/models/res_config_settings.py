@@ -20,7 +20,7 @@ class ResConfigSettings(models.TransientModel):
         ResUsers = self.env['res.users']
         for name, groups, implied_group in classified['group']:
             if ResUsers.search_count([('id', '=', uid), ('groups_id', 'in', [implied_group.id])]) or \
-               ResUsers.has_group('access_restricted.group_allow_add_implied_from_settings'):
+                    ResUsers.has_group('access_restricted.group_allow_add_implied_from_settings'):
                 group.append((name, groups, implied_group))
         classified['group'] = group
         return classified
