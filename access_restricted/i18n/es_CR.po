@@ -1,10 +1,10 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * access_restricted
-# 
+#
 # Translators:
 # Randall <randall_castro@me.com>, 2018
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
@@ -12,24 +12,27 @@ msgstr ""
 "POT-Creation-Date: 2018-04-21 00:17+0000\n"
 "PO-Revision-Date: 2017-11-28 13:02+0000\n"
 "Last-Translator: Randall <randall_castro@me.com>, 2018\n"
-"Language-Team: Spanish (Costa Rica) (https://www.transifex.com/it-projects-llc/teams/76080/es_CR/)\n"
+"Language-Team: Spanish (Costa Rica) (https://www.transifex.com/it-projects-"
+"llc/teams/76080/es_CR/)\n"
+"Language: es_CR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: es_CR\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: access_restricted
-#: code:addons/access_restricted/models/res_config_settings.py:49
+#: code:addons/access_restricted/models/res_config_settings.py:48
 #, python-format
 msgid ""
 "\n"
 "\n"
-"You don't have access to change this settings, because you administration rights are restricted"
+"You don't have access to change this settings, because you administration "
+"rights are restricted"
 msgstr ""
 "\n"
 "\n"
-"No tiene acceso para cambiar esta configuración, ya que los derechos de administración están restringidos."
+"No tiene acceso para cambiar esta configuración, ya que los derechos de "
+"administración están restringidos."
 
 #. module: access_restricted
 #: model:ir.model,name:access_restricted.model_res_groups
