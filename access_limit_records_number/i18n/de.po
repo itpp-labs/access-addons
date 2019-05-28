@@ -1,11 +1,11 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * access_limit_records_number
-# 
+#
 # Translators:
 # Sergej Briesin <20bs18@gmail.com>, 2018
 # Ermin Trevisan <trevi@twanda.com>, 2019
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
@@ -13,11 +13,12 @@ msgstr ""
 "POT-Creation-Date: 2018-04-21 00:17+0000\n"
 "PO-Revision-Date: 2017-11-28 13:02+0000\n"
 "Last-Translator: Ermin Trevisan <trevi@twanda.com>, 2019\n"
-"Language-Team: German (https://www.transifex.com/it-projects-llc/teams/76080/de/)\n"
+"Language-Team: German (https://www.transifex.com/it-projects-llc/teams/76080/"
+"de/)\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: access_limit_records_number
@@ -123,8 +124,10 @@ msgstr ""
 #: model:ir.model.fields,help:access_limit_records_number.field_base_limit_records_number_trg_date_range
 msgid ""
 "Delay after the trigger date.\n"
-"                                    You can put a negative number if you need a delay before the\n"
-"                                    trigger date, like sending a reminder 15 minutes before a meeting."
+"                                    You can put a negative number if you "
+"need a delay before the\n"
+"                                    trigger date, like sending a reminder 15 "
+"minutes before a meeting."
 msgstr ""
 
 #. module: access_limit_records_number
@@ -174,8 +177,7 @@ msgstr ""
 #. module: access_limit_records_number
 #: model:ir.model.fields,help:access_limit_records_number.field_base_limit_records_number_filter_pre_domain
 msgid ""
-"If present, this condition must be satisfied before the update of the "
-"record."
+"If present, this condition must be satisfied before the update of the record."
 msgstr ""
 
 #. module: access_limit_records_number
@@ -212,7 +214,7 @@ msgid "Link using field"
 msgstr ""
 
 #. module: access_limit_records_number
-#: code:addons/access_limit_records_number/models.py:32
+#: code:addons/access_limit_records_number/models.py:31
 #, python-format
 msgid ""
 "Maximimum allowed records in table \"%(model_name)s\" is %(max_records)s, "
@@ -225,14 +227,10 @@ msgid "Maximum Records"
 msgstr ""
 
 #. module: access_limit_records_number
+#: model:ir.model.fields,field_description:access_limit_records_number.field_base_limit_records_number_crud_model_name
 #: model:ir.model.fields,field_description:access_limit_records_number.field_base_limit_records_number_model_id
 #: model:ir.model.fields,field_description:access_limit_records_number.field_base_limit_records_number_model_name
 msgid "Model"
-msgstr ""
-
-#. module: access_limit_records_number
-#: model:ir.model.fields,field_description:access_limit_records_number.field_base_limit_records_number_crud_model_name
-msgid "Model Description"
 msgstr ""
 
 #. module: access_limit_records_number
@@ -260,8 +258,8 @@ msgstr ""
 #. module: access_limit_records_number
 #: model:ir.model.fields,help:access_limit_records_number.field_base_limit_records_number_help
 msgid ""
-"Optional help text for the users with a description of the target view, such"
-" as its usage and purpose."
+"Optional help text for the users with a description of the target view, such "
+"as its usage and purpose."
 msgstr ""
 
 #. module: access_limit_records_number
@@ -279,7 +277,6 @@ msgstr ""
 #. module: access_limit_records_number
 #: model:ir.ui.view,arch_db:access_limit_records_number.base_limit_view_form
 #: model:ir.ui.view,arch_db:access_limit_records_number.base_limit_view_search
-#: model:ir.ui.view,arch_db:access_limit_records_number.base_limit_view_tree
 msgid "Records Number"
 msgstr ""
 
@@ -328,9 +325,11 @@ msgstr ""
 msgid ""
 "Type of server action. The following values are available:\n"
 "- 'Execute Python Code': a block of python code that will be executed\n"
-"- 'Create or Copy a new Record': create a new record with new values, or copy an existing record in your database\n"
+"- 'Create or Copy a new Record': create a new record with new values, or "
+"copy an existing record in your database\n"
 "- 'Write on a Record': update the values of a record\n"
-"- 'Execute several actions': define an action that triggers several other server actions\n"
+"- 'Execute several actions': define an action that triggers several other "
+"server actions\n"
 "- 'Add Followers': add followers to a record (available in Discuss)\n"
 "- 'Send Email': automatically send an email (available in email_template)"
 msgstr ""
@@ -373,7 +372,8 @@ msgstr ""
 #: model:ir.model.fields,help:access_limit_records_number.field_base_limit_records_number_trg_date_id
 msgid ""
 "When should the condition be triggered.\n"
-"                                  If present, will be checked by the scheduler. If empty, will be checked at creation and update."
+"                                  If present, will be checked by the "
+"scheduler. If empty, will be checked at creation and update."
 msgstr ""
 
 #. module: access_limit_records_number
@@ -384,8 +384,8 @@ msgstr ""
 #. module: access_limit_records_number
 #: model:ir.model.fields,help:access_limit_records_number.field_base_limit_records_number_code
 msgid ""
-"Write Python code that the action will execute. Some variables are available"
-" for use; help about pyhon expression is given in the help tab."
+"Write Python code that the action will execute. Some variables are available "
+"for use; help about pyhon expression is given in the help tab."
 msgstr ""
 
 #. module: access_limit_records_number
