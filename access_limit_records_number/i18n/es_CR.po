@@ -1,10 +1,10 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * access_limit_records_number
-#
+# 
 # Translators:
 # Randall <randall_castro@me.com>, 2018
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
@@ -12,12 +12,11 @@ msgstr ""
 "POT-Creation-Date: 2018-04-21 00:17+0000\n"
 "PO-Revision-Date: 2017-11-28 13:02+0000\n"
 "Last-Translator: Randall <randall_castro@me.com>, 2018\n"
-"Language-Team: Spanish (Costa Rica) (https://www.transifex.com/it-projects-"
-"llc/teams/76080/es_CR/)\n"
-"Language: es_CR\n"
+"Language-Team: Spanish (Costa Rica) (https://www.transifex.com/it-projects-llc/teams/76080/es_CR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
+"Language: es_CR\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: access_limit_records_number
@@ -91,8 +90,8 @@ msgid ""
 "Child server actions that will be executed. Note that the last return "
 "returned action value will be used as global return value."
 msgstr ""
-"Acciones hijas del servidor que se ejecutarán. Tenga en cuenta que el último "
-"valor de acción devuelto, se usará como valor devuelto global."
+"Acciones hijas del servidor que se ejecutarán. Tenga en cuenta que el último"
+" valor de acción devuelto, se usará como valor devuelto global."
 
 #. module: access_limit_records_number
 #: model:ir.model.fields,help:access_limit_records_number.field_base_limit_records_number_on_change_fields
@@ -126,10 +125,8 @@ msgstr "Creado en"
 #: model:ir.model.fields,help:access_limit_records_number.field_base_limit_records_number_trg_date_range
 msgid ""
 "Delay after the trigger date.\n"
-"                                    You can put a negative number if you "
-"need a delay before the\n"
-"                                    trigger date, like sending a reminder 15 "
-"minutes before a meeting."
+"                                    You can put a negative number if you need a delay before the\n"
+"                                    trigger date, like sending a reminder 15 minutes before a meeting."
 msgstr ""
 "Demora después de la fecha de activación. Puede poner un número negativo si "
 "necesita un retraso antes de la fecha de activación , como enviar un "
@@ -184,7 +181,8 @@ msgstr ""
 #. module: access_limit_records_number
 #: model:ir.model.fields,help:access_limit_records_number.field_base_limit_records_number_filter_pre_domain
 msgid ""
-"If present, this condition must be satisfied before the update of the record."
+"If present, this condition must be satisfied before the update of the "
+"record."
 msgstr ""
 "Si está presente, esta condición debe cumplirse antes de actualizar el "
 "registro."
@@ -223,7 +221,7 @@ msgid "Link using field"
 msgstr "Vincular usando un campo"
 
 #. module: access_limit_records_number
-#: code:addons/access_limit_records_number/models.py:31
+#: code:addons/access_limit_records_number/models.py:32
 #, python-format
 msgid ""
 "Maximimum allowed records in table \"%(model_name)s\" is %(max_records)s, "
@@ -239,11 +237,15 @@ msgid "Maximum Records"
 msgstr "Máximo Registros"
 
 #. module: access_limit_records_number
-#: model:ir.model.fields,field_description:access_limit_records_number.field_base_limit_records_number_crud_model_name
 #: model:ir.model.fields,field_description:access_limit_records_number.field_base_limit_records_number_model_id
 #: model:ir.model.fields,field_description:access_limit_records_number.field_base_limit_records_number_model_name
 msgid "Model"
 msgstr "Modelo"
+
+#. module: access_limit_records_number
+#: model:ir.model.fields,field_description:access_limit_records_number.field_base_limit_records_number_crud_model_name
+msgid "Model Description"
+msgstr "Descripción Modelo"
 
 #. module: access_limit_records_number
 #: model:ir.model.fields,help:access_limit_records_number.field_base_limit_records_number_crud_model_id
@@ -272,11 +274,11 @@ msgstr "Lanzador de campos onchange"
 #. module: access_limit_records_number
 #: model:ir.model.fields,help:access_limit_records_number.field_base_limit_records_number_help
 msgid ""
-"Optional help text for the users with a description of the target view, such "
-"as its usage and purpose."
+"Optional help text for the users with a description of the target view, such"
+" as its usage and purpose."
 msgstr ""
-"Texto de ayuda opcional para los usuarios con una descripción de la vista de "
-"destino, como su uso y propósito."
+"Texto de ayuda opcional para los usuarios con una descripción de la vista de"
+" destino, como su uso y propósito."
 
 #. module: access_limit_records_number
 #: model:ir.model.fields,help:access_limit_records_number.field_base_limit_records_number_link_field_id
@@ -284,8 +286,8 @@ msgid ""
 "Provide the field used to link the newly created record on the record on "
 "used by the server action."
 msgstr ""
-"Proporcione el campo utilizado para vincular el registro recién creado en el "
-"registro utilizado por la acción del servidor."
+"Proporcione el campo utilizado para vincular el registro recién creado en el"
+" registro utilizado por la acción del servidor."
 
 #. module: access_limit_records_number
 #: model:ir.model.fields,field_description:access_limit_records_number.field_base_limit_records_number_code
@@ -295,6 +297,7 @@ msgstr "Código Python"
 #. module: access_limit_records_number
 #: model:ir.ui.view,arch_db:access_limit_records_number.base_limit_view_form
 #: model:ir.ui.view,arch_db:access_limit_records_number.base_limit_view_search
+#: model:ir.ui.view,arch_db:access_limit_records_number.base_limit_view_tree
 msgid "Records Number"
 msgstr "Número de Registros"
 
@@ -320,8 +323,8 @@ msgid ""
 "Setting a value makes this action available in the sidebar for the given "
 "model."
 msgstr ""
-"Establecer un valor hace que esta acción esté disponible en la barra lateral "
-"para el modelo dado."
+"Establecer un valor hace que esta acción esté disponible en la barra lateral"
+" para el modelo dado."
 
 #. module: access_limit_records_number
 #: model:base.automation,name:access_limit_records_number.test_rule_base_automation
@@ -345,25 +348,19 @@ msgstr "Fecha Lanzador"
 msgid ""
 "Type of server action. The following values are available:\n"
 "- 'Execute Python Code': a block of python code that will be executed\n"
-"- 'Create or Copy a new Record': create a new record with new values, or "
-"copy an existing record in your database\n"
+"- 'Create or Copy a new Record': create a new record with new values, or copy an existing record in your database\n"
 "- 'Write on a Record': update the values of a record\n"
-"- 'Execute several actions': define an action that triggers several other "
-"server actions\n"
+"- 'Execute several actions': define an action that triggers several other server actions\n"
 "- 'Add Followers': add followers to a record (available in Discuss)\n"
 "- 'Send Email': automatically send an email (available in email_template)"
 msgstr ""
 "Tipo de acción del servidor. Están disponibles los siguientes valores:\n"
 "-' Ejecutar código Python ': un bloque de código Python que se ejecutará\n"
-"-' Crear o copiar un nuevo registro ': crear un nuevo registro con nuevos "
-"valores o copiar un registro existente en la base de datos\n"
+"-' Crear o copiar un nuevo registro ': crear un nuevo registro con nuevos valores o copiar un registro existente en la base de datos\n"
 "-' Escribir en un registro ': actualizar los valores de un registro\n"
-"-' Ejecutar varias acciones ': definir una acción que desencadena varias "
-"otras acciones del servidor\n"
-"-' Añadir seguidores ': Añadir seguidores a un registro (disponible en "
-"discutir)\n"
-"-' Enviar correo electrónico ': enviar automáticamente un correo electrónico "
-"(disponible en email_template)"
+"-' Ejecutar varias acciones ': definir una acción que desencadena varias otras acciones del servidor\n"
+"-' Añadir seguidores ': Añadir seguidores a un registro (disponible en discutir)\n"
+"-' Enviar correo electrónico ': enviar automáticamente un correo electrónico (disponible en email_template)"
 
 #. module: access_limit_records_number
 #: model:ir.ui.view,arch_db:access_limit_records_number.base_limit_view_search
@@ -391,8 +388,8 @@ msgid ""
 "When calculating a day-based timed condition, it is possible to use a "
 "calendar to compute the date based on working days."
 msgstr ""
-"Al calcular una condición de tiempo basada en el día, es posible utilizar un "
-"calendario para calcular la fecha en función de los días laborables."
+"Al calcular una condición de tiempo basada en el día, es posible utilizar un"
+" calendario para calcular la fecha en función de los días laborables."
 
 #. module: access_limit_records_number
 #: model:ir.model.fields,help:access_limit_records_number.field_base_limit_records_number_sequence
@@ -407,12 +404,10 @@ msgstr ""
 #: model:ir.model.fields,help:access_limit_records_number.field_base_limit_records_number_trg_date_id
 msgid ""
 "When should the condition be triggered.\n"
-"                                  If present, will be checked by the "
-"scheduler. If empty, will be checked at creation and update."
+"                                  If present, will be checked by the scheduler. If empty, will be checked at creation and update."
 msgstr ""
 "¿Cuándo debe activarse la condición?\n"
-"Si está presente, será comprobado por el programador. Si está vacía, se "
-"comprobará en la creación y actualización."
+"Si está presente, será comprobado por el programador. Si está vacía, se comprobará en la creación y actualización."
 
 #. module: access_limit_records_number
 #: model:ir.model.fields,help:access_limit_records_number.field_base_limit_records_number_active
@@ -422,11 +417,11 @@ msgstr "Cuando está desactivada, la regla se oculta y no se ejecutará."
 #. module: access_limit_records_number
 #: model:ir.model.fields,help:access_limit_records_number.field_base_limit_records_number_code
 msgid ""
-"Write Python code that the action will execute. Some variables are available "
-"for use; help about pyhon expression is given in the help tab."
+"Write Python code that the action will execute. Some variables are available"
+" for use; help about pyhon expression is given in the help tab."
 msgstr ""
-"Escriba el código de Python que ejecutará la acción. Algunas variables están "
-"disponibles para su uso; la ayuda sobre la expresión de Pyhon se da en la "
+"Escriba el código de Python que ejecutará la acción. Algunas variables están"
+" disponibles para su uso; la ayuda sobre la expresión de Pyhon se da en la "
 "pestaña de ayuda."
 
 #. module: access_limit_records_number
@@ -438,6 +433,3 @@ msgstr "base.limit.records_number"
 #: model:ir.model,name:access_limit_records_number.model_base_limit_records_number_test
 msgid "base.limit.records_number.test"
 msgstr "base.limit.records_number.test"
-
-#~ msgid "Model Description"
-#~ msgstr "Descripción Modelo"
