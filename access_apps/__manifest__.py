@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Copyright 2018 Ivan Yelizariev <https://it-projects.info/team/yelizariev>
 # Copyright 2018 Ildar Nasyrov <https://it-projects.info/team/iledarn>
 # License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl.html).
@@ -8,7 +7,7 @@
     "category": "Access",
     # "live_test_url": "",
     "images": [],
-    "version": "10.0.1.3.2",
+    "version": "11.0.1.3.2",
     "application": False,
 
     "author": "IT-Projects LLC, Ivan Yelizariev",

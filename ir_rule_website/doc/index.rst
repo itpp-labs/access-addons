@@ -15,12 +15,21 @@ Configuration
 * You should see on rule form a new group named ``Multi-website extension`` with the ``Backend behaviour`` setting in it
 * Leave this field empty if your rule has nothing to do with websites
 * Select ``Grant access`` if you want to give access to model from backend, or ``Deny access`` - if you want to restrict
-* Note: if you leave this fields empty for a rule that is using ``website_id`` parameter - you may have this kind of exception when trying to access data from odoo backend:
+* Note: if you leave this fields empty for a rule that is using ``website_id`` parameter - you may have this kind of error when trying to configure your product's **website_ids** field from odoo backend:
 
 ::
 
- ProgrammingError: syntax error at or near ")"
- ...duct_template_website_rel" WHERE "website_id" IN ()))
+ The requested operation cannot be completed due to security restrictions. Please contact your system administrator.
+
+ (Document type: product.template, Operation: read)
+
+from web-interface, or
+
+::
+
+ INFO rw odoo.models: The requested operation cannot be completed due to record rules: Document type: product.template, Operation: read, Records: 47, User: 5
+
+in odoo logs
 
 This is so because in backend rules work in non-website context.
 In other words the setting is mandatory for website rules.

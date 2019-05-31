@@ -1,10 +1,12 @@
-Updates
-=======
+`1.3.5`
+-------
+
+- **Fix:** Fixed possibility to write inappropriate groups directly via write method after some odoo updates https://github.com/odoo/odoo/commit/5f12e244f6e57b8edb56788147774150e2ae134d
 
 `1.3.4`
 -------
 
-- **Fix:** Fixed possibility to write inappropriate groups directly via write method after some odoo updates https://github.com/odoo/odoo/commit/5f12e244f6e57b8edb56788147774150e2ae134d
+- **Fix:** Allow superuser to write groups via settings menu
 
 `1.3.3`
 -------

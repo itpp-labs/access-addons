@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
@@ -30,4 +29,5 @@
     'data': [
         'views/groups.xml'
     ],
+    'installable': False
 }

@@ -12,6 +12,7 @@ And also there is new model base.limit.records_number to strore the settings.
 To do new settings to restrict number of records in any model
 the user should be a member of ``Control limits on records number`` security group.
 
+
 Credits
 =======
 
@@ -23,15 +24,25 @@ Sponsors
 --------
 * `Mattobell <https://www.mattobell.com>`_
 
+Maintainers
+-----------
+* `IT-Projects LLC <https://it-projects.info>`__
+
+      To get a guaranteed support you are kindly requested to purchase the module at `odoo apps store <https://apps.odoo.com/apps/modules/11.0/access_limit_records_number/>`__.
+
+      Thank you for understanding!
+
+      `IT-Projects Team <https://www.it-projects.info/team>`__
+
 Further information
 ===================
 
-Demo: http://runbot.it-projects.info/demo/access-addons/9.0
+Demo: http://runbot.it-projects.info/demo/access-addons/11.0
 
-HTML Description: https://apps.odoo.com/apps/modules/9.0/access_limit_records_number/
+HTML Description: https://apps.odoo.com/apps/modules/11.0/access_limit_records_number/
 
 Usage instructions: `<doc/index.rst>`_
 
 Changelog: `<doc/changelog.rst>`_
 
-Tested on Odoo 9.0 b9bca7909aee5edd05d1cf81d45a540b7856f76e
+Tested on Odoo 11.0 cc031bd2264a7fcd8efbc9105902574111859c8b

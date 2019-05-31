@@ -3,15 +3,14 @@
 # * access_settings_menu
 #
 # Translators:
-# Dawid Runowski <dawrun@outlook.com>, 2019
-#
+# Sergej Briesin <20bs18@gmail.com>, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0\n"
+"Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-26 19:17+0000\n"
-"PO-Revision-Date: 2017-12-05 05:26+0000\n"
-"Last-Translator: Dawid Runowski <dawrun@outlook.com>, 2019\n"
+"POT-Creation-Date: 2018-04-21 00:17+0000\n"
+"PO-Revision-Date: 2018-04-21 00:17+0000\n"
+"Last-Translator: Sergej Briesin <20bs18@gmail.com>, 2018\n"
 "Language-Team: German (https://www.transifex.com/it-projects-llc/teams/76080/"
 "de/)\n"
 "Language: de\n"
@@ -23,9 +22,9 @@ msgstr ""
 #. module: access_settings_menu
 #: model:res.groups,name:access_settings_menu.group_show_settings_menu
 msgid "Show Settings Menu"
-msgstr ""
+msgstr "Einstellungsmenü anzeigen"
 
 #. module: access_settings_menu
 #: model:ir.model,name:access_settings_menu.model_res_users
 msgid "Users"
-msgstr "Benutzer"
+msgstr "Nutzer"

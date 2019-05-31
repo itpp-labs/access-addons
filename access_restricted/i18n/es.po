@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: access_restricted
-#: code:addons/access_restricted/models/res_config_settings.py:49
+#: code:addons/access_restricted/models/res_config_settings.py:48
 #, python-format
 msgid ""
 "\n"
@@ -56,7 +56,7 @@ msgstr "Nombre para mostrar"
 
 #. module: access_restricted
 #: model:ir.model.fields,field_description:access_restricted.field_test_config_settings_group_user
-msgid "Group user"
+msgid "Group User"
 msgstr ""
 
 #. module: access_restricted

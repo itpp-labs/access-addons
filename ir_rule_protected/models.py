@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from openerp import models, api, fields, exceptions, SUPERUSER_ID
 from openerp.tools.translate import _
 

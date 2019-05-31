@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 {
     "name": """Extra access groups for menus""",
     "summary": """Restrict access to menus globall""",
@@ -21,6 +20,6 @@
     ],
     "demo": [
     ],
-    "installable": True,
+    "installable": False,
     "auto_install": False,
 }

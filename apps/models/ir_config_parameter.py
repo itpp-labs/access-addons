@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from odoo import models, api
 
 KEY = 'apps.super_app_prefix'

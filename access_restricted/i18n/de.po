@@ -3,15 +3,14 @@
 # * access_restricted
 #
 # Translators:
-# Dawid Runowski <dawrun@outlook.com>, 2019
-#
+# Sergej Briesin <20bs18@gmail.com>, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0\n"
+"Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-26 19:17+0000\n"
-"PO-Revision-Date: 2017-12-05 05:26+0000\n"
-"Last-Translator: Dawid Runowski <dawrun@outlook.com>, 2019\n"
+"POT-Creation-Date: 2018-04-21 00:17+0000\n"
+"PO-Revision-Date: 2018-04-21 00:17+0000\n"
+"Last-Translator: Sergej Briesin <20bs18@gmail.com>, 2018\n"
 "Language-Team: German (https://www.transifex.com/it-projects-llc/teams/76080/"
 "de/)\n"
 "Language: de\n"
@@ -21,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: access_restricted
-#: code:addons/access_restricted/models/res_config_settings.py:49
+#: code:addons/access_restricted/models/res_config_settings.py:48
 #, python-format
 msgid ""
 "\n"
@@ -29,25 +28,21 @@ msgid ""
 "You don't have access to change this settings, because you administration "
 "rights are restricted"
 msgstr ""
-"\n"
-"\n"
-"Sie dürfen diese Einstellung nicht ändern, weil ihre Administratorrechte "
-"beschränkt sind"
 
 #. module: access_restricted
 #: model:ir.model,name:access_restricted.model_res_groups
 msgid "Access Groups"
-msgstr "den Gruppen beitreten"
+msgstr ""
 
 #. module: access_restricted
 #: model:res.groups,name:access_restricted.group_allow_add_implied_from_settings
 msgid "Allow add implied groups from settings"
-msgstr "vorgeschlagene Gruppen aus den Einstellungen hinzufügen zulassen"
+msgstr ""
 
 #. module: access_restricted
 #: model:ir.model.fields,field_description:access_restricted.field_test_config_settings_create_uid
 msgid "Created by"
-msgstr "erstellt von"
+msgstr ""
 
 #. module: access_restricted
 #: model:ir.model.fields,field_description:access_restricted.field_test_config_settings_create_date
@@ -57,27 +52,27 @@ msgstr ""
 #. module: access_restricted
 #: model:ir.model.fields,field_description:access_restricted.field_test_config_settings_display_name
 msgid "Display Name"
-msgstr "den Namen anzeigen"
+msgstr ""
 
 #. module: access_restricted
 #: model:ir.model.fields,field_description:access_restricted.field_test_config_settings_group_user
-msgid "Group user"
+msgid "Group User"
 msgstr ""
 
 #. module: access_restricted
 #: model:ir.model.fields,field_description:access_restricted.field_test_config_settings_id
 msgid "ID"
-msgstr "ID"
+msgstr ""
 
 #. module: access_restricted
 #: model:ir.model.fields,field_description:access_restricted.field_test_config_settings___last_update
 msgid "Last Modified on"
-msgstr "Zuletzt aktualisiert am"
+msgstr ""
 
 #. module: access_restricted
 #: model:ir.model.fields,field_description:access_restricted.field_test_config_settings_write_uid
 msgid "Last Updated by"
-msgstr "Zuletzt aktualisiert von"
+msgstr ""
 
 #. module: access_restricted
 #: model:ir.model.fields,field_description:access_restricted.field_test_config_settings_write_date
@@ -87,7 +82,7 @@ msgstr ""
 #. module: access_restricted
 #: model:ir.model,name:access_restricted.model_res_users
 msgid "Users"
-msgstr "Benutzer"
+msgstr "Nutzer"
 
 #. module: access_restricted
 #: model:ir.model,name:access_restricted.model_res_config_settings
