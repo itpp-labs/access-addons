@@ -1,4 +1,5 @@
 # Copyright 2018 Ivan Yelizariev <https://it-projects.info/team/yelizariev>
+# Copyright 2019 Denis Mudarisov <https://it-projects.info/team/trojikman>
 # License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl.html).
 import json
 import requests
@@ -23,7 +24,7 @@ class AuthQuickMaster(http.Controller):
         return parsed.scheme + "://" + parsed.netloc
 
     @http.route('/auth_quick/login', type="http", auth='public')
-    def login(self, build_login=None, build_user_id=None):
+    def login(self, build_login=None, build_user_id=None, public_token=None):
         if not (build_login or build_user_id):
             return "Wrong args"
 
@@ -44,7 +45,10 @@ class AuthQuickMaster(http.Controller):
             'build_user_id': build_user_id,
             'build_url': build_url,
         })
-        url = urllib.parse.urljoin(master_url, '/auth_quick_master/get-token?%s' % params)
+        if public_token:
+            url = urllib.parse.urljoin(master_url, '/auth_quick_master/get-public-token?%s' % params)
+        else:
+            url = urllib.parse.urljoin(master_url, '/auth_quick_master/get-token?%s' % params)
 
         return werkzeug.utils.redirect(url, 302)
 
