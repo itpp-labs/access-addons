@@ -1,7 +1,8 @@
 from odoo import SUPERUSER_ID
-from odoo import api
+from odoo import api, _
 from odoo import models
 from odoo.addons.base.res.res_users import is_reified_group
+from odoo.exceptions import AccessError
 
 IR_CONFIG_NAME = 'access_restricted.fields_view_get_uid'
 
@@ -71,4 +72,29 @@ class ResGroups(models.Model):
             else:
                 # do nothing with groups if there is no permission to add from settings
                 return
-        return super(ResGroups, self).write(vals)
+
+        # in the https://github.com/odoo/odoo/commit/5f12e244f6e57b8edb56788147774150e2ae134d commit
+        # the method was refactored due to a higher performance.
+        # Super method lacks of orm part so as consequent ir rules are not checked and we check its conditions manually.
+        # We apply super method and check the difference of implied groups,
+        # if the not proper group was set error is raised
+        check_for_implied_ids = 'implied_ids' in vals and vals['implied_ids'] and self.env.user.id != SUPERUSER_ID
+        if check_for_implied_ids:
+            implied_ids_before = self.mapped('implied_ids')
+            groups_before = self.env.user.groups_id
+
+        result = super(ResGroups, self).write(vals)
+
+        if check_for_implied_ids:
+            implied_ids_after = self.mapped('implied_ids')
+            group_no_one = self.env.ref('base.group_no_one')
+            implied_group_ids = implied_ids_after - implied_ids_before - group_no_one
+
+            # R1 <= R2  True if all records of R1 are also in R2
+            if not implied_group_ids <= groups_before:
+                raise AccessError(_(
+                    "You cannot add groups to Implied groups, because you are not allowed to increase your rights. "
+                    "Please contact your system administrator."
+                ))
+
+        return result

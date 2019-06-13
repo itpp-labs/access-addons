@@ -4,6 +4,8 @@
 #
 # Translators:
 # charles paul requena palomino <rcharles84@gmail.com>, 2018
+# Danny Daniel Rolffot Felix <100250830dr@gmail.com>, 2019
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
@@ -289,13 +291,13 @@ msgstr ""
 #: model:ir.ui.view,arch_db:access_limit_records_number.base_limit_view_form
 #: model:ir.ui.view,arch_db:access_limit_records_number.base_limit_view_search
 msgid "Records Number"
-msgstr ""
+msgstr "Numero de Archivos"
 
 #. module: access_limit_records_number
 #: model:ir.actions.act_window,name:access_limit_records_number.base_limit_act
 #: model:ir.ui.menu,name:access_limit_records_number.menu_base_limit_act
 msgid "Records Number Limits"
-msgstr ""
+msgstr "Limite de Número de Archivos"
 
 #. module: access_limit_records_number
 #: model:ir.model.fields,field_description:access_limit_records_number.field_base_limit_records_number_sequence
@@ -329,7 +331,7 @@ msgstr ""
 #. module: access_limit_records_number
 #: model:ir.model.fields,field_description:access_limit_records_number.field_base_limit_records_number_trg_date_id
 msgid "Trigger Date"
-msgstr ""
+msgstr "Fecha de Activación"
 
 #. module: access_limit_records_number
 #: model:ir.model.fields,help:access_limit_records_number.field_base_limit_records_number_state
@@ -348,7 +350,7 @@ msgstr ""
 #. module: access_limit_records_number
 #: model:ir.ui.view,arch_db:access_limit_records_number.base_limit_view_search
 msgid "Unlimited Table"
-msgstr ""
+msgstr "Tabla Ilimitada"
 
 #. module: access_limit_records_number
 #: model:ir.model.fields,field_description:access_limit_records_number.field_base_limit_records_number_usage
@@ -358,7 +360,7 @@ msgstr ""
 #. module: access_limit_records_number
 #: model:ir.model.fields,field_description:access_limit_records_number.field_base_limit_records_number_trg_date_calendar_id
 msgid "Use Calendar"
-msgstr ""
+msgstr "Usar Calendario"
 
 #. module: access_limit_records_number
 #: model:ir.model.fields,field_description:access_limit_records_number.field_base_limit_records_number_fields_lines
@@ -371,6 +373,8 @@ msgid ""
 "When calculating a day-based timed condition, it is possible to use a "
 "calendar to compute the date based on working days."
 msgstr ""
+"Al calcular una condición de tiempo basada en el día, es posible utilizar un"
+" calendario para calcular la fecha en función de los días laborables."
 
 #. module: access_limit_records_number
 #: model:ir.model.fields,help:access_limit_records_number.field_base_limit_records_number_sequence
@@ -378,6 +382,8 @@ msgid ""
 "When dealing with multiple actions, the execution order is based on the "
 "sequence. Low number means high priority."
 msgstr ""
+"Cuándo debe activarse la condición. Si está presente, será verificado por el"
+" programador. Si está vacío, se comprobará en la creación y actualización."
 
 #. module: access_limit_records_number
 #: model:ir.model.fields,help:access_limit_records_number.field_base_limit_records_number_trg_date_id
@@ -390,7 +396,7 @@ msgstr ""
 #. module: access_limit_records_number
 #: model:ir.model.fields,help:access_limit_records_number.field_base_limit_records_number_active
 msgid "When unchecked, the rule is hidden and will not be executed."
-msgstr ""
+msgstr "Cuando no está marcada, la regla está oculta y no se ejecutará."
 
 #. module: access_limit_records_number
 #: model:ir.model.fields,help:access_limit_records_number.field_base_limit_records_number_code
