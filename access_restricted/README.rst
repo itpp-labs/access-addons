@@ -11,6 +11,7 @@ Typical usage of the module.
 ----------------------------
 
 The superuser creates an administrator user without access group "Show Apps Menu" (see **access_apps** module). Then the administrator has access to settings, but not able to install new apps (without this module he can add himself to "Show Apps Menu" and get access to apps).
+
 For Odoo versions older than https://github.com/odoo/odoo/commit/5f12e244f6e57b8edb56788147774150e2ae134d check for access rules in the ``write`` method is duplicated with ORM methods, please update Odoo for higher performance
 
-Tested on Odoo 11.0 aefbd6da12748f078a197e5e3ae0c1cd68b2e6c5
+Tested on Odoo 12.0 0669eddc7e88303f3a97e9f4f834f64fd9a8158c

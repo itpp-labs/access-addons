@@ -1,6 +1,7 @@
 {
     'name': 'Show settings menu for non-admin',
-    'version': '11.0.1.0.2',
+    "summary": """Set up non-admin users rights so they can see the ``[[ Settings ]]`` menu""",
+    'version': '12.0.1.0.2',
     'author': 'IT-Projects LLC, Ivan Yelizariev',
     "category": "Access",
     "support": "apps@it-projects.info",

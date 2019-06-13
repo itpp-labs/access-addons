@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: ir_rule_protected
-#: model:ir.model.fields,help:ir_rule_protected.field_ir_rule_protected
+#: model:ir.model.fields,help:ir_rule_protected.field_ir_rule__protected
 msgid "Make rule editable only for superuser"
 msgstr "Hacer que la regla sea editable sólo para Superusuario"
 
@@ -37,9 +37,14 @@ msgid "Only admin can uninstall the module"
 msgstr "Sólo admin puede desinstalar el módulo"
 
 #. module: ir_rule_protected
-#: model:ir.model.fields,field_description:ir_rule_protected.field_ir_rule_protected
+#: model:ir.model.fields,field_description:ir_rule_protected.field_ir_rule__protected
 msgid "Protected"
 msgstr "Protegido"
+
+#. module: ir_rule_protected
+#: model:ir.model,name:ir_rule_protected.model_ir_rule
+msgid "Record Rule"
+msgstr ""
 
 #. module: ir_rule_protected
 #: code:addons/ir_rule_protected/models.py:18
@@ -47,7 +52,5 @@ msgstr "Protegido"
 msgid "The Rule is protected. You don't have access for this operation"
 msgstr "La regla está protegida. No tiene acceso para esta operación"
 
-#. module: ir_rule_protected
-#: model:ir.model,name:ir_rule_protected.model_ir_rule
-msgid "ir.rule"
-msgstr "ir.rule"
+#~ msgid "ir.rule"
+#~ msgstr "ir.rule"

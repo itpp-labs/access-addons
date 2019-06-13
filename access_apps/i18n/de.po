@@ -21,12 +21,14 @@ msgstr ""
 
 #. module: access_apps
 #: model:res.groups,name:access_apps.group_allow_apps
-msgid "Allow install apps"
+#, fuzzy
+msgid "Allow installing apps"
 msgstr "Erlaube Apps zu installieren"
 
 #. module: access_apps
 #: model:res.groups,name:access_apps.group_allow_apps_only_from_settings
-msgid "Allow install apps only from settings"
+#, fuzzy
+msgid "Allow installing apps only from settings"
 msgstr "Erlaube Apps nur vom Einstellungen zu installieren"
 
 #. module: access_apps
@@ -36,5 +38,5 @@ msgstr "Apps Zugriff"
 
 #. module: access_apps
 #: model:ir.model,name:access_apps.model_res_config_settings
-msgid "res.config.settings"
+msgid "Config Settings"
 msgstr ""

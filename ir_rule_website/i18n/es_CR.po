@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: ir_rule_website
-#: model:ir.model.fields,field_description:ir_rule_website.field_ir_rule_backend_behaviour
+#: model:ir.model.fields,field_description:ir_rule_website.field_ir_rule__backend_behaviour
 msgid "Backend behaviour"
 msgstr ""
 
@@ -36,12 +36,17 @@ msgid "Grant access"
 msgstr ""
 
 #. module: ir_rule_website
-#: model:ir.ui.view,arch_db:ir_rule_website.view_rule_form_inherit_ir_rule_website
+#: model_terms:ir.ui.view,arch_db:ir_rule_website.view_rule_form_inherit_ir_rule_website
 msgid "Multi-website extension"
 msgstr ""
 
 #. module: ir_rule_website
-#: model:ir.model.fields,help:ir_rule_website.field_ir_rule_backend_behaviour
+#: model:ir.model,name:ir_rule_website.model_ir_rule
+msgid "Record Rule"
+msgstr ""
+
+#. module: ir_rule_website
+#: model:ir.model.fields,help:ir_rule_website.field_ir_rule__backend_behaviour
 msgid ""
 "This is bypass for main rule definition.\n"
 "        When working from backend there is usually no 'website_id' value in "
@@ -50,7 +55,5 @@ msgid ""
 "always desirable"
 msgstr ""
 
-#. module: ir_rule_website
-#: model:ir.model,name:ir_rule_website.model_ir_rule
-msgid "ir.rule"
-msgstr "ir.rule"
+#~ msgid "ir.rule"
+#~ msgstr "ir.rule"

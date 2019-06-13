@@ -1,7 +1,7 @@
 from odoo import SUPERUSER_ID
 from odoo import api, _
 from odoo import models
-from odoo.addons.base.res.res_users import is_reified_group
+from odoo.addons.base.models.res_users import is_reified_group
 from odoo.exceptions import AccessError
 
 IR_CONFIG_NAME = 'access_restricted.fields_view_get_uid'

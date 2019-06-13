@@ -5,10 +5,10 @@
 
 Allows to configure administrators which don't have access to Apps.
 
-Adds **Apps access** selection in user's access rights tab. Two options are available: 
+Adds **Apps access** selection in user's access rights tab. Two options are available:
 
-* *Allow install apps*
-* *Allow install apps only from settings*
+* *Allow installing apps*
+* *Allow installing apps only from settings*
 
 Credits
 =======
@@ -33,4 +33,4 @@ Usage instructions: `<doc/index.rst>`_
 
 Changelog: `<doc/changelog.rst>`_
 
-Tested on 10.0 5f0b7942d551f441aa41e75ee06f2dd163a9c6f6
+Tested on 12.0 b34b7d4270eda98ee8e87516c044161232b335ae
