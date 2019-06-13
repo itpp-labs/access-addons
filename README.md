@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/it-projects-llc/access-addons.svg?branch=10.0)](https://travis-ci.com/it-projects-llc/access-addons)
+[![Build Status](https://travis-ci.com/it-projects-llc/access-addons.svg?branch=11.0)](https://travis-ci.com/it-projects-llc/access-addons)
 
 access-addons
 ===============
