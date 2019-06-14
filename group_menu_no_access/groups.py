@@ -17,7 +17,7 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from openerp import models, fields, api, SUPERUSER_ID
+from odoo import models, fields, api, SUPERUSER_ID
 
 
 class ResGroups(models.Model):
