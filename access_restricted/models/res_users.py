@@ -93,8 +93,8 @@ class ResGroups(models.Model):
             # R1 <= R2  True if all records of R1 are also in R2
             if not implied_group_ids <= groups_before:
                 raise AccessError(_(
-                    'The requested operation cannot be completed due to security restrictions. '
-                    'Please contact your system administrator.\n\n(Document type: %s, '
-                    'Operation: %s)') % (self._description, 'write'))
+                    "You cannot add groups to Implied groups, because you are not allowed to increase your rights. "
+                    "Please contact your system administrator."
+                ))
 
         return result

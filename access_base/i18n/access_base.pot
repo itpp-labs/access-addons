@@ -1,55 +1,48 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * access_base
+#	* access_base
 #
-# Translators:
-# Randall Castro <randall_castro@me.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-26 19:17+0000\n"
-"PO-Revision-Date: 2018-04-26 19:17+0000\n"
-"Last-Translator: Randall Castro <randall_castro@me.com>, 2018\n"
-"Language-Team: Spanish (Costa Rica) (https://www.transifex.com/it-projects-"
-"llc/teams/76080/es_CR/)\n"
-"Language: es_CR\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: \n"
 
 #. module: access_base
 #: model:ir.model,name:access_base.model_res_groups
 msgid "Access Groups"
-msgstr "Grupos Acceso"
+msgstr ""
 
 #. module: access_base
 #: code:addons/access_base/models.py:29
 #, python-format
 msgid "Application"
-msgstr "Aplicación"
+msgstr ""
 
 #. module: access_base
 #: model:ir.model.fields,field_description:access_base.field_res_groups_is_custom_group
 msgid "Custom Group"
-msgstr "Grupo Personalizado"
+msgstr ""
 
 #. module: access_base
 #: code:addons/access_base/models.py:32
 #, python-format
 msgid "Custom User Groups"
-msgstr "Grupo Personalizado Usuario"
+msgstr ""
 
 #. module: access_base
 #: code:addons/access_base/models.py:53
 #, python-format
 msgid "Other"
-msgstr "Otro"
+msgstr ""
 
 #. module: access_base
 #: model:ir.model.fields,help:access_base.field_res_groups_is_custom_group
 msgid "show group at the top of Access Rights tab in user form"
 msgstr ""
-"mostrar grupo al inicio de la pestaña Permisos de Acceso en el formulario de "
-"usuario"
+

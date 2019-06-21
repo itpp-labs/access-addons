@@ -5,4 +5,4 @@ The module allows protect ir.rule from modifying and deleting. Once a rule is ma
 
 Also, the module protect itself from uninstalling by non-superuser.
 
-Tested on 12.0 b34b7d4270eda98ee8e87516c044161232b335ae
+Tested on Odoo 12.0 b34b7d4270eda98ee8e87516c044161232b335ae

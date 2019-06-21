@@ -1,40 +1,31 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * access_menu_extra_groups
+#	* access_menu_extra_groups
 #
-# Translators:
-# Randall <randall_castro@me.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-26 19:17+0000\n"
-"PO-Revision-Date: 2018-04-26 19:17+0000\n"
-"Last-Translator: Randall <randall_castro@me.com>, 2018\n"
-"Language-Team: Spanish (Costa Rica) (https://www.transifex.com/it-projects-"
-"llc/teams/76080/es_CR/)\n"
-"Language: es_CR\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: \n"
 
 #. module: access_menu_extra_groups
 #: model:ir.model.fields,field_description:access_menu_extra_groups.field_ir_ui_menu_extra_groups_id
 #: model:ir.ui.view,arch_db:access_menu_extra_groups.edit_menu_access_extra_group
 msgid "Extra Groups"
-msgstr "Grupos Extra"
+msgstr ""
 
 #. module: access_menu_extra_groups
 #: model:ir.model.fields,help:access_menu_extra_groups.field_ir_ui_menu_extra_groups_id
-msgid ""
-"Menu is visible only for users who are in the groups specified in the fields:"
-"\"groups_id\" and \"extra_groups_id\"."
+msgid "Menu is visible only for users who are in the groups specified in the fields:\"groups_id\" and \"extra_groups_id\"."
 msgstr ""
-"El menú sólo es visible para los usuarios que se encuentran en los grupos "
-"especificados en los campos: \"groups_id \" y \"extra_groups_id \"."
 
 #. module: access_menu_extra_groups
 #: model:ir.model,name:access_menu_extra_groups.model_ir_ui_menu
 msgid "ir.ui.menu"
-msgstr "ir.ui.menu"
+msgstr ""
+

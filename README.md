@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/it-projects-llc/access-addons.svg?branch=12.0)](https://travis-ci.com/it-projects-llc/access-addons)
+
 access-addons
 ===============
 
