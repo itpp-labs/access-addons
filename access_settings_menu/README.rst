@@ -1,5 +1,5 @@
 Show settings menu for non-admin
-================================
+===============================
 
 Adds "Show Settings Menu" tick in user's access rights tab.
 
