@@ -1,6 +1,6 @@
-Restrict access to "Install Apps" in Website
+Restrict access to "Add Features" in Website
 =============================================
 
-Shows "Install Apps" item in the "Customize" menu in Website only for users with "Show Apps Menu" access.
+Shows "Add Features" item in the "Customize" menu in Website only for users with "Show Apps Menu" access.
 
-Tested on 10.0 5f0b7942d551f441aa41e75ee06f2dd163a9c6f6
+Tested on 12.0 e81ef3a6039212dd8b5b39b6461920101a99bce5
