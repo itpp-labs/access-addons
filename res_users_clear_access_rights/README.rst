@@ -1,6 +1,6 @@
-============================
- Clear access rights button
-============================
+==========================
+ Clear User Access rights
+==========================
 
 There is an inheritance in access right groups. Some time you try untick something,
 but after clicking "Save" button you get tick back.
