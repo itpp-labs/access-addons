@@ -26,6 +26,7 @@
     'author': 'Cesar Lage',
     'depends': ['base'],
     "license": "AGPL-3",
+    "images": ['images/noaccess3_1.jpg'],
     'data': [
         'views/groups.xml'
     ],

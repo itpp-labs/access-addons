@@ -7,6 +7,7 @@
     "support": "apps@it-projects.info",
     'website': 'https://it-projects.info',
     "category": "Access",
+    "images": ['images/clear_user_access_rights.jpg'],
     'depends': ['base'],
     "external_dependencies": {"python": [], "bin": []},
     'data': [
