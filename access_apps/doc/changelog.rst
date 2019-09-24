@@ -1,3 +1,5 @@
+- **Fix:** some fix
+
 `1.3.3`
 -------
 - **Fix:** Grant `Allow installing apps` to Admin and System users (it was only System)
