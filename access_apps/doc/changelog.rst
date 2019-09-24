@@ -1,3 +1,7 @@
+`2.0.0`
+-------
+
+- **Improvement:** full refactoring
 - **New:** new features is added
 - **Fix:** some fix
 
