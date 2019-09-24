@@ -1,3 +1,7 @@
+`1.4.0`
+-------
+- **New:** maybe it's a conflict?
+
 `1.3.3`
 -------
 - **Fix:** Grant `Allow installing apps` to Admin and System users (it was only System)
