@@ -9,6 +9,7 @@ Adds **Apps access** selection in user's access rights tab. Two options are avai
 
 * *Allow installing apps*
 * *Allow installing apps only from settings*
+* new feature
 
 Credits
 =======
