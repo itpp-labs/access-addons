@@ -2,6 +2,8 @@
  Control access to Apps
 ========================
 
+Hmm, maybe it's a conflict?
+
 Installation
 ============
 
