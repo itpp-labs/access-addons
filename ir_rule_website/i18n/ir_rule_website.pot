@@ -44,3 +44,4 @@ msgstr ""
 #: model:ir.model,name:ir_rule_website.model_ir_rule
 msgid "ir.rule"
 msgstr ""
+
