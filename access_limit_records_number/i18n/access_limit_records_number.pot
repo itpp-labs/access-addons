@@ -14,11 +14,6 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: access_limit_records_number
-#: model:ir.model.fields,help:access_limit_records_number.field_base_limit_records_number__website_published
-msgid "A code server action can be executed from the website, using a dedicated controller. The address is <base>/website/action/<website_path>. Set this field as True to allow users to run this action. If it is set to False the action cannot be run through the website."
-msgstr ""
-
-#. module: access_limit_records_number
 #: model:ir.model.fields,field_description:access_limit_records_number.field_base_limit_records_number__help
 msgid "Action Description"
 msgstr ""
@@ -66,11 +61,6 @@ msgstr ""
 #. module: access_limit_records_number
 #: model:ir.model.fields,field_description:access_limit_records_number.field_base_limit_records_number__filter_domain
 msgid "Apply on"
-msgstr ""
-
-#. module: access_limit_records_number
-#: model:ir.model.fields,field_description:access_limit_records_number.field_base_limit_records_number__website_published
-msgid "Available on the Website"
 msgstr ""
 
 #. module: access_limit_records_number
@@ -182,11 +172,6 @@ msgstr ""
 #: model:ir.model.fields,field_description:access_limit_records_number.field_base_limit_records_number__id
 #: model:ir.model.fields,field_description:access_limit_records_number.field_base_limit_records_number_test__id
 msgid "ID"
-msgstr ""
-
-#. module: access_limit_records_number
-#: model:ir.model.fields,help:access_limit_records_number.field_base_limit_records_number__xml_id
-msgid "ID of the action if defined in a XML file"
 msgstr ""
 
 #. module: access_limit_records_number
@@ -357,11 +342,6 @@ msgid "Test model to test access"
 msgstr ""
 
 #. module: access_limit_records_number
-#: model:ir.model.fields,help:access_limit_records_number.field_base_limit_records_number__website_url
-msgid "The full URL to access the server action through the website."
-msgstr ""
-
-#. module: access_limit_records_number
 #: model:ir.model.fields,field_description:access_limit_records_number.field_base_limit_records_number__trigger
 msgid "Trigger Condition"
 msgstr ""
@@ -411,16 +391,6 @@ msgstr ""
 #. module: access_limit_records_number
 #: model:ir.model.fields,field_description:access_limit_records_number.field_base_limit_records_number__fields_lines
 msgid "Value Mapping"
-msgstr ""
-
-#. module: access_limit_records_number
-#: model:ir.model.fields,field_description:access_limit_records_number.field_base_limit_records_number__website_path
-msgid "Website Path"
-msgstr ""
-
-#. module: access_limit_records_number
-#: model:ir.model.fields,field_description:access_limit_records_number.field_base_limit_records_number__website_url
-msgid "Website Url"
 msgstr ""
 
 #. module: access_limit_records_number
