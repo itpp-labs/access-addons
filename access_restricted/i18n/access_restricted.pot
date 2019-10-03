@@ -22,23 +22,8 @@ msgid "\n"
 msgstr ""
 
 #. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__module_website_version
-msgid "A/B Testing"
-msgstr ""
-
-#. module: access_restricted
 #: model:ir.model,name:access_restricted.model_res_groups
 msgid "Access Groups"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__unsplash_access_key
-msgid "Access Key"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__alias_domain
-msgid "Alias Domain"
 msgstr ""
 
 #. module: access_restricted
@@ -47,78 +32,8 @@ msgid "Allow add implied groups from settings"
 msgstr ""
 
 #. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__module_google_calendar
-msgid "Allow the users to synchronize their calendar  with Google Calendar"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__module_base_import
-msgid "Allow users to import data from CSV/XLS/XLSX/ODS files"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,help:access_restricted.field_test_config_settings__group_multi_currency
-msgid "Allows to work in a multi currency environment"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,help:access_restricted.field_test_config_settings__specific_user_account
-msgid "Are newly created user accounts website specific"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__module_voip
-msgid "Asterisk (VoIP)"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__module_google_drive
-msgid "Attach Google documents to any record"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__module_partner_autocomplete
-msgid "Auto-populate company data"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__cdn_url
-msgid "CDN Base URL"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__cdn_filters
-msgid "CDN Filters"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__module_pad
-msgid "Collaborative Pads"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__company_id
-msgid "Company"
-msgstr ""
-
-#. module: access_restricted
 #: model:ir.model,name:access_restricted.model_res_config_settings
 msgid "Config Settings"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__has_social_network
-msgid "Configure Social Network"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__cdn_activated
-msgid "Content Delivery Network (CDN)"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__website_country_group_ids
-msgid "Country Groups"
 msgstr ""
 
 #. module: access_restricted
@@ -132,123 +47,8 @@ msgid "Created on"
 msgstr ""
 
 #. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__report_footer
-msgid "Custom Report Footer"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__auth_signup_uninvited
-msgid "Customer Account"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__user_default_rights
-msgid "Default Access Rights"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__social_default_image
-msgid "Default Social Share Image"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__website_default_lang_id
-msgid "Default language"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__website_default_lang_code
-msgid "Default language code"
-msgstr ""
-
-#. module: access_restricted
 #: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__display_name
 msgid "Display Name"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__external_report_layout_id
-msgid "Document Template"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__auth_signup_reset_password
-msgid "Enable password reset from Login page"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__external_email_server_default
-msgid "External Email Servers"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__social_facebook
-msgid "Facebook Account"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__fail_counter
-msgid "Fail Mail"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__favicon
-msgid "Favicon"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,help:access_restricted.field_test_config_settings__report_footer
-msgid "Footer text displayed at the bottom of all reports."
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__social_github
-msgid "GitHub Account"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__has_google_analytics
-msgid "Google Analytics"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__has_google_analytics_dashboard
-msgid "Google Analytics Dashboard"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__google_analytics_key
-msgid "Google Analytics Key"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__google_management_client_id
-msgid "Google Client ID"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__google_management_client_secret
-msgid "Google Client Secret"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__has_google_maps
-msgid "Google Maps"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__google_maps_api_key
-msgid "Google Maps API Key"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__module_google_spreadsheet
-msgid "Google Spreadsheet"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__social_googleplus
-msgid "Google+ Account"
 msgstr ""
 
 #. module: access_restricted
@@ -259,36 +59,6 @@ msgstr ""
 #. module: access_restricted
 #: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__id
 msgid "ID"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,help:access_restricted.field_test_config_settings__social_default_image
-msgid "If set, replaces the company logo as the default social share image."
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,help:access_restricted.field_test_config_settings__alias_domain
-msgid "If you have setup a catch-all email domain redirected to the Odoo server, enter the domain name here."
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__social_instagram
-msgid "Instagram Account"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__partner_autocomplete_insufficient_credit
-msgid "Insufficient credit"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__module_auth_ldap
-msgid "LDAP Authentication"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__language_ids
-msgid "Languages"
 msgstr ""
 
 #. module: access_restricted
@@ -307,145 +77,8 @@ msgid "Last Updated on"
 msgstr ""
 
 #. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__module_website_links
-msgid "Link Trackers"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__social_linkedin
-msgid "LinkedIn Account"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__module_inter_company_rules
-msgid "Manage Inter Company"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__group_multi_company
-msgid "Manage multiple companies"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__group_multi_website
-msgid "Multi Website for Backend"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__group_multi_currency
-msgid "Multi-Currencies"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__language_count
-msgid "Number of languages"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__paperformat_id
-msgid "Paper format"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__snailmail_duplex
-msgid "Print Both sides"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__snailmail_color
-msgid "Print In Color"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__company_share_partner
-msgid "Share partners to all companies"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,help:access_restricted.field_test_config_settings__company_share_partner
-msgid "Share your partners to all companies defined in your instance.\n"
-" * Checked : Partners are visible for every companies, even if a company is defined on the partner.\n"
-" * Unchecked : Each company can see only its partner (partners where company is defined). Partners not related to a company are visible for all companies."
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__show_effect
-msgid "Show Effect"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,help:access_restricted.field_test_config_settings__group_multi_website
-msgid "Show Website Switcher in backend"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__specific_user_account
-msgid "Specific User Account"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__auth_signup_template_user_id
-msgid "Template user for new users created through signup"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,help:access_restricted.field_test_config_settings__favicon
-msgid "This field holds the image used to display a favicon on the website."
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,help:access_restricted.field_test_config_settings__website_default_lang_code
-msgid "This field is used to set/get locales for user"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__module_base_gengo
-msgid "Translate Your Website with Gengo"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__social_twitter
-msgid "Twitter Account"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,help:access_restricted.field_test_config_settings__cdn_filters
-msgid "URL matching those filters will be rewritten using the CDN Base URL"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__module_web_unsplash
-msgid "Unsplash Image Library"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__module_auth_oauth
-msgid "Use external authentication providers (OAuth)"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,help:access_restricted.field_test_config_settings__website_country_group_ids
-msgid "Used when multiple websites have the same domain."
-msgstr ""
-
-#. module: access_restricted
 #: model:ir.model,name:access_restricted.model_res_users
 msgid "Users"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__website_company_id
-msgid "Website Company"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__website_domain
-msgid "Website Domain"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__website_name
-msgid "Website Name"
 msgstr ""
 
 #. module: access_restricted
@@ -455,17 +88,7 @@ msgid "You cannot add groups to Implied groups, because you are not allowed to i
 msgstr ""
 
 #. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__social_youtube
-msgid "Youtube Account"
-msgstr ""
-
-#. module: access_restricted
 #: model:ir.model,name:access_restricted.model_test_config_settings
 msgid "test.config.settings"
-msgstr ""
-
-#. module: access_restricted
-#: model:ir.model.fields,field_description:access_restricted.field_test_config_settings__website_id
-msgid "website"
 msgstr ""
 
