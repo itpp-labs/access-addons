@@ -77,6 +77,12 @@ msgid "Users"
 msgstr ""
 
 #. module: access_restricted
+#: code:addons/access_restricted/models/res_users.py:95
+#, python-format
+msgid "You cannot add groups to Implied groups, because you are not allowed to increase your rights. Please contact your system administrator."
+msgstr ""
+
+#. module: access_restricted
 #: model:ir.model,name:access_restricted.model_res_config_settings
 msgid "res.config.settings"
 msgstr ""
