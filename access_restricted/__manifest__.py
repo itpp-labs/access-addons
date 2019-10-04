@@ -12,5 +12,5 @@
     'data': [
         'security/access_restricted_security.xml',
     ],
-    'installable': True
+    'installable': False
 }

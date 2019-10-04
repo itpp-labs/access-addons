@@ -19,10 +19,10 @@ Known issues
 
 * This module redefines ``ir.rule`` ``_compute_domain`` base method and may be not compatible with others that redefine the method too.
 
-Odoo 12.0+
+Odoo 13.0+
 ==========
 
-We hope this feature will be built-in since Odoo 12.0 at least: https://github.com/odoo/odoo/pull/22743
+We hope this feature will be built-in since Odoo 13.0 at least: https://github.com/odoo/odoo/pull/22743
 
 Credits
 =======
@@ -40,7 +40,7 @@ Maintainers
 -----------
 * `IT-Projects LLC <https://it-projects.info>`__
 
-      To get a guaranteed support you are kindly requested to purchase the module at `odoo apps store <https://apps.odoo.com/apps/modules/12.0/ir_rule_website/>`__.
+      To get a guaranteed support you are kindly requested to purchase the module at `odoo apps store <https://apps.odoo.com/apps/modules/13.0/ir_rule_website/>`__.
 
       Thank you for understanding!
 
@@ -49,9 +49,9 @@ Maintainers
 Further information
 ===================
 
-Demo: http://runbot.it-projects.info/demo/access-addons/12.0
+Demo: http://runbot.it-projects.info/demo/access-addons/13.0
 
-HTML Description: https://apps.odoo.com/apps/modules/12.0/ir_rule_website
+HTML Description: https://apps.odoo.com/apps/modules/13.0/ir_rule_website
 
 Usage instructions: `<doc/index.rst>`_
 

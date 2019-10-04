@@ -5,7 +5,7 @@
 Installation
 ============
 
-Follow insturction of the module `Quick Auth (Master) <https://apps.odoo.com/apps/modules/12.0/auth_quick_master/>`__
+Follow insturction of the module `Quick Auth (Master) <https://apps.odoo.com/apps/modules/13.0/auth_quick_master/>`__
 
 Configuration
 =============
@@ -20,4 +20,4 @@ Configuration
 Usage
 =====
 
-Follow instruction of the module `Quick Auth (Master) <https://apps.odoo.com/apps/modules/12.0/auth_quick_master/>`__
+Follow instruction of the module `Quick Auth (Master) <https://apps.odoo.com/apps/modules/13.0/auth_quick_master/>`__

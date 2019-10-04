@@ -18,5 +18,5 @@
     'demo': [
         'security/access_settings_menu_security_demo.xml',
     ],
-    'installable': True
+    'installable': False
 }
