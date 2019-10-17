@@ -48,7 +48,6 @@ class ResConfigSettings(models.TransientModel):
                 _('\n\nYou don\'t have access to change this settings, because you administration rights are restricted'))
         return fields
 
-    @api.multi
     def execute(self):
         res = super(ResConfigSettings, self.with_context({'config': self})).execute()
         return res

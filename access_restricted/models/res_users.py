@@ -19,7 +19,6 @@ class ResUsers(models.Model):
 
         return super(ResUsers, self).fields_view_get(view_id=view_id, view_type=view_type, **kwargs)
 
-    @api.multi
     def write(self, vals):
         for key in vals:
             if is_reified_group(key):
@@ -50,7 +49,6 @@ class ResGroups(models.Model):
             domain = domain + ['|', ('users', 'in', [real_uid]), ('id', '=', group_no_one_id)]
         return self.sudo().search(domain)
 
-    @api.multi
     def write(self, vals):
         config = self.env.context.get('config')
 

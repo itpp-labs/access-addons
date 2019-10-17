@@ -10,7 +10,6 @@ class IrUiMenuExtra(models.Model):
              '"groups_id" and "extra_groups_id".'
     )
 
-    @api.multi
     @api.returns('self')
     def _filter_visible_menus(self):
         menus = super(IrUiMenuExtra, self)._filter_visible_menus()

@@ -4,7 +4,6 @@ from odoo import models, api
 class ResUsers(models.Model):
     _inherit = 'res.users'
 
-    @api.multi
     def action_clear_access_rights(self):
         self.ensure_one()
         admin_groups = [
