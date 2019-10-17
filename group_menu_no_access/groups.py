@@ -33,7 +33,6 @@ class IrUiMenu(models.Model):
     no_groups = fields.Many2many('res.groups', 'ir_ui_menu_no_group_rel',
                                  'menu_id', 'group_id', 'No Groups')
 
-    @api.multi
     @api.returns('self')
     def _filter_visible_menus(self):
         menus = super(IrUiMenu, self)._filter_visible_menus()
