@@ -8,6 +8,10 @@ As usual user doesn't see admin user it could lead to ignoring Admin user\partne
 
 Unittests could raise errors, because they assume that admin user is available for other users.
 
+Maintainers
+------------
+This module is not maintainable since Odoo 11.0, because lack of interests from customers.
+
 Known issues
 ------------
 
