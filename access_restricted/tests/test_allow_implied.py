@@ -1,4 +1,4 @@
-from openerp.tests.common import TransactionCase, tagged
+from odoo.tests.common import TransactionCase, tagged
 from odoo.exceptions import AccessError
 
 
@@ -13,12 +13,12 @@ class TestAllowImplied(TransactionCase):
 
         demo_user.write({'groups_id': [(3, group_private_addresses.id)]})
         group_private_addresses.write({'users': [(3, demo_user.id)]})
-        self.assertFalse(self.env['res.users'].sudo(demo_user.id).has_group('base.group_private_addresses'))
+        self.assertFalse(self.env['res.users'].with_user(demo_user.id).has_group('base.group_private_addresses'))
 
         demo_user.write({'groups_id': [(4, group_system.id)]})
 
-        test_config_settings = self.env['test.config.settings'].sudo(demo_user.id).create({'group_private_addresses': True})
-        self.assertFalse(self.env['res.users'].sudo(demo_user.id).has_group('base.group_private_addresses'))
+        test_config_settings = self.env['test.config.settings'].with_user(demo_user.id).create({'group_private_addresses': True})
+        self.assertFalse(self.env['res.users'].with_user(demo_user.id).has_group('base.group_private_addresses'))
 
         # check that the field is readonly
         self.assertTrue(test_config_settings.fields_get()['group_private_addresses']['readonly'])
@@ -33,9 +33,9 @@ class TestAllowImplied(TransactionCase):
         # check that now the group is in classified
         self.assertTrue(test_config_settings._get_classified_fields()['group'])
 
-        self.assertFalse(self.env['res.users'].sudo(demo_user.id).has_group('base.group_private_addresses'))
-        test_config_settings.sudo(demo_user.id).execute()
-        self.assertTrue(self.env['res.users'].sudo(demo_user.id).has_group('base.group_private_addresses'))
+        self.assertFalse(self.env['res.users'].with_user(demo_user.id).has_group('base.group_private_addresses'))
+        test_config_settings.with_user(demo_user.id).execute()
+        self.assertTrue(self.env['res.users'].with_user(demo_user.id).has_group('base.group_private_addresses'))
 
     def test_assert_raises(self):
 
@@ -45,11 +45,11 @@ class TestAllowImplied(TransactionCase):
 
         demo_user.write({'groups_id': [(3, group_private_addresses.id)]})
         group_private_addresses.write({'users': [(3, demo_user.id)]})
-        self.assertFalse(self.env['res.users'].sudo(demo_user.id).has_group('base.group_private_addresses'))
+        self.assertFalse(self.env['res.users'].with_user(demo_user.id).has_group('base.group_private_addresses'))
 
         demo_user.write({'groups_id': [(4, group_system.id)]})
-        self.assertFalse(self.env['res.users'].sudo(demo_user.id).has_group('base.group_private_addresses'))
+        self.assertFalse(self.env['res.users'].with_user(demo_user.id).has_group('base.group_private_addresses'))
 
         # check that there is no access to put test group into implied_ids anyways
         with self.assertRaises(AccessError):
-            group_system.sudo(demo_user.id).write({'implied_ids': [(4, group_private_addresses.id)]})
+            group_system.with_user(demo_user.id).write({'implied_ids': [(4, group_private_addresses.id)]})
