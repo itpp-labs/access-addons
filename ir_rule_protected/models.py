@@ -1,5 +1,5 @@
-from openerp import models, api, fields, exceptions, SUPERUSER_ID
-from openerp.tools.translate import _
+from odoo import models, fields, exceptions, SUPERUSER_ID
+from odoo.tools.translate import _
 
 MODULE_NAME = 'ir_rule_protected'
 
