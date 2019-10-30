@@ -8,6 +8,11 @@
 
 Client part for ``auth_quick_master`` module.
 
+Roadmap
+=======
+
+* TODO: split the master_url variable into master_url.direct and master_url.global
+
 Credits
 =======
 
