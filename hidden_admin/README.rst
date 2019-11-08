@@ -10,7 +10,7 @@ Unittests could raise errors, because they assume that admin user is available f
 
 Maintainers
 ------------
-This module is not maintainable since Odoo 11.0.
+This module is not maintained since Odoo 11.0.
 
 Known issues
 ------------
