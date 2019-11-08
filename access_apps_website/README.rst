@@ -3,7 +3,7 @@ Restrict access to "Add Features" in Website
 
 Maintainers
 -----------
-* This module is not maintainable since Odoo 13.0.
+* This module is not maintained since Odoo 13.0.
 
 Shows "Add Features" item in the "Customize" menu in Website only for users with "Show Apps Menu" access.
 
