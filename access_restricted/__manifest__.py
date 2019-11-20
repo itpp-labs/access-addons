@@ -6,6 +6,7 @@
     "category": "Access",
     "support": "apps@it-projects.info",
     'website': 'https://twitter.com/yelizariev',
+    'images': ['images/access_restricted.jpg'],
     "license": "LGPL-3",
     'price': 30.00,
     'currency': 'EUR',
