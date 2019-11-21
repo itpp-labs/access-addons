@@ -1,9 +1,9 @@
 {
-    "name": """Multi-website support in Security Rules""",
+    "name": """Multiwebsite in Sec.Rules""",
     "summary": """Provide access depending on current website""",
     "category": "Access",
     # "live_test_url": "",
-    "images": [],
+    "images": ['images/ir_rule_website.jpg'],
     "version": "12.0.1.3.2",
     "application": False,
 
