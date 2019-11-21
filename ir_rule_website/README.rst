@@ -1,6 +1,6 @@
-=========================================
- Multi-website support in Security Rules
-=========================================
+===========================
+ Multiwebsite in Sec.Rules
+===========================
 
 Allows to use ``website_id`` (current website) in ``domain_force`` field of Record Rules (``ir.rule``), e.g.:
 
