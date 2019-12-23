@@ -7,7 +7,7 @@
     "category": "Access",
     # "live_test_url": "",
     "images": [],
-    "version": "12.0.1.3.3",
+    "version": "13.0.1.3.3",
     "application": False,
     "author": "IT-Projects LLC, Ivan Yelizariev",
     "support": "apps@it-projects.info",
@@ -15,10 +15,9 @@
     "license": "LGPL-3",
     "price": 10.00,
     "currency": "EUR",
-    "depends": ["web_settings_dashboard", "access_restricted"],
+    "depends": ["access_restricted"],
     "external_dependencies": {"python": [], "bin": []},
     "data": [
-        "views/access_apps.xml",
         "security/access_apps_security.xml",
         "security/ir.model.access.csv",
     ],
@@ -29,5 +28,5 @@
     "post_init_hook": None,
     "uninstall_hook": None,
     "auto_install": False,
-    "installable": False,
+    "installable": True,
 }
