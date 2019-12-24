@@ -1,4 +1,4 @@
-from openerp.tests.common import TransactionCase, tagged
+from odoo.tests.common import TransactionCase, tagged
 from odoo.addons.base.models.res_users import name_selection_groups
 
 
@@ -15,14 +15,14 @@ class TestFieldsGet(TransactionCase):
         demo_user.write({'groups_id': [(4, group_erp_manager.id)]})
 
         view_users_form = self.env.ref('base.view_users_form')
-        res = self.env['res.users'].sudo(demo_user).with_context({'uid': demo_user.id}).load_views([[view_users_form.id, "form"]])
+        res = self.env['res.users'].with_user(demo_user).with_context({'uid': demo_user.id}).load_views([[view_users_form.id, "form"]])
 
         sel_groups = name_selection_groups([group_erp_manager.id])
-        res = self.env['res.users'].sudo(demo_user).fields_get()
+        res = self.env['res.users'].with_user(demo_user).fields_get()
         self.assertTrue(res.get(sel_groups))
 
         demo_user.write({'groups_id': [(4, group_system.id)]})
 
         sel_groups = name_selection_groups([group_erp_manager.id, group_system.id])
-        res = self.env['res.users'].sudo(demo_user).fields_get()
+        res = self.env['res.users'].with_user(demo_user).fields_get()
         self.assertTrue(res.get(sel_groups))

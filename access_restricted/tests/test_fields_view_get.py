@@ -1,4 +1,4 @@
-from openerp.tests.common import TransactionCase, tagged
+from odoo.tests.common import TransactionCase, tagged
 
 IR_CONFIG_NAME = 'access_restricted.fields_view_get_uid'
 
@@ -21,7 +21,7 @@ class TestFieldsViewGet(TransactionCase):
     def _view_form(self, user, view_xmlid):
         view_id = self.env.ref(view_xmlid).id
         # context = {'lang': "en_US", 'tz': "Europe/Brussels", 'uid': user.id}
-        self.env['res.users'].sudo(user.id).fields_view_get(view_id=view_id)
+        self.env['res.users'].with_user(user.id).fields_view_get(view_id=view_id)
 
     def view_preference_form(self, user):
         self._view_form(user, 'base.view_users_form_simple_modif')

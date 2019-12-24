@@ -66,7 +66,7 @@ class ResGroups(models.Model):
             add_implied_group_operation = implied_group in [group[2].id for group in classified_group]
             curr_user_allowed = self.env.user._is_superuser() or self.env['res.users'].has_group('access_restricted.group_allow_add_implied_from_settings')
             if users_exclude_operation or add_implied_group_operation and curr_user_allowed:
-                self = self.sudo()
+                self = self.with_user(SUPERUSER_ID)
             else:
                 # do nothing with groups if there is no permission to add from settings
                 return
