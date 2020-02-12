@@ -1,17 +1,17 @@
 # -*- coding: utf-8 -*-
-from openerp import models, api
+from odoo import api, models
 
 
 class ResUsers(models.Model):
-    _inherit = 'res.users'
+    _inherit = "res.users"
 
     @api.multi
     def action_clear_access_rights(self):
         self.ensure_one()
         admin_groups = [
-            self.env.ref('base.group_user').id,
-            self.env.ref('base.group_erp_manager').id,
-            self.env.ref('base.group_system').id,
+            self.env.ref("base.group_user").id,
+            self.env.ref("base.group_erp_manager").id,
+            self.env.ref("base.group_system").id,
         ]
 
         groups_id = []
@@ -20,5 +20,5 @@ class ResUsers(models.Model):
                 # don't allow for Administrator to clear his admin rights
                 continue
             groups_id.append((3, g.id))
-        self.write({'groups_id': groups_id})
+        self.write({"groups_id": groups_id})
         return True
