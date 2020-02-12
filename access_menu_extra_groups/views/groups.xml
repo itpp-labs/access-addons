@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" ?>
 <openerp>
     <data>
 
@@ -6,11 +6,11 @@
             <field name="name">edit.menu.access.extra</field>
             <field name="model">ir.ui.menu</field>
             <field name="type">form</field>
-            <field name="inherit_id" ref="base.edit_menu_access"/>
+            <field name="inherit_id" ref="base.edit_menu_access" />
             <field name="arch" type="xml">
                 <xpath expr="(//notebook/page)[1]" position="after">
                     <page string="Extra Groups">
-                        <field name="extra_groups_id"/>
+                        <field name="extra_groups_id" />
                     </page>
                 </xpath>
             </field>

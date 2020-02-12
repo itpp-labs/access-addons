@@ -30,4 +30,3 @@
 
 - **Fix:** updates for recent odoo 9.0
 - **Improvement:** apps dashboard can be showed if user has access 'Show Apps Menu'
-
