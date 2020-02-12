@@ -24,7 +24,7 @@ msgid "Module"
 msgstr ""
 
 #. module: ir_rule_protected
-#: code:addons/ir_rule_protected/models.py:39
+#: code:addons/ir_rule_protected/models.py:43
 #, python-format
 msgid "Only admin can uninstall the module"
 msgstr ""
@@ -35,7 +35,7 @@ msgid "Protected"
 msgstr ""
 
 #. module: ir_rule_protected
-#: code:addons/ir_rule_protected/models.py:19
+#: code:addons/ir_rule_protected/models.py:22
 #, python-format
 msgid "The Rule is protected. You don't have access for this operation"
 msgstr ""
