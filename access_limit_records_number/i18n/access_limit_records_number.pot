@@ -156,7 +156,7 @@ msgid "Limit records number"
 msgstr ""
 
 #. module: access_limit_records_number
-#: code:addons/access_limit_records_number/models.py:37
+#: code:addons/access_limit_records_number/models.py:47
 #, python-format
 msgid "Maximimum allowed records in table \"%(model_name)s\" is %(max_records)s, while after this update you would have %(records_count)s"
 msgstr ""
