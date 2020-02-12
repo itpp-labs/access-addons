@@ -65,7 +65,7 @@ class ResConfigSettings(models.TransientModel):
             "access_apps.group_allow_apps_only_from_settings"
         ):
             to_uninstall_modules = self.env["ir.module.module"]
-            for name, module in to_uninstall:
+            for _name, module in to_uninstall:
                 to_uninstall_modules += module
             to_uninstall_modules.sudo().button_immediate_uninstall()
         return res
