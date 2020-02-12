@@ -14,7 +14,7 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: access_restricted
-#: code:addons/access_restricted/models/res_config_settings.py:48
+#: code:addons/access_restricted/models/res_config_settings.py:49
 #, python-format
 msgid "\n"
 "\n"
@@ -82,7 +82,7 @@ msgid "Users"
 msgstr ""
 
 #. module: access_restricted
-#: code:addons/access_restricted/models/res_users.py:95
+#: code:addons/access_restricted/models/res_users.py:117
 #, python-format
 msgid "You cannot add groups to Implied groups, because you are not allowed to increase your rights. Please contact your system administrator."
 msgstr ""
