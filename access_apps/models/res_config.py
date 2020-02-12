@@ -6,11 +6,13 @@ from odoo import api, models
 
 
 class ResConfigSettings(models.TransientModel):
-    _inherit = 'res.config.settings'
+    _inherit = "res.config.settings"
 
     @api.model
     def _install_modules(self, modules):
-        if self.env['res.users'].has_group('access_apps.group_allow_apps_only_from_settings'):
+        if self.env["res.users"].has_group(
+            "access_apps.group_allow_apps_only_from_settings"
+        ):
             self = self.sudo()
 
         return super(ResConfigSettings, self)._install_modules(modules)
@@ -28,9 +30,9 @@ class ResConfigSettings(models.TransientModel):
 
         # modules: which modules are installed/to install
         classified = self._get_classified_fields()
-        for name, module in classified['to_uninstall']:
-            res[name] = module.state in ('installed', 'to install', 'to upgrade')
-            if self._fields[name].type == 'selection':
+        for name, module in classified["to_uninstall"]:
+            res[name] = module.state in ("installed", "to install", "to upgrade")
+            if self._fields[name].type == "selection":
                 res[name] = int(res[name])
 
         return res
@@ -42,15 +44,15 @@ class ResConfigSettings(models.TransientModel):
 
         to_uninstall_modules = []
 
-        for name, module in res['module']:
+        for name, module in res["module"]:
             if not self[name]:
-                if module and module.state in ('installed', 'to upgrade'):
+                if module and module.state in ("installed", "to upgrade"):
                     to_uninstall_modules.append((name, module))
 
-        modules = list(set(res['module']).difference(set(to_uninstall_modules)))
+        modules = list(set(res["module"]).difference(set(to_uninstall_modules)))
 
-        res['module'] = modules
-        res['to_uninstall'] = to_uninstall_modules
+        res["module"] = modules
+        res["to_uninstall"] = to_uninstall_modules
 
         return res
 
@@ -58,10 +60,12 @@ class ResConfigSettings(models.TransientModel):
         # base `exectute` doesn't know about new classification - it only has a list of modules to install now
         res = super(ResConfigSettings, self).execute()
         # uninstall modules if needed and a user has access
-        to_uninstall = self._get_classified_fields()['to_uninstall']
-        if to_uninstall and self.env['res.users'].has_group('access_apps.group_allow_apps_only_from_settings'):
-            to_uninstall_modules = self.env['ir.module.module']
-            for name, module in to_uninstall:
+        to_uninstall = self._get_classified_fields()["to_uninstall"]
+        if to_uninstall and self.env["res.users"].has_group(
+            "access_apps.group_allow_apps_only_from_settings"
+        ):
+            to_uninstall_modules = self.env["ir.module.module"]
+            for _name, module in to_uninstall:
                 to_uninstall_modules += module
             to_uninstall_modules.sudo().button_immediate_uninstall()
         return res

@@ -1,20 +1,24 @@
-from odoo import models, fields, exceptions, SUPERUSER_ID
+from odoo import SUPERUSER_ID, exceptions, fields, models
 from odoo.tools.translate import _
 
-MODULE_NAME = 'ir_rule_protected'
+MODULE_NAME = "ir_rule_protected"
 
 
 class IRRule(models.Model):
-    _inherit = 'ir.rule'
+    _inherit = "ir.rule"
 
-    protected = fields.Boolean('Protected', help='Make rule editable only for superuser')
+    protected = fields.Boolean(
+        "Protected", help="Make rule editable only for superuser"
+    )
 
     def check_restricted(self):
         if self.env.user.id == SUPERUSER_ID:
             return
         for r in self:
             if r.protected:
-                raise exceptions.Warning(_("The Rule is protected. You don't have access for this operation"))
+                raise exceptions.Warning(
+                    _("The Rule is protected. You don't have access for this operation")
+                )
 
     def write(self, vals):
         self.check_restricted()
