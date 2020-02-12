@@ -3,7 +3,7 @@
     "name": "Custom Apps",
     "summary": """Simplify Apps Interface""",
     "images": [],
-    "version": "1.0.0",
+    "vesion": "10.0.1.0.0",
     "application": False,
     "author": "IT-Projects LLC, Dinar Gabbasov",
     "support": "apps@it-projects.info",
