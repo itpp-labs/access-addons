@@ -19,7 +19,7 @@ msgid "Access Groups"
 msgstr ""
 
 #. module: access_base
-#: code:addons/access_base/models.py:29
+#: code:addons/access_base/models.py:33
 #, python-format
 msgid "Application"
 msgstr ""
@@ -30,13 +30,13 @@ msgid "Custom Group"
 msgstr ""
 
 #. module: access_base
-#: code:addons/access_base/models.py:32
+#: code:addons/access_base/models.py:36
 #, python-format
 msgid "Custom User Groups"
 msgstr ""
 
 #. module: access_base
-#: code:addons/access_base/models.py:53
+#: code:addons/access_base/models.py:70
 #, python-format
 msgid "Other"
 msgstr ""
