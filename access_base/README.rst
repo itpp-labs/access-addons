@@ -26,3 +26,8 @@ Please note, that if you delete some technical group from custom group, then you
 *See access_custom module as example of usage.*
 
 Tested on 8.0 ab7b5d7732a7c222a0aea45bd173742acd47242d.
+
+Odoo 11.0+
+==========
+
+The module is not maintained since odoo 11.0. Consider to use `base_user_role <https://github.com/OCA/server-backend/tree/11.0/base_user_role>`__ instead
