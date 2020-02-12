@@ -8,6 +8,6 @@
     "website": "https://twitter.com/yelizariev",
     "license": "LGPL-3",
     "depends": [],
-    "data": ["views.xml",],
+    "data": ["views.xml"],
     "installable": True,
 }

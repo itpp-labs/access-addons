@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
-from odoo.tests.common import TransactionCase
-
 from odoo.exceptions import AccessError
+from odoo.tests.common import TransactionCase
 
 
 class TestBackendWebsiteRule(TransactionCase):

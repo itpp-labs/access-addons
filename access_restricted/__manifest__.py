@@ -11,6 +11,6 @@
     "price": 30.00,
     "currency": "EUR",
     "depends": ["ir_rule_protected"],
-    "data": ["security/access_restricted_security.xml",],
+    "data": ["security/access_restricted_security.xml"],
     "installable": True,
 }

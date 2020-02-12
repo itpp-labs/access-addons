@@ -11,7 +11,7 @@
     "license": "LGPL-3",
     "price": 30.00,
     "currency": "EUR",
-    "depends": ["base_action_rule",],
+    "depends": ["base_action_rule"],
     "external_dependencies": {"python": [], "bin": []},
     "data": [
         "security/records_number_security.xml",
@@ -20,7 +20,7 @@
         "data/data.xml",
     ],
     "qweb": [],
-    "demo": ["demo/demo.xml",],
+    "demo": ["demo/demo.xml"],
     "post_load": None,
     "pre_init_hook": None,
     "post_init_hook": None,
