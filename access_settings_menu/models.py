@@ -1,8 +1,8 @@
-from openerp import models, api
+from openerp import api, models
 
 
 class ResUsers(models.Model):
-    _inherit = 'res.users'
+    _inherit = "res.users"
 
     @api.model
     def fields_get(self, *args, **kwargs):

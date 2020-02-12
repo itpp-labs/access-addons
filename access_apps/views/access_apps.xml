@@ -1,9 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <openerp>
     <data>
         <template id="assets_backend" name="assets" inherit_id="web.assets_backend">
             <xpath expr="." position="inside">
-                <script type="text/javascript" src="/access_apps/static/src/js/dashboard.js"></script>
+                <script
+                    type="text/javascript"
+                    src="/access_apps/static/src/js/dashboard.js"
+                />
             </xpath>
         </template>
     </data>
