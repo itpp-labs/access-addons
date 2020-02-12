@@ -14,7 +14,7 @@ Configuration
 * Open menu ``[[ Settings ]] >> Technical >> Parameters >> System Parameters``
 * Create following key-value records:
 
-  * ``auth_quick.master`` -- url to master server. 
+  * ``auth_quick.master`` -- url to master server.
   * ``auth_quick.build`` -- reference for this database
 
 Usage
