@@ -13,7 +13,7 @@ class TestBackendWebsiteRule(TransactionCase):
         self.website2 = self.env.ref("website.website2")
         self.user1 = self.env.ref("base.user_demo")
         self.user1.write(
-            {"backend_website_id": self.env.ref("website.default_website").id,}
+            {"backend_website_id": self.env.ref("website.default_website").id}
         )
 
         model_res_users = self.env.ref("base.model_res_users")
@@ -27,7 +27,7 @@ class TestBackendWebsiteRule(TransactionCase):
         )
 
         User = self.env["res.users"]
-        self.user2 = User.create({"name": "user2", "login": "user2",})
+        self.user2 = User.create({"name": "user2", "login": "user2"})
         self.user3 = User.create(
             {
                 "name": "user3",
@@ -40,7 +40,7 @@ class TestBackendWebsiteRule(TransactionCase):
         # e.g. [('id','=', website.company_id.id)]
         model_res_company = self.env.ref("base.model_res_company")
         company2_partner = self.env["res.partner"].create(
-            {"name": "Partner for Comapny2", "is_company": True,}
+            {"name": "Partner for Comapny2", "is_company": True}
         )
         self.company1 = self.env.ref("base.main_company")
         self.company2 = self.env["res.company"].create(
