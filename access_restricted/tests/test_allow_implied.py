@@ -1,6 +1,5 @@
-from odoo.tests.common import TransactionCase, tagged
-
 from odoo.exceptions import AccessError
+from odoo.tests.common import TransactionCase, tagged
 
 
 @tagged("at_install", "post_install")

@@ -1,7 +1,8 @@
+from odoo.tests import common
+
 from odoo.addons.access_restricted.tests.test_fields_view_get import (
     TestFieldsViewGet as TestFieldsViewGetBase,
 )
-from odoo.tests import common
 
 
 @common.tagged("post_install", "-at_install")
