@@ -21,13 +21,11 @@
 
 
 {
-    'name': 'Group Menu No Access',
-    'version': '0.1',
+    "name": "Group Menu No Access",
+    "version": "0.1",
     "category": "Access",
-    'author': 'Cesar Lage',
-    'depends': ['base'],
+    "author": "Cesar Lage",
+    "depends": ["base"],
     "license": "AGPL-3",
-    'data': [
-        'views/groups.xml'
-    ],
+    "data": ["views/groups.xml"],
 }

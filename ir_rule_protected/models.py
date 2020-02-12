@@ -1,14 +1,16 @@
 # -*- coding: utf-8 -*-
-from openerp import models, api, fields, exceptions, SUPERUSER_ID
+from openerp import SUPERUSER_ID, api, exceptions, fields, models
 from openerp.tools.translate import _
 
-MODULE_NAME = 'ir_rule_protected'
+MODULE_NAME = "ir_rule_protected"
 
 
 class IRRule(models.Model):
-    _inherit = 'ir.rule'
+    _inherit = "ir.rule"
 
-    protected = fields.Boolean('Protected', help='Make rule editable only for superuser')
+    protected = fields.Boolean(
+        "Protected", help="Make rule editable only for superuser"
+    )
 
     @api.multi
     def check_restricted(self):
@@ -16,7 +18,9 @@ class IRRule(models.Model):
             return
         for r in self:
             if r.protected:
-                raise exceptions.Warning(_("The Rule is protected. You don't have access for this operation"))
+                raise exceptions.Warning(
+                    _("The Rule is protected. You don't have access for this operation")
+                )
 
     @api.multi
     def write(self, vals):

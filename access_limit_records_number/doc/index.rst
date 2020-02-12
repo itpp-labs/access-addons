@@ -10,7 +10,7 @@ Usage
 * Open ``Settings / Technical / Security / Records Number Limits`` menu
 * Create new record. For example:
 
-  * Model: Information on a vehicle 
+  * Model: Information on a vehicle
   * Domain: []
   * Maximum Records: 3
 
