@@ -7,6 +7,6 @@
     "website": "https://www.odoo.com/apps/modules/12.0/ir_rule_protected/",
     "license": "LGPL-3",
     "depends": [],
-    "data": ["views.xml",],
+    "data": ["views.xml"],
     "installable": True,
 }
