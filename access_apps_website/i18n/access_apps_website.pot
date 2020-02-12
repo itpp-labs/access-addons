@@ -15,8 +15,8 @@ msgstr ""
 
 #. module: access_apps_website
 #. openerp-web
-#: code:addons/access_apps_website/static/src/js/new_content.js:54
-#: code:addons/access_apps_website/static/src/js/tour.js:20
+#: code:addons/access_apps_website/static/src/js/new_content.js:53
+#: code:addons/access_apps_website/static/src/js/tour.js:19
 #, python-format
 msgid "\"%s\" App is not installed in the system."
 msgstr ""
