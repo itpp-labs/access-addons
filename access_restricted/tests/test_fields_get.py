@@ -1,4 +1,4 @@
-from openerp.tests.common import TransactionCase, tagged
+from odoo.tests.common import TransactionCase, tagged
 
 from odoo.addons.base.models.res_users import name_selection_groups
 

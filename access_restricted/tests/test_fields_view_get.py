@@ -1,4 +1,4 @@
-from openerp.tests.common import TransactionCase, tagged
+from odoo.tests.common import TransactionCase, tagged
 
 IR_CONFIG_NAME = "access_restricted.fields_view_get_uid"
 

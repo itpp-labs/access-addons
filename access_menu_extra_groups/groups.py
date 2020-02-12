@@ -1,4 +1,4 @@
-from openerp import SUPERUSER_ID, api, fields, models
+from odoo import SUPERUSER_ID, api, fields, models
 
 
 class IrUiMenuExtra(models.Model):
