@@ -7,7 +7,7 @@ class IrRule(models.Model):
     _inherit = "ir.rule"
 
     backend_behaviour = fields.Selection(
-        [("true", "Grant access"), ("false", "Deny access"),],
+        [("true", "Grant access"), ("false", "Deny access")],
         string="Backend behaviour",
         help="""This is bypass for main rule definition.
         When working from backend there is usually no 'website_id' value in the rule evaluation context

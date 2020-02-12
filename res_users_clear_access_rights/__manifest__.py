@@ -9,7 +9,7 @@
     "category": "Access",
     "depends": ["base"],
     "external_dependencies": {"python": [], "bin": []},
-    "data": ["views.xml",],
+    "data": ["views.xml"],
     "demo": [],
     "installable": False,
     "auto_install": False,

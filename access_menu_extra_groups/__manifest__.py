@@ -12,7 +12,7 @@
     # "currency": "EUR",
     "depends": [],
     "external_dependencies": {"python": [], "bin": []},
-    "data": ["views/groups.xml",],
+    "data": ["views/groups.xml"],
     "demo": [],
     "installable": False,
     "auto_install": False,
