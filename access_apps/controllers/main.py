@@ -1,6 +1,7 @@
 from odoo import SUPERUSER_ID, http
-from odoo.addons.web_settings_dashboard.controllers.main import WebSettingsDashboard
 from odoo.http import request
+
+from odoo.addons.web_settings_dashboard.controllers.main import WebSettingsDashboard
 
 
 class WebSettingsDashboardCustom(WebSettingsDashboard):

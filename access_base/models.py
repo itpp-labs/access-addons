@@ -1,8 +1,10 @@
 from lxml import etree
 from lxml.builder import E
+
 from odoo import api, fields, models
-from odoo.addons.base.res.res_users import name_boolean_group, name_selection_groups
 from odoo.tools.translate import _
+
+from odoo.addons.base.res.res_users import name_boolean_group, name_selection_groups
 
 
 class GroupsView(models.Model):
