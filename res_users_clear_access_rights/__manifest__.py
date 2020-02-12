@@ -1,7 +1,7 @@
 {
     "name": "Clear access rights button",
     "summary": """Useful tool to reset user rights""",
-    "version": "1.0.0",
+    "vesion": "11.0.1.0.0",
     "author": "IT-Projects LLC, Ivan Yelizariev",
     "license": "LGPL-3",
     "support": "apps@it-projects.info",
