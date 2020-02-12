@@ -1,11 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <openerp>
     <data>
         <!-- Hide Install apps button in frontend -->
         <template id="access_apps_user_navbar" inherit_id="website.user_navbar">
             <xpath expr="//li[@id='install_apps']" position="replace">
                 <li id="install_apps" groups="access_apps.group_allow_apps">
-                    <a href="/web#return_label=Website&amp;action=website.action_module_website">Install Apps</a>
+                    <a
+                        href="/web#return_label=Website&amp;action=website.action_module_website"
+                    >Install Apps</a>
                 </li>
             </xpath>
         </template>

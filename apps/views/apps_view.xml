@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <openerp>
     <data>
 
@@ -7,10 +7,21 @@
             <field name="model">ir.module.module</field>
             <field name="arch" type="xml">
                 <search string="Search modules">
-                    <field name="name" filter_domain="['|', '|', ('summary', 'ilike', self), ('shortdesc', 'ilike', self), ('name',
-                        'ilike', self)]" string="Module"/>
-                    <filter name="installed" string="Installed" domain="[('state', 'in', ['installed', 'to upgrade', 'to remove'])]"/>
-                    <filter string="Not Installed" domain="[('state', 'in', ['uninstalled', 'uninstallable', 'to install'])]"/>
+                    <field
+                        name="name"
+                        filter_domain="['|', '|', ('summary', 'ilike', self), ('shortdesc', 'ilike', self), ('name',
+                        'ilike', self)]"
+                        string="Module"
+                    />
+                    <filter
+                        name="installed"
+                        string="Installed"
+                        domain="[('state', 'in', ['installed', 'to upgrade', 'to remove'])]"
+                    />
+                    <filter
+                        string="Not Installed"
+                        domain="[('state', 'in', ['uninstalled', 'uninstallable', 'to install'])]"
+                    />
                </search>
             </field>
         </record>
@@ -21,14 +32,21 @@
             <field name="view_type">form</field>
             <field name="view_mode">kanban,tree,form</field>
             <field name="domain">[('is_super_app', '=', True)]</field>
-            <field name="search_view_id" ref="view_client_module_filter"/>
+            <field name="search_view_id" ref="view_client_module_filter" />
             <field name="help" type="html">
                 <p><b>No module found!</b></p>
                 <p>You should try other search criteria.</p>
             </field>
         </record>
 
-        <menuitem sequence="309" id="menu_apps" name="Apps" action="open_client_open_module_tree" groups="base.group_system" web_icon="apps,static/description/modules.png"/>
+        <menuitem
+            sequence="309"
+            id="menu_apps"
+            name="Apps"
+            action="open_client_open_module_tree"
+            groups="base.group_system"
+            web_icon="apps,static/description/modules.png"
+        />
         <menuitem id="base.menu_management" name="All Apps" />
 
     </data>
