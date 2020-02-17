@@ -10,7 +10,7 @@
     "author": "IT-Projects LLC, Ildar Nasyrov",
     "support": "apps@it-projects.info",
     "website": "https://it-projects.info/team/iledarn",
-    "license": "LGPL-3",
+    "license": "Other OSI approved licence",  # MIT
     "price": 20.00,
     "currency": "EUR",
     "depends": ["web_website"],
