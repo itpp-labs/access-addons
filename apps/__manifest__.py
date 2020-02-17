@@ -9,7 +9,7 @@
     "support": "apps@it-projects.info",
     "website": "https://twitter.com/gabbasov_dinar",
     "category": "Access",
-    "license": "LGPL-3",
+    "license": "Other OSI approved licence",  # MIT
     "depends": ["access_apps"],
     "data": ["views/apps_view.xml", "security.xml", "data/ir_config_parameter.xml"],
     "post_load": None,

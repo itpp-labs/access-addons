@@ -6,7 +6,7 @@
     "category": "Access",
     "support": "apps@it-projects.info",
     "website": "https://twitter.com/yelizariev",
-    "license": "LGPL-3",
+    "license": "Other OSI approved licence",  # MIT
     "depends": [],
     "data": ["views.xml"],
     "installable": True,
