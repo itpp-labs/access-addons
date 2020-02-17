@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!-- Copyright 2018 Rafis Bikbov <https://it-projects.info/team/RafiZz>
-     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html). -->
+     License MIT (https://opensource.org/licenses/MIT). -->
 <odoo>
     <template id="assets_editor" inherit_id="web_editor.assets_editor">
         <xpath expr="//script[last()]" position="after">
