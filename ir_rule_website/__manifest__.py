@@ -8,7 +8,7 @@
     "version": "10.0.1.3.1",
     "application": False,
     "author": "IT-Projects LLC, Ildar Nasyrov",
-    "support": "apps@it-projects.info",
+    "support": "apps@itpp.dev",
     "website": "https://it-projects.info/team/iledarn",
     "license": "Other OSI approved licence",  # MIT
     "price": 20.00,

@@ -4,7 +4,7 @@
     "version": "10.0.1.3.4",
     "author": "IT-Projects LLC, Ivan Yelizariev",
     "category": "Access",
-    "support": "apps@it-projects.info",
+    "support": "apps@itpp.dev",
     "website": "https://twitter.com/yelizariev",
     "images": ["images/access_restricted.jpg"],
     "license": "Other OSI approved licence",  # MIT
