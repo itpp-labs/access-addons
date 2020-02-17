@@ -4,7 +4,7 @@
     "author": "IT-Projects LLC, Ivan Yelizariev",
     "license": "Other OSI approved licence",  # MIT
     "category": "Access",
-    "support": "apps@it-projects.info",
+    "support": "apps@itpp.dev",
     "website": "https://yelizariev.github.io",
     "images": ["images/user.png"],
     "depends": ["base", "res_users_clear_access_rights"],

@@ -3,7 +3,7 @@
     "version": "12.0.1.3.5",
     "author": "IT-Projects LLC, Ivan Yelizariev",
     "category": "Access",
-    "support": "apps@it-projects.info",
+    "support": "apps@itpp.dev",
     "website": "https://apps.odoo.com/apps/modules/12.0/access_restricted/",
     "license": "Other OSI approved licence",  # MIT
     "price": 30.00,
