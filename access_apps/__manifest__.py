@@ -10,7 +10,7 @@
     "version": "12.0.1.3.3",
     "application": False,
     "author": "IT-Projects LLC, Ivan Yelizariev",
-    "support": "apps@it-projects.info",
+    "support": "apps@itpp.dev",
     "website": "https://apps.odoo.com/apps/modules/12.0/access_apps/",
     "license": "Other OSI approved licence",  # MIT
     "price": 10.00,
