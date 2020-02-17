@@ -7,7 +7,7 @@
     "author": "IT-Projects LLC",
     "support": "apps@it-projects.info",
     "website": "https://apps.odoo.com/apps/modules/12.0/access_apps_website/",
-    "license": "LGPL-3",
+    "license": "Other OSI approved licence",  # MIT
     "price": 10.00,
     "currency": "EUR",
     "depends": ["access_apps", "website"],

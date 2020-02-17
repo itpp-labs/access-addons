@@ -6,7 +6,7 @@
     "images": ["images/icon.png"],
     "support": "apps@it-projects.info",
     "website": "https://apps.odoo.com/apps/modules/12.0/access_restricted/",
-    "license": "LGPL-3",
+    "license": "Other OSI approved licence",  # MIT
     "price": 30.00,
     "currency": "EUR",
     "depends": ["ir_rule_protected"],
