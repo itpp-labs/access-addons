@@ -5,7 +5,7 @@
     "category": "Access",
     "support": "apps@it-projects.info",
     "website": "https://www.odoo.com/apps/modules/12.0/ir_rule_protected/",
-    "license": "LGPL-3",
+    "license": "Other OSI approved licence",  # MIT
     "depends": [],
     "data": ["views.xml"],
     "installable": True,
