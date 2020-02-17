@@ -4,7 +4,7 @@
     "vesion": "11.0.1.0.0",
     "author": "IT-Projects LLC, Ivan Yelizariev",
     "license": "Other OSI approved licence",  # MIT
-    "support": "apps@it-projects.info",
+    "support": "apps@itpp.dev",
     "website": "https://it-projects.info",
     "category": "Access",
     "depends": ["base"],
