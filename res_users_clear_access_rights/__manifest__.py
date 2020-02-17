@@ -3,7 +3,7 @@
     "summary": """Useful tool to reset user rights""",
     "version": "12.0.1.1.0",
     "author": "IT-Projects LLC, Ivan Yelizariev",
-    "license": "LGPL-3",
+    "license": "Other OSI approved licence",  # MIT
     "support": "apps@it-projects.info",
     "website": "https://it-projects.info",
     "category": "Access",
