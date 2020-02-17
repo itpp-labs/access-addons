@@ -5,7 +5,7 @@
     "category": "Access",
     "support": "apps@it-projects.info",
     "website": "https://twitter.com/yelizariev",
-    "license": "LGPL-3",
+    "license": "Other OSI approved licence",  # MIT
     "price": 30.00,
     "currency": "EUR",
     "depends": ["ir_rule_protected"],
