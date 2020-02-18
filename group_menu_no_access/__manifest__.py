@@ -1,3 +1,4 @@
+# pylint: disable=manifest-version-format
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
