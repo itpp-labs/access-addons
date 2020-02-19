@@ -1,3 +1,4 @@
+# pylint: disable=sql-injection
 from odoo import SUPERUSER_ID, api, fields, models, tools
 from odoo.osv import expression
 from odoo.tools.safe_eval import safe_eval
