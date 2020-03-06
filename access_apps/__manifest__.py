@@ -15,10 +15,9 @@
     "license": "Other OSI approved licence",  # MIT
     "price": 10.00,
     "currency": "EUR",
-    "depends": ["web_settings_dashboard", "access_restricted"],
+    "depends": ["access_restricted"],
     "external_dependencies": {"python": [], "bin": []},
     "data": [
-        "views/access_apps.xml",
         "security/access_apps_security.xml",
         "security/ir.model.access.csv",
     ],
@@ -29,5 +28,5 @@
     "post_init_hook": None,
     "uninstall_hook": None,
     "auto_install": False,
-    "installable": False,
+    "installable": True,
 }

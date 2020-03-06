@@ -11,5 +11,5 @@
     "currency": "EUR",
     "depends": ["ir_rule_protected"],
     "data": ["security/access_restricted_security.xml"],
-    "installable": False,
+    "installable": True,
 }

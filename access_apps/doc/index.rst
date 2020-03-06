@@ -15,7 +15,7 @@ To control such permission follow the steps below.
 
 
 * Open menu ``[[ Settings ]] >> Users & Companies >> Users``, select the user you want to grant the access to
-* On ``Access Rights`` tab, ``Application Accesses`` settings group there is an ``Apps access`` security category
+* On ``Access Rights`` tab, ``Other`` settings group there is an ``Apps access`` security category
 
  * Select ``Allow installing apps`` - to allow apps installation from everywhere
  * Select ``Allow installing apps only from settings`` - to allow apps installation only from other module's ``Configuration >> Settings`` menu, there is no ``[[ Apps ]]`` menu available
