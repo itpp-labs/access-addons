@@ -59,7 +59,7 @@ Sponsors
 
 Maintainers
 ------------
-This module is not maintainable since Odoo 11.0, because lack of interests from customers.
+This module is not maintained since Odoo 11.0.
 
 Further information
 ===================
