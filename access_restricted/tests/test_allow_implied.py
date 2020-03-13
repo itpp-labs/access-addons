@@ -21,7 +21,7 @@ class TestAllowImplied(TransactionCase):
         demo_user.write({"groups_id": [(4, group_system.id)]})
 
         test_config_settings = (
-            self.env["test.config.settings"]
+            self.env["res.config.settings"]
             .with_user(demo_user.id)
             .create({"group_private_addresses": True})
         )
