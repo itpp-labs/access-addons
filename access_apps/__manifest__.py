@@ -17,10 +17,7 @@
     "currency": "EUR",
     "depends": ["access_restricted"],
     "external_dependencies": {"python": [], "bin": []},
-    "data": [
-        "security/access_apps_security.xml",
-        "security/ir.model.access.csv",
-    ],
+    "data": ["security/access_apps_security.xml", "security/ir.model.access.csv"],
     "demo": [],
     "qweb": [],
     "post_load": None,

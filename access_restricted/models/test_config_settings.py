@@ -3,7 +3,6 @@ from odoo import fields, models
 
 class TestConfigSettings(models.TransientModel):
 
-    _name = "test.config.settings"
     _description = "Test config settings"
     _inherit = ["res.config.settings"]
 
