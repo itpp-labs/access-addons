@@ -1,7 +1,6 @@
 <?xml version="1.0" ?>
 <openerp>
     <data>
-
         <record id="edit_menu_access_extra_group" model="ir.ui.view">
             <field name="name">edit.menu.access.extra</field>
             <field name="model">ir.ui.menu</field>
@@ -15,6 +14,5 @@
                 </xpath>
             </field>
         </record>
-
     </data>
 </openerp>
