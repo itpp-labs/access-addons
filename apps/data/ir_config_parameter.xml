@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <data noupdate="1">
-
         <record id="super_app_prefix" model="ir.config_parameter">
             <field name="key">apps.super_app_prefix</field>
             <field name="value">super_app_</field>
         </record>
-
     </data>
 </odoo>
