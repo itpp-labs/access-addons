@@ -12,7 +12,6 @@
             <field name="perm_unlink" eval="True" />
             <field name="protected" eval="True" />
         </record>
-
         <record id="admin_partner_hidden" model="ir.rule">
             <field name="name">Only admin can see admin partner</field>
             <field name="model_id" ref="base.model_res_partner" />
