@@ -1,12 +1,13 @@
-===========================
- Multiwebsite in Sec.Rules
-===========================
+==========================
+ Multi-Brand Access Rules
+==========================
 
-Allows to use ``website_id`` (current website) in ``domain_force`` field of Record Rules (``ir.rule``), e.g.:
+Allows to use new variables to be used in ``domain_force`` field of Record Rules (``ir.rule``):
 
-* ``[('website_ids', 'in', [website_id])]``
-* ``[('website_id', '=', website_id)]``
+* ``website_ids`` -- equal to ``context["allowed_website_ids"]`` (see module ``web_website``)
+* ``websites`` -- browsed ``website_ids``
 
+For your information: Odoo provides ``website`` variable, which is equal to current website in frontend and is empty in backend
 
 Example of usage:
 
@@ -14,15 +15,10 @@ Example of usage:
 * Show an event on specific websites only (TODO: add link to the module)
 * Show a product on specific websites only (TODO: add link to the module)
 
-Known issues
-============
+Roadmap
+=======
 
-* This module redefines ``ir.rule`` ``_compute_domain`` base method and may be not compatible with others that redefine the method too.
-
-Odoo 13.0+
-==========
-
-We hope this feature will be built-in since Odoo 13.0 at least: https://github.com/odoo/odoo/pull/22743
+* This module can be merged to ``web_website`` module
 
 Credits
 =======
@@ -57,4 +53,4 @@ Usage instructions: `<doc/index.rst>`_
 
 Changelog: `<doc/changelog.rst>`_
 
-Tested on Odoo 12.0 0669eddc7e88303f3a97e9f4f834f64fd9a8158c
+Tested on Odoo 13.0 669203b6a86c1c2d8463dc34b8674b2a38010ed0
