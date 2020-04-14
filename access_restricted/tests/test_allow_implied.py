@@ -4,6 +4,10 @@ from odoo.tests.common import TransactionCase, tagged
 
 @tagged("at_install", "post_install")
 class TestAllowImplied(TransactionCase):
+    def _get_classified_groups(self, config):
+        groups = config._get_classified_fields()["group"]
+        return [g[0] for g in groups]
+
     def test_base(self):
         demo_user = self.env.ref("base.user_demo")
 
@@ -36,7 +40,9 @@ class TestAllowImplied(TransactionCase):
             test_config_settings.fields_get()["group_private_addresses"]["readonly"]
         )
         # check that test group hasn't got appended to classified
-        self.assertFalse(test_config_settings._get_classified_fields()["group"])
+        self.assertNotIn(
+            "group_private_addresses", self._get_classified_groups(test_config_settings)
+        )
 
         group_allow = self.env.ref(
             "access_restricted.group_allow_add_implied_from_settings"
@@ -48,7 +54,9 @@ class TestAllowImplied(TransactionCase):
             test_config_settings.fields_get()["group_private_addresses"]["readonly"]
         )
         # check that now the group is in classified
-        self.assertTrue(test_config_settings._get_classified_fields()["group"])
+        self.assertIn(
+            "group_private_addresses", self._get_classified_groups(test_config_settings)
+        )
 
         self.assertFalse(
             self.env["res.users"]

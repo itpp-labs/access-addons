@@ -1,3 +1,8 @@
+`2.0.0`
+-------
+
+- **Improvement**: simplify code, get rid of ``backend_behavior`` field
+
 `1.3.2`
 -------
 
