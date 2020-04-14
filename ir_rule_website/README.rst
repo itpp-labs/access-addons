@@ -19,7 +19,7 @@ Roadmap
 =======
 
 * This module can be merged to ``web_website`` module
-* Website rules don't work for ``/mail/read_followers`` method
+* Website rules don't work for ``/mail/read_followers`` method: https://github.com/itpp-labs/access-addons/issues/232
 
 Credits
 =======
