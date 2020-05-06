@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2020 Eugene Molotov <https://it-projects.info/team/em230418>
+     License MIT (https://opensource.org/licenses/MIT). -->
+<template>
+    <t t-extend="AppsMenu">
+        <t t-jquery=".dropdown-menu" t-operation="prepend">
+            <div class="expiration_message alert alert-info" style="display: none" />
+            <div style="display: none">
+                <div
+                    class="block_ui_expiration_message alert alert-danger"
+                    onclick="$('a.full').trigger('click');"
+                >Your database is expired</div>
+            </div>
+        </t>
+    </t>
+</template>
