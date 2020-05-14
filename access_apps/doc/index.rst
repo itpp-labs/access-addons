@@ -28,5 +28,5 @@ Usage
 * If you don't select anything in ``Apps access``: there is no ``[[ Apps ]]`` menu - even if your user is in ``Administration: Settings`` security group. Also note that you
   have no ability to include yourself in groups allowing to installing apps - this is what ``access_restricted`` module does (``access_apps`` depends on it)
 * If you have ``Allow installing apps`` selected: there is ``[[ Apps ]]`` menu
-* If you have ``Allow installing apps only from settings``: from other module's ``Configuration >> Settings`` menu, e.g. from ``[[ Website ]] >> Configuration >> Settings`` see that
+* If you have ``Allow installing apps only from settings``: from other module's ``Configuration >> Settings`` menu, e.g. from ``[[ Website ]] >> Configuration >> Settings`` (this menu is available after the *Website app* installation) see that
   you have the ability to check the ``Digital Content`` checkbox that actually installs the ``website_sale_digital`` module after clicking on ``[Apply]`` button.
