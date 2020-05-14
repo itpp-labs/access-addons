@@ -17,7 +17,9 @@ odoo.define("database_expiration.main", function(require) {
             }
 
             if (odoo.session_info.is_database_expired) {
-                $(".o_main").block({message: $(".block_ui_expiration_message")});
+                $(".o_action_manager").block({
+                    message: $(".block_ui_expiration_message"),
+                });
                 $("header").css("z-index", $.blockUI.defaults.baseZ + 20);
             }
         },
