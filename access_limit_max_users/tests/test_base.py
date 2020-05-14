@@ -13,7 +13,7 @@ class TestBase(common.TransactionCase):
             "access_limit_max_users.max_users_limit"
         ).max_records
 
-        Users = self.env["res.users"].sudo(admin_user)
+        Users = self.env["res.users"].with_user(admin_user)
 
         while users_count < max_users_allowed:
             Users.create({"name": "test_max_users_{}".format(users_count)})
