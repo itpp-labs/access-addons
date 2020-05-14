@@ -46,7 +46,6 @@
         <record id="base_limit_act" model="ir.actions.act_window">
             <field name="name">Records Number Limits</field>
             <field name="res_model">base.limit.records_number</field>
-            <field name="view_type">form</field>
             <field name="view_id" ref="base_limit_view_tree" />
             <field name="search_view_id" ref="base_limit_view_search" />
         </record>

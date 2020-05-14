@@ -28,7 +28,7 @@ Maintainers
 -----------
 * `IT-Projects LLC <https://it-projects.info>`__
 
-      To get a guaranteed support you are kindly requested to purchase the module at `odoo apps store <https://apps.odoo.com/apps/modules/11.0/access_limit_records_number/>`__.
+      To get a guaranteed support you are kindly requested to purchase the module at `odoo apps store <https://apps.odoo.com/apps/modules/13.0/access_limit_records_number/>`__.
 
       Thank you for understanding!
 
@@ -37,12 +37,12 @@ Maintainers
 Further information
 ===================
 
-Demo: http://runbot.it-projects.info/demo/access-addons/11.0
+Demo: http://runbot.it-projects.info/demo/access-addons/13.0
 
-HTML Description: https://apps.odoo.com/apps/modules/11.0/access_limit_records_number/
+HTML Description: https://apps.odoo.com/apps/modules/13.0/access_limit_records_number/
 
 Usage instructions: `<doc/index.rst>`_
 
 Changelog: `<doc/changelog.rst>`_
 
-Tested on Odoo 11.0 cc031bd2264a7fcd8efbc9105902574111859c8b
+Tested on Odoo 13.0 991c3392708946fdf9973d18e8c29469fa21eed9
