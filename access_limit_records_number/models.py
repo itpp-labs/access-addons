@@ -39,3 +39,8 @@ class BaseLimitRecordsNumber(models.Model):
                         "records_count": records_count,
                     }
                 )
+
+    @api.model
+    def set_max_records(self, xmlid, max_records):
+        rule = self.env.ref(xmlid)
+        rule.max_records = max_records
