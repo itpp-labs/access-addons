@@ -14,13 +14,10 @@ class IrHttp(models.AbstractModel):
     def session_info(self):
         res = super(IrHttp, self).session_info()
 
-        res["is_database_expired"] = False
         now = datetime.now()
-        database_expiration_date = (
-            self.env["ir.config_parameter"]
-            .sudo()
-            .get_param("database_expiration_date", None)
-        )
+        Config = self.env["ir.config_parameter"].sudo()
+        database_expiration_date = Config.get_param("database_expiration_date", None)
+
         # Note:
         # DO NOT USE database.expiration_date (with dot)
         # it will be overwritten here: https://github.com/odoo/odoo/blob/f9a559f5455a4b964de9a99ff05756302071e959/addons/mail/models/update.py#L114
@@ -31,27 +28,22 @@ class IrHttp(models.AbstractModel):
             )
             delta = database_expiration_date - now
             if now > database_expiration_date:
-                res["is_database_expired"] = True
-                res["database_expiration_message"] = "Your database is expired"
+                res["database_block_message"] = "Your database is expired"
             elif delta.days > 7:
                 pass
             elif delta.days > 1:
                 res[
-                    "database_expiration_message"
+                    "database_block_message"
                 ] = "Your database will expire in {} days".format(delta.days,)
+                res["database_block_is_warning"] = True
             elif delta.days == 1:
                 res[
                     "database_expiration_message"
                 ] = "Your database will expire tomorrow"
+                res["database_block_is_warning"] = True
             elif delta.days == 0:
                 res["database_expiration_message"] = "Your database will expire today"
+                res["database_block_is_warning"] = True
 
-            # database_expiration_message is shown, only if web_responsive installted
-            if res.get("database_expiration_message") and not self.env[
-                "ir.module.module"
-            ].search(
-                [("name", "=", "web_responsive"), ("state", "=", "installed")], limit=1
-            ):
-                del res["database_expiration_message"]
 
         return res
