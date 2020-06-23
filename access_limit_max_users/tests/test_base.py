@@ -6,7 +6,7 @@ from odoo.tests import common
 
 @common.tagged("post_install", "-at_install")
 class TestBase(common.TransactionCase):
-    def test_max_users(self):
+    def _test_max_users(self, create_excluded_user=False):
         admin_user = self.env.ref("base.user_admin")
 
         users_count = self.env["res.users"].sudo().search_count([])
@@ -21,7 +21,19 @@ class TestBase(common.TransactionCase):
             Users.create({"name": login, "login": login})
             users_count += 1
 
+        if create_excluded_user:
+            login = "test_excluded_user"
+            Users.sudo().create(
+                {"name": login, "login": login, "is_excluded_from_limiting": True}
+            )
+
         # limit is reached
         with self.assertRaises(exceptions.UserError):
             login = "test_max_users_{}".format(users_count)
             Users.create({"name": login, "login": login})
+
+    def test_max_users(self):
+        self._test_max_users(create_excluded_user=False)
+
+    def test_max_users_with_excluded(self):
+        self._test_max_users(create_excluded_user=True)

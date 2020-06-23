@@ -16,6 +16,8 @@ This module creates record with external id `access_limit_max_users.max_users_li
 that defines max amount of users can have current database. By default it is
 number of active users at moment of installation of this module.
 
+In order to create or set user with ignoring the limit, in superuser mode you must set field `is_excluded_from_limiting` to True.
+
 Questions?
 ==========
 
