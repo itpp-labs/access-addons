@@ -13,7 +13,8 @@ Adds **Apps access** selection in user's access rights tab. Two options are avai
 Roadmap
 =======
 
-* Access records (e.g. ``access_ir_module_module_group_user``) should not be deleted. It has to be disactivated and make active on uninstallation 
+* Access records (e.g. ``access_ir_module_module_group_user``) should not be deleted. It has to be disactivated and make active on uninstallation
+
 Credits
 =======
 
