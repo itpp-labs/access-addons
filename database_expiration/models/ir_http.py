@@ -4,10 +4,15 @@
 import logging
 from datetime import datetime
 
+from mako.template import Template
+
 from odoo import models
 from odoo.tools.misc import DEFAULT_SERVER_DATETIME_FORMAT
 
 _logger = logging.getLogger(__name__)
+DATABASE_BLOCK_MESSAGE_HTML_TEMPLATE = Template(
+    "<p>${database_block_message}</p><a href='${database_expiration_link}'>${database_expiration_link_label}</a>"
+)
 
 
 class IrHttp(models.AbstractModel):
@@ -62,5 +67,21 @@ class IrHttp(models.AbstractModel):
                 res["database_expiration_message"] = "Your database will expire today"
                 res["database_block_is_warning"] = True
 
+            if res.get("database_block_message"):
+                database_expiration_link = Config.get_param(
+                    "database_expiration_details_link", None
+                )
+
+                if database_expiration_link:
+                    database_expiration_link_label = Config.get_param(
+                        "database_expiration_details_link_label", "Details"
+                    )
+                    res[
+                        "database_block_message"
+                    ] = DATABASE_BLOCK_MESSAGE_HTML_TEMPLATE.render(
+                        database_block_message=res["database_block_message"],
+                        database_expiration_link=database_expiration_link,
+                        database_expiration_link_label=database_expiration_link_label,
+                    )
 
         return res
