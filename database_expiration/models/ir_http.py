@@ -1,10 +1,13 @@
 # Copyright 2020 Eugene Molotov <https://it-projects.info/team/em230418>
 # License MIT (https://opensource.org/licenses/MIT).
 
+import logging
 from datetime import datetime
 
 from odoo import models
 from odoo.tools.misc import DEFAULT_SERVER_DATETIME_FORMAT
+
+_logger = logging.getLogger(__name__)
 
 
 class IrHttp(models.AbstractModel):
@@ -27,9 +30,23 @@ class IrHttp(models.AbstractModel):
                 database_expiration_date, DEFAULT_SERVER_DATETIME_FORMAT
             )
             delta = database_expiration_date - now
+
+            try:
+                database_expiration_warning_delay = int(
+                    Config.get_param("database_expiration_warning_delay", 7)
+                )
+                if not database_expiration_warning_delay > 1:
+                    raise ValueError("Value must be greater than 1")
+            except ValueError as e:
+                _logger.warning(
+                    "Could not get expiration warning delay: %s. Using default: 7 days"
+                    % str(e)
+                )
+                database_expiration_warning_delay = 7
+
             if now > database_expiration_date:
                 res["database_block_message"] = "Your database is expired"
-            elif delta.days > 7:
+            elif delta.days > database_expiration_warning_delay:
                 pass
             elif delta.days > 1:
                 res[
