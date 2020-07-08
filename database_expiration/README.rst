@@ -11,6 +11,10 @@ With this module you can make database to expire.
 After reaching expiration date "Your database is expired" will be shown.
 Expiration date is defined in "System Parameters" as `database_expiration_date`.
 
+Also if ``web_responsive`` is installed, 7 days before expiration date
+module will start to show warning in main menu.
+To configure how many days to show warning in advance, you can set ``database_expiration_warning_delay`` in "System Parameters"
+
 Credits
 =======
 
