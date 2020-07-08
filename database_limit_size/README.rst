@@ -13,6 +13,11 @@ is defined in "System Parameters" as ``database_limit_size``. Value is expected 
 
 If ``database_limit_size`` is not given or zero, there is no limit.
 
+Roadmap
+=======
+
+* Customize percentage of the limit which, if exceeded, would indicate a warning. As for now it is hardcoded to 90%
+
 Credits
 =======
 
