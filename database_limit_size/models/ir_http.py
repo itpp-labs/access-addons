@@ -7,6 +7,7 @@ from odoo import models
 from odoo.tools import human_size
 
 
+# https://stackoverflow.com/a/1392549
 def get_directory_size(start_path):
     total_size = 0
     for dirpath, _dirnames, filenames in os.walk(start_path):
