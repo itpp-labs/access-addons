@@ -5,12 +5,12 @@
         <xpath expr="." position="inside">
             <script
                 type="text/javascript"
-                src="/database_expiration/static/src/js/main.js"
+                src="/database_block/static/src/js/main.js"
             />
             <link
                 rel="stylesheet"
                 type="text/css"
-                href="/database_expiration/static/src/css/main.css"
+                href="/database_block/static/src/css/main.css"
             />
         </xpath>
     </template>
