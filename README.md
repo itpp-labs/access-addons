@@ -1,3 +1,8 @@
+Access addons
+=============
+
+Odoo addons for core framework
+
 List of repositories
 ====================
 
