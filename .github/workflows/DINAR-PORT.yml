@@ -31,7 +31,7 @@ jobs:
       - name: Analyze PR
         run: |
           # sets environment variables that available in next steps via $ {{ env.PORT_... }} notation
-          python DINAR/workflow-files/analyze_port_trigger.py ${{ github.event.issue.title }}
+          python DINAR/workflow-files/analyze_port_trigger.py "${{ github.event.issue.title }}"
       - name: Checkout Repo
         uses: actions/checkout@v2
         with:
