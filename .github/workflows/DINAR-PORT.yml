@@ -65,15 +65,15 @@ jobs:
                   # just copy source
                   git checkout origin/${{ env.PORT_FROM_BRANCH }} -- ${{ env.PORT_MODULE }}
                   git commit -m ":tada:${{ env.PORT_FROM_BRANCH_TAGS }} ${{ env.PORT_MODULE }}
-                  previous commits history: https://github.com/${{ github.repository }}/commits/${{ env.PORT_FROM_BRANCH }}/ir_rule_protected
+          previous commits history: https://github.com/${{ github.repository }}/commits/${{ env.PORT_FROM_BRANCH }}/ir_rule_protected
 
-                  > Made via .github/workflows/DINAR-PORT.yml"
+          > Made via .github/workflows/DINAR-PORT.yml"
               fi
           fi
       - name: pre-commit
         run: |
           cd REPO
-          pre-commit run --files ${{ env.PORT_MODULE }}
+          pre-commit run --files $(find ${{ env.PORT_MODULE }} -type f)
           git add -A
           git commit -m ":rainbow: pre-commit
           > Made via .github/workflows/DINAR-PORT.yml" || echo "pre-commit: no changes"
