@@ -1,4 +1,4 @@
-name: "Port module via OCA/odoo-module-migrator"
+name: "Port module"
 
 on:
   issues:
@@ -44,7 +44,7 @@ jobs:
           then
               # apply original commit history
               git format-patch --keep-subject --stdout origin/ ${{ env.PORT_TO_BRANCH }}..origin/ ${{ env.PORT_FROM_BRANCH }} --  ${{ env.PORT_MODULE }} | git am -3 --keep
-          end
+          fi
 
           # pre-commit
           pre-commit run -a
