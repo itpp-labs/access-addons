@@ -25,6 +25,9 @@ jobs:
           path: DINAR
           repository: itpp-labs/DINAR
           ref: master
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.7.x'
       - name: Install python tools
         run: |
           pip install plumbum pre-commit
