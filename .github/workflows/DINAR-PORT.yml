@@ -52,7 +52,7 @@ jobs:
           if [ ! -d ${{ env.PORT_MODULE }} ]
           then
               # apply original commit history
-              git format-patch --keep-subject --stdout origin/ ${{ env.PORT_TO_BRANCH }}..origin/ ${{ env.PORT_FROM_BRANCH }} --  ${{ env.PORT_MODULE }} | git am -3 --keep
+              git format-patch --keep-subject --stdout origin/${{ env.PORT_TO_BRANCH }}..origin/${{ env.PORT_FROM_BRANCH }} --  ${{ env.PORT_MODULE }} | git am -3 --keep
           fi
       - name: pre-commit
         run: |
