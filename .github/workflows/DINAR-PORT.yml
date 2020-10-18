@@ -28,6 +28,14 @@ jobs:
       - name: Install python tools
         run: |
           pip install plumbum PyGithub pyyaml
+      - name: Check Python Version
+        run:
+          echo "::set-env name=PY::$(python --version --version | sha256sum | cut -d' '
+          -f1)"
+      - uses: actions/cache@v1
+        with:
+          path: ~/.cache/pre-commit
+          key: pre-commit|${{ env.PY }}|${{ hashFiles('REPO/.pre-commit-config.yaml') }}
       - name: Analyze request
         run: |
           # sets environment variables that available in next steps via $ {{ env.PORT_... }} notation
@@ -41,19 +49,22 @@ jobs:
       - name: Copy module to new branch
         run: |
           cd REPO
-          if [ ! -d REPO/${{ env.PORT_MODULE }} ]
+          if [ ! -d ${{ env.PORT_MODULE }} ]
           then
               # apply original commit history
               git format-patch --keep-subject --stdout origin/ ${{ env.PORT_TO_BRANCH }}..origin/ ${{ env.PORT_FROM_BRANCH }} --  ${{ env.PORT_MODULE }} | git am -3 --keep
           fi
-
-          # pre-commit
-          pre-commit run -a
+      - name: pre-commit
+        run: |
+          cd REPO
+          pre-commit run --files ${{ env.PORT_MODULE }}
           git add -A
           git commit -m ":rainbow: pre-commit
           > Made via .github/workflows/DINAR-PORT.yml"
-          
-          # OCA/odoo-module-migrator
+  
+      - name: OCA/odoo-module-migrator
+        run: |
+          cd REPO
           echo "TODO"
           git add -A
           git commit -m ":arrow_up:${{ env.PORT_TO_BRANCH_TAGS }} OCA/odoo-module-migrator
