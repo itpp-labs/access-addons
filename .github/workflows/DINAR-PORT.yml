@@ -76,7 +76,7 @@ jobs:
           pre-commit run --files ${{ env.PORT_MODULE }}
           git add -A
           git commit -m ":rainbow: pre-commit
-          > Made via .github/workflows/DINAR-PORT.yml"
+          > Made via .github/workflows/DINAR-PORT.yml" || echo "pre-commit: no changes"
   
       - name: OCA/odoo-module-migrator
         run: |
@@ -86,7 +86,7 @@ jobs:
           git commit -m ":arrow_up:${{ env.PORT_TO_BRANCH_TAGS }} OCA/odoo-module-migrator
           close #${{ github.event.issue.number }}
           
-          > Made via .github/workflows/DINAR-PORT.yml"
+          > Made via .github/workflows/DINAR-PORT.yml" || echo "OCA/odoo-module-migrator: no changes"
               
       - name: PR
         uses: peter-evans/create-pull-request@v2
