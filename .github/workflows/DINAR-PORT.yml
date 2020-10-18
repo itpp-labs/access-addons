@@ -48,6 +48,8 @@ jobs:
           ref: ${{ env.PORT_TO_BRANCH }}
       - name: Copy module to new branch
         run: |
+          git config --global user.email "itpp-bot@users.noreply.github.com"
+          git config --global user.name "Mitchell Admin"
           cd REPO
           if [ ! -d ${{ env.PORT_MODULE }} ]
           then
