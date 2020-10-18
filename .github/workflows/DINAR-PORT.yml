@@ -40,6 +40,7 @@ jobs:
           ref: ${{ env.PORT_TO_BRANCH }}
       - name: Copy module to new branch
         run: |
+          cd REPO
           if [ ! -d REPO/${{ env.PORT_MODULE }} ]
           then
               # apply original commit history
@@ -62,9 +63,9 @@ jobs:
       - name: PR
         uses: peter-evans/create-pull-request@v2
         with:
+          path: REPO
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ env.PORT_TO_BRANCH }}-${{ env.PORT_MODULE }}
           title: "[${{ env.PORT_TO_BRANCH }}] ${{ env.PORT_MODULE }}"
-
           body: |
             Made by [DINAR](https://github.com/itpp-labs/DINAR#readme) by request in #${{ github.event.issue.number }}
