@@ -28,7 +28,7 @@ jobs:
       - name: Install python tools
         run: |
           pip install plumbum PyGithub pyyaml
-      - name: Analyze PR
+      - name: Analyze request
         run: |
           # sets environment variables that available in next steps via $ {{ env.PORT_... }} notation
           python DINAR/workflow-files/analyze_port_trigger.py "${{ github.event.issue.title }}"
@@ -36,7 +36,35 @@ jobs:
         uses: actions/checkout@v2
         with:
           path: REPO
+          fetch-depth: 0
           ref: ${{ env.PORT_TO_BRANCH }}
       - name: Copy module to new branch
         run: |
-          echo TODO
+          if [ ! -d REPO/${{ env.PORT_MODULE }} ]
+          then
+              # apply original commit history
+              git format-patch --keep-subject --stdout origin/ ${{ env.PORT_TO_BRANCH }}..origin/ ${{ env.PORT_FROM_BRANCH }} --  ${{ env.PORT_MODULE }} | git am -3 --keep
+          end
+
+          # pre-commit
+          pre-commit run -a
+          git add -A
+          git commit -m ":rainbow: pre-commit
+          > Made via .github/workflows/DINAR-PORT.yml"
+          
+          # OCA/odoo-module-migrator
+          echo "TODO"
+          git add -A
+          git commit -m ":arrow_up:${{ env.PORT_TO_BRANCH_TAGS }} OCA/odoo-module-migrator
+          close #${{ github.event.issue.number }}
+          > Made via .github/workflows/DINAR-PORT.yml"
+              
+      - name: PR
+        uses: peter-evans/create-pull-request@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ env.PORT_TO_BRANCH }}-${{ env.PORT_MODULE }}
+          title: [${{ env.PORT_TO_BRANCH }}] ${{ env.PORT_MODULE }}
+
+          body: |
+            Made by [DINAR](https://github.com/itpp-labs/DINAR#readme) by request in #${{ github.event.issue.number }}
