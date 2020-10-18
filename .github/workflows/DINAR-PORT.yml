@@ -1,4 +1,4 @@
-name: "Port modules to next version"
+name: "Port module to next version"
 
 on:
   issues:
@@ -16,6 +16,7 @@ jobs:
         uses: jamessingleton/leave-a-comment@v1.0.0
         with:
           issue_number: ${{ github.event.issue.number }}
+          issue_type: issue
           comment: 'Porting is started. Check logs: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}'
           token: ${{ secrets.GITHUB_TOKEN }}        
       - name: Checkout DINAR
