@@ -32,6 +32,12 @@ jobs:
         run:
           echo "::set-env name=PY::$(python --version --version | sha256sum | cut -d' '
           -f1)"
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+        with:
+          path: REPO
+          fetch-depth: 0
+          ref: ${{ env.PORT_TO_BRANCH }}
       - uses: actions/cache@v1
         with:
           path: ~/.cache/pre-commit
@@ -40,12 +46,6 @@ jobs:
         run: |
           # sets environment variables that available in next steps via $ {{ env.PORT_... }} notation
           python DINAR/workflow-files/analyze_port_trigger.py "${{ github.event.issue.title }}"
-      - name: Checkout Repo
-        uses: actions/checkout@v2
-        with:
-          path: REPO
-          fetch-depth: 0
-          ref: ${{ env.PORT_TO_BRANCH }}
       - name: Copy module to new branch
         run: |
           git config --global user.email "itpp-bot@users.noreply.github.com"
