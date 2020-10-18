@@ -1,4 +1,4 @@
-name: "Port module to next version"
+name: "Port module via OCA/odoo-module-migrator"
 
 on:
   issues:
@@ -25,6 +25,9 @@ jobs:
           path: DINAR
           repository: itpp-labs/DINAR
           ref: master
+      - name: Install python tools
+        run: |
+          pip install plumbum PyGithub pyyaml
       - name: Analyze PR
         run: |
           # sets environment variables that available in next steps via $ {{ env.PORT_... }} notation
