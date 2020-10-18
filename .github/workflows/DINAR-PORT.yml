@@ -81,7 +81,8 @@ jobs:
       - name: OCA/odoo-module-migrator
         run: |
           cd REPO
-          echo "TODO"
+          echo "TODO: OCA/odoo-module-migrator"
+          echo "TODO: update version"
           git add -A
           git commit -m ":arrow_up:${{ env.PORT_TO_BRANCH_TAGS }} OCA/odoo-module-migrator
           close #${{ github.event.issue.number }}
