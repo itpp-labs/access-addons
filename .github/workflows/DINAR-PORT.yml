@@ -27,7 +27,7 @@ jobs:
           ref: master
       - name: Install python tools
         run: |
-          pip install plumbum PyGithub pyyaml
+          pip install plumbum pre-commit
       - name: Check Python Version
         run:
           echo "::set-env name=PY::$(python --version --version | sha256sum | cut -d' '
