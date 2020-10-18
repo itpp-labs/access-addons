@@ -54,7 +54,18 @@ jobs:
           if [ ! -d ${{ env.PORT_MODULE }} ]
           then
               # apply original commit history
-              git format-patch --keep-subject --stdout origin/${{ env.PORT_TO_BRANCH }}..origin/${{ env.PORT_FROM_BRANCH }} --  ${{ env.PORT_MODULE }} | git am -3 --keep
+              if ! git format-patch --keep-subject --stdout origin/${{ env.PORT_TO_BRANCH }}..origin/${{ env.PORT_FROM_BRANCH }} --  ${{ env.PORT_MODULE }} | git am -3 --keep
+              then
+                  # git am failed
+                  git am --abort
+                  
+                  # just copy source
+                  git checkout origin/${{ env.PORT_FROM_BRANCH }} -- ${{ env.PORT_MODULE }}
+                  git commit -m ":tada:{{ env.PORT_FROM_BRANCH_TAGS }} ${{ env.PORT_MODULE }}
+                  previous commits history: https://github.com/${{ github.repository }}/commits/${{ env.PORT_FROM_BRANCH }}/ir_rule_protected
+
+                  > Made via .github/workflows/DINAR-PORT.yml"
+              fi
           fi
       - name: pre-commit
         run: |
@@ -71,6 +82,7 @@ jobs:
           git add -A
           git commit -m ":arrow_up:${{ env.PORT_TO_BRANCH_TAGS }} OCA/odoo-module-migrator
           close #${{ github.event.issue.number }}
+          
           > Made via .github/workflows/DINAR-PORT.yml"
               
       - name: PR
