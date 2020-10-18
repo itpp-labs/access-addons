@@ -64,7 +64,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ env.PORT_TO_BRANCH }}-${{ env.PORT_MODULE }}
-          title: [${{ env.PORT_TO_BRANCH }}] ${{ env.PORT_MODULE }}
+          title: "[${{ env.PORT_TO_BRANCH }}] ${{ env.PORT_MODULE }}"
 
           body: |
             Made by [DINAR](https://github.com/itpp-labs/DINAR#readme) by request in #${{ github.event.issue.number }}
