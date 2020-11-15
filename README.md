@@ -1,18 +1,12 @@
 [![help@itpp.dev](https://itpp.dev/images/infinity-readme.png)](mailto:help@itpp.dev)
-# [11.0] Extended user access rights at Odoo
+# [11.0] Odoo Addons for extended access control
 
 <br/>:heavy_check_mark: [access_apps](https://apps.odoo.com/apps/modules/11.0/access_apps/)
-<br/>:heavy_check_mark: [access_apps_website](https://apps.odoo.com/apps/modules/11.0/access_apps_website/)
-<br/>:heavy_check_mark: [access_base](https://apps.odoo.com/apps/modules/11.0/access_base/)
 <br/>:heavy_check_mark: [access_limit_records_number](https://apps.odoo.com/apps/modules/11.0/access_limit_records_number/)
-<br/>:heavy_check_mark: [access_menu_extra_groups](https://apps.odoo.com/apps/modules/11.0/access_menu_extra_groups/)
 <br/>:heavy_check_mark: [access_restricted](https://apps.odoo.com/apps/modules/11.0/access_restricted/)
 <br/>:heavy_check_mark: [access_settings_menu](https://apps.odoo.com/apps/modules/11.0/access_settings_menu/)
-<br/>:heavy_check_mark: [apps](https://apps.odoo.com/apps/modules/11.0/apps/)
-<br/>:heavy_check_mark: [group_menu_no_access](https://apps.odoo.com/apps/modules/11.0/group_menu_no_access/)
 <br/>:heavy_check_mark: [ir_rule_protected](https://apps.odoo.com/apps/modules/11.0/ir_rule_protected/)
 <br/>:heavy_check_mark: [ir_rule_website](https://apps.odoo.com/apps/modules/11.0/ir_rule_website/)
-<br/>:heavy_check_mark: [res_users_clear_access_rights](https://apps.odoo.com/apps/modules/11.0/res_users_clear_access_rights/)
 
 Other Addons
 ============
