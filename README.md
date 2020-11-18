@@ -1,21 +1,25 @@
-access-addons
-===============
+[![help@itpp.dev](https://itpp.dev/images/infinity-readme.png)](mailto:help@itpp.dev)
+# [8.0] Odoo Addons for extended access control
 
-Odoo (OpenERP) access addons 
+<br/>:heavy_check_mark: [access_apps](https://apps.odoo.com/apps/modules/8.0/access_apps/)
+<br/>:heavy_check_mark: [access_apps_website](https://apps.odoo.com/apps/modules/8.0/access_apps_website/)
+<br/>:heavy_check_mark: [access_base](https://apps.odoo.com/apps/modules/8.0/access_base/)
+<br/>:heavy_check_mark: [access_limit_records_number](https://apps.odoo.com/apps/modules/8.0/access_limit_records_number/)
+<br/>:heavy_check_mark: [access_restricted](https://apps.odoo.com/apps/modules/8.0/access_restricted/)
+<br/>:heavy_check_mark: [access_settings_menu](https://apps.odoo.com/apps/modules/8.0/access_settings_menu/)
+<br/>:heavy_check_mark: [group_menu_no_access](https://apps.odoo.com/apps/modules/8.0/group_menu_no_access/)
+<br/>:heavy_check_mark: [hidden_admin](https://apps.odoo.com/apps/modules/8.0/hidden_admin/)
+<br/>:heavy_check_mark: [ir_rule_protected](https://apps.odoo.com/apps/modules/8.0/ir_rule_protected/)
+<br/>:heavy_check_mark: [res_users_clear_access_rights](https://apps.odoo.com/apps/modules/8.0/res_users_clear_access_rights/)
 
-List of repositories:
----------------------
+Other Addons
+============
 
-* https://github.com/it-projects-llc/misc-addons
-* https://github.com/it-projects-llc/pos-addons
-* https://github.com/it-projects-llc/mail-addons
-* https://github.com/it-projects-llc/rental-addons
-* https://github.com/it-projects-llc/access-addons
-* https://github.com/it-projects-llc/website-addons
-* https://github.com/it-projects-llc/l10n-addons
-* https://github.com/it-projects-llc/odoo-telegram
-* https://github.com/it-projects-llc/odoo-saas-tools
-
-Donation
-========
-Feel free to support our efforts by purchasing [our access modules at app store](https://apps.odoo.com/apps/modules/category/Access/browse?price=Paid&order=Newest&author=IT-Projects+LLC)
+| Repository | Versions |
+|------------|----------|
+| [itpp-labs/**pos-addons**](https://github.com/itpp-labs/pos-addons) | [[14.0]](https://github.com/itpp-labs/pos-addons/tree/14.0#readme) [[13.0]](https://github.com/itpp-labs/pos-addons/tree/13.0#readme) [[12.0]](https://github.com/itpp-labs/pos-addons/tree/12.0#readme) [[11.0]](https://github.com/itpp-labs/pos-addons/tree/11.0#readme) [[10.0]](https://github.com/itpp-labs/pos-addons/tree/10.0#readme) [[9.0]](https://github.com/itpp-labs/pos-addons/tree/9.0#readme) [[8.0]](https://github.com/itpp-labs/pos-addons/tree/8.0#readme) [[7.0]](https://github.com/itpp-labs/pos-addons/tree/7.0#readme) |
+| [itpp-labs/**mail-addons**](https://github.com/itpp-labs/mail-addons) | [[14.0]](https://github.com/itpp-labs/mail-addons/tree/14.0#readme) [[13.0]](https://github.com/itpp-labs/mail-addons/tree/13.0#readme) [[12.0]](https://github.com/itpp-labs/mail-addons/tree/12.0#readme) [[11.0]](https://github.com/itpp-labs/mail-addons/tree/11.0#readme) [[10.0]](https://github.com/itpp-labs/mail-addons/tree/10.0#readme) [[9.0]](https://github.com/itpp-labs/mail-addons/tree/9.0#readme) [[8.0]](https://github.com/itpp-labs/mail-addons/tree/8.0#readme) |
+| [itpp-labs/**misc-addons**](https://github.com/itpp-labs/misc-addons) | [[14.0]](https://github.com/itpp-labs/misc-addons/tree/14.0#readme) [[13.0]](https://github.com/itpp-labs/misc-addons/tree/13.0#readme) [[12.0]](https://github.com/itpp-labs/misc-addons/tree/12.0#readme) [[11.0]](https://github.com/itpp-labs/misc-addons/tree/11.0#readme) [[10.0]](https://github.com/itpp-labs/misc-addons/tree/10.0#readme) [[9.0]](https://github.com/itpp-labs/misc-addons/tree/9.0#readme) [[8.0]](https://github.com/itpp-labs/misc-addons/tree/8.0#readme) [[7.0]](https://github.com/itpp-labs/misc-addons/tree/7.0#readme) |
+| [itpp-labs/**sync-addons**](https://github.com/itpp-labs/sync-addons) | [[14.0]](https://github.com/itpp-labs/sync-addons/tree/14.0#readme) [[13.0]](https://github.com/itpp-labs/sync-addons/tree/13.0#readme) [[12.0]](https://github.com/itpp-labs/sync-addons/tree/12.0#readme) [[11.0]](https://github.com/itpp-labs/sync-addons/tree/11.0#readme) [[10.0]](https://github.com/itpp-labs/sync-addons/tree/10.0#readme) [[9.0]](https://github.com/itpp-labs/sync-addons/tree/9.0#readme) [[8.0]](https://github.com/itpp-labs/sync-addons/tree/8.0#readme) |
+| [itpp-labs/**access-addons**](https://github.com/itpp-labs/access-addons) | [[14.0]](https://github.com/itpp-labs/access-addons/tree/14.0#readme) [[13.0]](https://github.com/itpp-labs/access-addons/tree/13.0#readme) [[12.0]](https://github.com/itpp-labs/access-addons/tree/12.0#readme) [[11.0]](https://github.com/itpp-labs/access-addons/tree/11.0#readme) [[10.0]](https://github.com/itpp-labs/access-addons/tree/10.0#readme) [[9.0]](https://github.com/itpp-labs/access-addons/tree/9.0#readme) [[8.0]](https://github.com/itpp-labs/access-addons/tree/8.0#readme) |
+| [itpp-labs/**website-addons**](https://github.com/itpp-labs/website-addons) | [[14.0]](https://github.com/itpp-labs/website-addons/tree/14.0#readme) [[13.0]](https://github.com/itpp-labs/website-addons/tree/13.0#readme) [[12.0]](https://github.com/itpp-labs/website-addons/tree/12.0#readme) [[11.0]](https://github.com/itpp-labs/website-addons/tree/11.0#readme) [[10.0]](https://github.com/itpp-labs/website-addons/tree/10.0#readme) [[9.0]](https://github.com/itpp-labs/website-addons/tree/9.0#readme) [[8.0]](https://github.com/itpp-labs/website-addons/tree/8.0#readme) |
