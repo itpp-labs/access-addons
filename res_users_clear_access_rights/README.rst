@@ -1,3 +1,7 @@
+.. image:: https://itpp.dev/images/infinity-readme.png
+   :alt: Tested and maintained by IT Projects Labs
+   :target: https://itpp.dev
+
 ==========================
 Clear access rights button
 ==========================
@@ -7,20 +11,18 @@ but after clicking "Save" button you get tick back.
 In that case it's better to untick all rights and start access rights configuration from scratch. 
 This module helps to do it.
 
-Credits
-=======
+Questions?
+==========
+
+To get an assistance on this module contact us by email :arrow_right: help@itpp.dev
 
 Contributors
-------------
+============
 * krotov@it-projects.info
-
-Sponsors
---------
-* `IT-Projects LLC <https://it-projects.info>`_
 
 Further information
 ===================
 
-HTML Description: https://apps.odoo.com/apps/modules/9.0/res_users_clear_access_rights/
+Odoo Apps Store: https://apps.odoo.com/apps/modules/9.0/res_users_clear_access_rights/
 
-Tested on Odoo 9.0 2ec9a9c99294761e56382bdcd766e90b8bc1bb38
+Tested on `Odoo 9.0 <https://github.com/odoo/odoo/commit/2ec9a9c99294761e56382bdcd766e90b8bc1bb38>`_
