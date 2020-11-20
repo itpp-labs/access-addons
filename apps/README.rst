@@ -1,3 +1,7 @@
+.. image:: https://itpp.dev/images/infinity-readme.png
+   :alt: Tested and maintained by IT Projects Labs
+   :target: https://itpp.dev
+
 =============
  Custom Apps
 =============
@@ -46,26 +50,19 @@ Then uninstallation scheme is as following:
   * uninstall ``sale``
   * uninstall ``website_sale``
 
-Credits
-=======
+Questions?
+==========
+
+To get an assistance on this module contact us by email :arrow_right: help@itpp.dev
 
 Contributors
-------------
+============
 * Dinar Gabbasov <gabbasov@it-projects.info>
-
-Sponsors
---------
-* `IT-Projects LLC <https://it-projects.info>`_
 
 Further information
 ===================
 
-Demo: http://runbot.it-projects.info/demo/access-addons/10.0
+Odoo Apps Store: https://apps.odoo.com/apps/modules/10.0/apps/
 
-HTML Description: https://apps.odoo.com/apps/modules/10.0/apps/
 
-Usage instructions: `<doc/index.rst>`_
-
-Changelog: `<doc/changelog.rst>`_
-
-Tested on 10.0 87184d0894fdb7444cc0d4b6e7028f1f97a7c4f7
+Tested on `10.0 <https://github.com/odoo/odoo/commit/87184d0894fdb7444cc0d4b6e7028f1f97a7c4f7>`_
