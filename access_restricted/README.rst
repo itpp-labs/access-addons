@@ -1,3 +1,7 @@
+.. image:: https://itpp.dev/images/infinity-readme.png
+   :alt: Tested and maintained by IT Projects Labs
+   :target: https://itpp.dev
+
 Restricted administration rights
 ================================
 
@@ -14,4 +18,4 @@ The superuser creates an administrator user without access group "Show Apps Menu
 
 For Odoo versions older than https://github.com/odoo/odoo/commit/5f12e244f6e57b8edb56788147774150e2ae134d check for access rules in the ``write`` method is duplicated with ORM methods, please update Odoo for higher performance
 
-Tested on Odoo 12.0 0669eddc7e88303f3a97e9f4f834f64fd9a8158c
+Tested on `Odoo 12.0 <https://github.com/odoo/odoo/commit/0669eddc7e88303f3a97e9f4f834f64fd9a8158c>`_
