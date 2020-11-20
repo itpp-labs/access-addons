@@ -1,3 +1,7 @@
+.. image:: https://itpp.dev/images/infinity-readme.png
+   :alt: Tested and maintained by IT Projects Labs
+   :target: https://itpp.dev
+
 =========================
  Limit number of records
 =========================
@@ -13,36 +17,18 @@ To do new settings to restrict number of records in any model
 the user should be a member of ``Control limits on records number`` security group.
 
 
-Credits
-=======
+Questions?
+==========
+
+To get an assistance on this module contact us by email :arrow_right: help@itpp.dev
 
 Contributors
-------------
+============
 * Pavel Romanchenko <romanchenko@it-projects.info>
 
-Sponsors
---------
-* `Mattobell <https://www.mattobell.com>`_
-
-Maintainers
------------
-* `IT-Projects LLC <https://it-projects.info>`__
-
-      To get a guaranteed support you are kindly requested to purchase the module at `odoo apps store <https://apps.odoo.com/apps/modules/11.0/access_limit_records_number/>`__.
-
-      Thank you for understanding!
-
-      `IT-Projects Team <https://www.it-projects.info/team>`__
-
-Further information
 ===================
 
-Demo: http://runbot.it-projects.info/demo/access-addons/11.0
+Odoo Apps Store: https://apps.odoo.com/apps/modules/11.0/access_limit_records_number/
 
-HTML Description: https://apps.odoo.com/apps/modules/11.0/access_limit_records_number/
 
-Usage instructions: `<doc/index.rst>`_
-
-Changelog: `<doc/changelog.rst>`_
-
-Tested on Odoo 11.0 cc031bd2264a7fcd8efbc9105902574111859c8b
+Tested on `Odoo 11.0 <https://github.com/odoo/odoo/commit/cc031bd2264a7fcd8efbc9105902574111859c8b>`_
