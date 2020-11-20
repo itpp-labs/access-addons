@@ -1,3 +1,7 @@
+.. image:: https://itpp.dev/images/infinity-readme.png
+   :alt: Tested and maintained by IT Projects Labs
+   :target: https://itpp.dev
+
 Basic module for custom security stuff
 ======================================
 
@@ -25,4 +29,4 @@ Please note, that if you delete some technical group from custom group, then you
 
 *See access_custom module as example of usage.*
 
-Tested on 8.0 ab7b5d7732a7c222a0aea45bd173742acd47242d.
+Tested on `8.0 <https://github.com/odoo/odoo/commit/ab7b5d7732a7c222a0aea45bd173742acd47242d.>`_
