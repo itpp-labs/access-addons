@@ -1,3 +1,7 @@
+.. image:: https://itpp.dev/images/infinity-readme.png
+   :alt: Tested and maintained by IT Projects Labs
+   :target: https://itpp.dev
+
 =============================
 Extra access groups for menus
 =============================
@@ -33,20 +37,18 @@ Now the "Project" menu is visible only for user who are in the following groups:
 
 This restriction is not applied for admin user.
 
-Credits
-=======
+Questions?
+==========
+
+To get an assistance on this module contact us by email :arrow_right: help@itpp.dev
 
 Contributors
-------------
+============
 * krotov@it-projects.info
-
-Sponsors
---------
-* `IT-Projects LLC <https://it-projects.info>`_
 
 Further information
 ===================
 
-HTML Description: https://apps.odoo.com/apps/modules/9.0/access_menu_extra_groups/
+Odoo Apps Store: https://apps.odoo.com/apps/modules/9.0/access_menu_extra_groups/
 
-Tested on Odoo 9.0 2ec9a9c99294761e56382bdcd766e90b8bc1bb38
+Tested on `Odoo 9.0 <https://github.com/odoo/odoo/commit/2ec9a9c99294761e56382bdcd766e90b8bc1bb38>`_
