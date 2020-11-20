@@ -1,7 +1,7 @@
 [![help@itpp.dev](https://itpp.dev/images/infinity-readme.png)](mailto:help@itpp.dev)
 # [10.0] Odoo Addons for extended access control
 
-<br/>:heavy_check_mark: [access_apps](https://apps.odoo.com/apps/modules/10.0/access_apps/)
+:heavy_check_mark: [access_apps](https://apps.odoo.com/apps/modules/10.0/access_apps/)
 <br/>:heavy_check_mark: [access_apps_website](https://apps.odoo.com/apps/modules/10.0/access_apps_website/)
 <br/>:heavy_check_mark: [access_base](https://apps.odoo.com/apps/modules/10.0/access_base/)
 <br/>:heavy_check_mark: [access_limit_records_number](https://apps.odoo.com/apps/modules/10.0/access_limit_records_number/)
