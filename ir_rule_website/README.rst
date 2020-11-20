@@ -1,3 +1,7 @@
+.. image:: https://itpp.dev/images/infinity-readme.png
+   :alt: Tested and maintained by IT Projects Labs
+   :target: https://itpp.dev
+
 =========================================
  Multi-website support in Security Rules
 =========================================
@@ -6,7 +10,6 @@ Allows to use ``website_id`` (current website) in ``domain_force`` field of Reco
 
 * ``[('website_ids', 'in', [website_id])]``
 * ``[('website_id', '=', website_id)]``
-
 
 Example of usage:
 
@@ -19,37 +22,19 @@ Odoo 12.0+
 
 We hope this feature will be built-in since Odoo 12.0 at least: https://github.com/odoo/odoo/pull/22743
 
-Credits
-=======
+Questions?
+==========
+
+To get an assistance on this module contact us by email :arrow_right: help@itpp.dev
 
 Contributors
-------------
+============
 * `Ivan Yelizariev <https://www.it-projects.info/team/yelizariev>`__
 * `Ildar Nasyrov <https://www.it-projects.info/team/iledarn>`__
 
-Sponsors
---------
-* `IT-Projects LLC <https://it-projects.info>`__
-
-Maintainers
------------
-* `IT-Projects LLC <https://it-projects.info>`__
-
-      To get a guaranteed support you are kindly requested to purchase the module at `odoo apps store <https://apps.odoo.com/apps/modules/10.0/ir_rule_website/>`__.
-
-      Thank you for understanding!
-
-      `IT-Projects Team <https://www.it-projects.info/team>`__
-
-Further information
 ===================
 
-Demo: http://runbot.it-projects.info/demo/access-addons/10.0
+Odoo Apps Store: https://apps.odoo.com/apps/modules/10.0/ir_rule_website
 
-HTML Description: https://apps.odoo.com/apps/modules/10.0/ir_rule_website
 
-Usage instructions: `<doc/index.rst>`_
-
-Changelog: `<doc/changelog.rst>`_
-
-Tested on Odoo 10.0 1ffe85f1cb3defcbf932138e2fc13f3a81b34787
+Tested on `Odoo 10.0 <https://github.com/odoo/odoo/commit/1ffe85f1cb3defcbf932138e2fc13f3a81b34787>`_
