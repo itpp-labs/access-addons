@@ -1,3 +1,7 @@
+.. image:: https://itpp.dev/images/infinity-readme.png
+   :alt: Tested and maintained by IT Projects Labs
+   :target: https://itpp.dev
+
 Restricted administration rights
 ================================
 
@@ -12,4 +16,4 @@ Typical usage of the module.
 
 The superuser creates an administrator user without access group "Show Apps Menu" (see **access_apps** module). Then the administrator has access to settings, but not able to install new apps (without this module he can add himself to "Show Apps Menu" and get access to apps).
 
-Tested on Odoo 13.0 c37a16c9dfd09038925034b90ab49e1ab674e714
+Tested on `Odoo 13.0 <https://github.com/odoo/odoo/commit/c37a16c9dfd09038925034b90ab49e1ab674e714>`_
