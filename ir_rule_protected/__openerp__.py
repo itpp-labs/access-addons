@@ -5,7 +5,7 @@
     'author': 'IT-Projects LLC, Ivan Yelizariev',
     "category": "Access",
     'website': 'https://twitter.com/yelizariev',
-    "license": "GPL-3",
+    "license": "Other OSI approved licence",  # MIT
     'depends': [],
     'data': [
         'views.xml',
