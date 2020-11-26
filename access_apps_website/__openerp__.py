@@ -8,7 +8,7 @@
 
     "author": "IT-Projects LLC",
     "website": "https://it-projects.info",
-    "license": "GPL-3",
+    "license": "Other OSI approved licence",  # MIT
     "price": 20.00,
     "currency": "EUR",
 
