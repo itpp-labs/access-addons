@@ -31,9 +31,9 @@ Contributors
 Further information
 ===================
 
-Odoo Apps Store: https://apps.odoo.com/apps/modules/13.0/database_block/
+Odoo Apps Store: https://apps.odoo.com/apps/modules/12.0/database_block/
 
 
-Notifications on updates: `via Atom <https://github.com/it-projects-llc/access-addons/commits/13.0/database_block.atom>`_, `by Email <https://blogtrottr.com/?subscribe=https://github.com/it-projects-llc/access-addons/commits/13.0/database_block.atom>`_
+Notifications on updates: `via Atom <https://github.com/it-projects-llc/access-addons/commits/12.0/database_block.atom>`_, `by Email <https://blogtrottr.com/?subscribe=https://github.com/it-projects-llc/access-addons/commits/12.0/database_block.atom>`_
 
-Tested on `Odoo 13.0 <https://github.com/odoo/odoo/commit/03fb98f876ea03deef05acb74144d8e979a61f54>`_
+Tested on `Odoo 12.0 <https://github.com/odoo/odoo/commit/d201fdd75946fa75bcce3dc0be7203649e7972db>`_

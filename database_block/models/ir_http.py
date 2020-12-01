@@ -1,7 +1,7 @@
 # Copyright 2020 Eugene Molotov <https://it-projects.info/team/em230418>
 # License MIT (https://opensource.org/licenses/MIT).
 
-from odoo import SUPERUSER_ID, models
+from odoo import models
 
 
 class IrHttp(models.AbstractModel):
@@ -13,7 +13,7 @@ class IrHttp(models.AbstractModel):
 
         res["database_block_show_message_in_apps_menu"] = bool(
             self.env["ir.module.module"]
-            .with_user(SUPERUSER_ID)
+            .sudo()
             .search(
                 [("name", "=", "web_responsive"), ("state", "=", "installed")], limit=1,
             )

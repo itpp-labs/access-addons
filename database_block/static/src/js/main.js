@@ -15,7 +15,7 @@ odoo.define("database_block.main", function(require) {
                 );
 
                 if (!odoo.session_info.database_block_is_warning) {
-                    $(".o_action_manager").block({
+                    $(".o_main").block({
                         message: $(".block_ui.database_block_message").html(
                             odoo.session_info.database_block_message
                         ),
