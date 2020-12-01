@@ -35,9 +35,9 @@ Contributors
 Further information
 ===================
 
-Odoo Apps Store: https://apps.odoo.com/apps/modules/13.0/database_limit_size/
+Odoo Apps Store: https://apps.odoo.com/apps/modules/12.0/database_limit_size/
 
 
-Notifications on updates: `via Atom <https://github.com/it-projects-llc/access-addons/commits/13.0/database_limit_size.atom>`_, `by Email <https://blogtrottr.com/?subscribe=https://github.com/it-projects-llc/access-addons/commits/13.0/database_limit_size.atom>`_
+Notifications on updates: `via Atom <https://github.com/it-projects-llc/access-addons/commits/12.0/database_limit_size.atom>`_, `by Email <https://blogtrottr.com/?subscribe=https://github.com/it-projects-llc/access-addons/commits/12.0/database_limit_size.atom>`_
 
-Tested on `Odoo 13.0 <https://github.com/odoo/odoo/commit/41f72d9628b467f82da0fafc15651002a49b10ad>`_
+Tested on `Odoo 12.0 <https://github.com/odoo/odoo/commit/d201fdd75946fa75bcce3dc0be7203649e7972db>`_
