@@ -2,28 +2,38 @@
 # License MIT (https://opensource.org/licenses/MIT).
 
 {
-    "name": """Database expiration""",
-    "summary": """With this module you can make database to expire""",
-    "category": "Hidden",
+    "name": """Block backend UI""",
+    "summary": """This technical module allows blocking backend access and display the message""",
+    "category": "Extra Tools",
     # "live_test_url": "http://apps.it-projects.info/shop/product/DEMO-URL?version=12.0",
     "images": [],
-    "version": "12.0.1.1.0",
+    "version": "12.0.1.0.0",
     "application": False,
     "author": "IT-Projects LLC, Eugene Molotov",
     "support": "apps@it-projects.info",
-    "website": "https://apps.odoo.com/apps/modules/12.0/database_expiration/",
+    "website": "https://apps.odoo.com/apps/modules/12.0/database_block/",
     "license": "Other OSI approved licence",  # MIT
     # "price": 9.00,
     # "currency": "EUR",
-    "depends": ["database_block"],
+    "depends": ["web"],
     "external_dependencies": {"python": [], "bin": []},
-    "data": [],
+    "data": ["views/assets.xml"],
     "demo": [],
-    "qweb": [],
+    "qweb": ["static/src/xml/apps.xml"],
     "post_load": None,
     "pre_init_hook": None,
     "post_init_hook": None,
     "uninstall_hook": None,
     "auto_install": False,
     "installable": True,
+    # "demo_title": "Database Block",
+    # "demo_addons": [
+    # ],
+    # "demo_addons_hidden": [
+    # ],
+    # "demo_url": "DEMO-URL",
+    # "demo_summary": "This module allows to block user to backend with specified reason",
+    # "demo_images": [
+    #    "images/MAIN_IMAGE",
+    # ]
 }
