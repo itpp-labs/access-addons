@@ -8,7 +8,7 @@ from odoo.tests import common
 class TestExcludedUsers(common.TransactionCase):
     def test_create(self):
         admin_user = self.env.ref("base.user_admin")
-        Users = self.env["res.users"].with_user(admin_user)
+        Users = self.env["res.users"].sudo(admin_user)
         login = "test_excluded_user"
         rule_record = self.env.ref("access_limit_max_users.max_users_limit")
         rule_record.max_records = Users.search_count(
@@ -24,7 +24,7 @@ class TestExcludedUsers(common.TransactionCase):
 
     def test_write(self):
         admin_user = self.env.ref("base.user_admin")
-        demo_user = self.env.ref("base.user_demo").with_user(admin_user)
+        demo_user = self.env.ref("base.user_demo").sudo(admin_user)
         rule_record = self.env.ref("access_limit_max_users.max_users_limit")
         rule_record.max_records = self.env["res.users"].search_count(
             [("is_excluded_from_limiting", "=", False)]
