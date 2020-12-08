@@ -9,7 +9,7 @@ class ResUsers(models.Model):
 
     @api.model
     def create(self, vals):
-        if vals.get("is_excluded_from_limiting") and not self.env.is_superuser():
+        if vals.get("is_excluded_from_limiting") and not self.env.user._is_superuser():
             raise ValidationError(
                 _(
                     "Only superuser can create user with positive is_excluded_from_limiting value"
@@ -19,7 +19,7 @@ class ResUsers(models.Model):
 
     @api.model
     def write(self, vals):
-        if vals.get("is_excluded_from_limiting") and not self.env.is_superuser():
+        if vals.get("is_excluded_from_limiting") and not self.env.user._is_superuser():
             raise ValidationError(
                 _(
                     "Only superuser can set user with positive is_excluded_from_limiting value"
