@@ -117,7 +117,8 @@ jobs:
         uses: peter-evans/create-pull-request@v3
         with:
           path: REPO
-          token: ${{ secrets.GITHUB_TOKEN }}
+          # GITHUB_TOKEN would not trigger PR checks
+          token: ${{ secrets.DINAR_TOKEN }}
           branch: ${{ env.PORT_TO_BRANCH }}-${{ env.PORT_MODULE }}
           title: "[${{ env.PORT_TO_BRANCH }}] ${{ env.PORT_MODULE }}"
           body: |
