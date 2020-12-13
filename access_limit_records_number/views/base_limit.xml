@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2018 Ivan Yelizariev <https://it-projects.info/team/yelizariev>
+     License MIT (https://opensource.org/licenses/MIT). -->
+<openerp>
+    <data>
+        <record id="base_limit_view_tree" model="ir.ui.view">
+            <field name="model">base.limit.records_number</field>
+            <field name="arch" type="xml">
+                <tree editable="top">
+                    <field name="name" />
+                    <field name="model_id" />
+                    <field name="max_records" />
+                    <field name="domain" />
+                </tree>
+            </field>
+        </record>
+        <record id="base_limit_view_form" model="ir.ui.view">
+            <field name="model">base.limit.records_number</field>
+            <field name="arch" type="xml">
+                <form string="Records Number">
+                    <sheet>
+                        <group col="3">
+                            <field name="name" />
+                            <field name="model_id" />
+                            <field name="max_records" />
+                            <field name="domain" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="base_limit_view_search" model="ir.ui.view">
+            <field name="model">base.limit.records_number</field>
+            <field name="arch" type="xml">
+                <search string="Records Number">
+                    <filter
+                        string="Unlimited Table"
+                        name="max_records"
+                        domain="[('max_records','in',[0, None, False])]"
+                    />
+                    <field name="name" />
+                    <field name="model_id" />
+                </search>
+            </field>
+        </record>
+        <record id="base_limit_act" model="ir.actions.act_window">
+            <field name="name">Records Number Limits</field>
+            <field name="res_model">base.limit.records_number</field>
+            <field name="view_id" ref="base_limit_view_tree" />
+            <field name="search_view_id" ref="base_limit_view_search" />
+        </record>
+        <menuitem
+            action="base_limit_act"
+            id="menu_base_limit_act"
+            parent="base.menu_security"
+            groups="access_limit_records_number.group_control_limits_on_records_number"
+        />
+    </data>
+</openerp>
