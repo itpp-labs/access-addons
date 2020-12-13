@@ -1,6 +1,6 @@
 {
     "name": "Protect ir.rule records",
-    "version": "13.0.1.0.0",
+    "version": "14.0.1.0.0",
     "author": "IT-Projects LLC, Ivan Yelizariev",
     "category": "Access",
     "images": ["images/icon.png"],
