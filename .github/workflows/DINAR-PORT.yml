@@ -106,7 +106,6 @@ jobs:
           close #${{ github.event.issue.number }}
           
           > Made via .github/workflows/DINAR-PORT.yml"
-            
       - name: pre-commit
         run: |
           cd REPO
