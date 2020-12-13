@@ -13,11 +13,9 @@ jobs:
       "startsWith(github.event.issue.title, 'DINAR-PORT ')"
     steps:
       - name: Post a message
-        uses: jamessingleton/leave-a-comment@v1.0.0
+        uses: KeisukeYamashita/create-comment@v1
         with:
-          issue_number: ${{ github.event.issue.number }}
           comment: 'Porting is started. Check logs: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}'
-          token: ${{ secrets.GITHUB_TOKEN }}        
       - name: Checkout DINAR
         uses: actions/checkout@v2
         with:
