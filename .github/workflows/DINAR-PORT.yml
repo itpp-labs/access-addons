@@ -103,6 +103,7 @@ jobs:
       - name: Commit
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
+          repository: REPO
           commit_message: |
             :arrow_up:${{ env.PORT_TO_BRANCH_TAGS }} OCA/odoo-module-migrator
 
