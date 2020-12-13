@@ -99,17 +99,14 @@ jobs:
           --modules ${{ env.PORT_MODULE }} \
           --init-version-name ${{ env.PORT_FROM_BRANCH }} \
           --target-version-name ${{ env.PORT_TO_BRANCH }} \
-           --no-commit
-      - name: Commit
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          repository: REPO
-          commit_message: |
-            :arrow_up:${{ env.PORT_TO_BRANCH_TAGS }} OCA/odoo-module-migrator
+          --no-commit
+          git add -A
+          git commit -m ":arrow_up:${{ env.PORT_TO_BRANCH_TAGS }} OCA/odoo-module-migrator
 
-            close #${{ github.event.issue.number }}
+          close #${{ github.event.issue.number }}
           
-            > Made via .github/workflows/DINAR-PORT.yml
+          > Made via .github/workflows/DINAR-PORT.yml"
+            
       - name: pre-commit
         run: |
           cd REPO
