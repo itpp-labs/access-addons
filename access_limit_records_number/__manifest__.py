@@ -5,7 +5,7 @@
     "summary": """e.g. allow to create maximum 10 users. Similar restriction can be applied to any table.""",
     "category": "Extra tools",
     "images": [],
-    "version": "13.0.1.1.0",
+    "version": "14.0.1.1.0",
     "author": "IT-Projects LLC, Pavel Romanchenko",
     "support": "apps@itpp.dev",
     "website": "https://it-projects.info",

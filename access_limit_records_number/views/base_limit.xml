@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- Copyright 2018 Ivan Yelizariev <https://it-projects.info/team/yelizariev>
      License MIT (https://opensource.org/licenses/MIT). -->
-<openerp>
-    <data>
+<odoo>
         <record id="base_limit_view_tree" model="ir.ui.view">
             <field name="model">base.limit.records_number</field>
             <field name="arch" type="xml">
@@ -55,5 +54,4 @@
             parent="base.menu_security"
             groups="access_limit_records_number.group_control_limits_on_records_number"
         />
-    </data>
-</openerp>
+</odoo>
