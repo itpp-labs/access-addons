@@ -56,7 +56,9 @@ class IrHttp(models.AbstractModel):
             elif delta.days > 1:
                 res[
                     "database_block_message"
-                ] = "Your database will expire in {} days".format(delta.days,)
+                ] = "Your database will expire in {} days".format(
+                    delta.days,
+                )
                 res["database_block_is_warning"] = True
             elif delta.days == 1:
                 res[
