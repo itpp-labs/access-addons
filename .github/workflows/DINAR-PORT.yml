@@ -73,7 +73,7 @@ jobs:
       - name: pre-commit
         run: |
           cd REPO
-          pre-commit run --files $(find ${{ env.PORT_MODULE }} -type f)
+          pre-commit run --files $(find ${{ env.PORT_MODULE }} -type f) || true
           git add -A
           git commit -m ":rainbow: pre-commit
           > Made via .github/workflows/DINAR-PORT.yml" || echo "pre-commit: no changes"
