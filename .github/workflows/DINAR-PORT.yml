@@ -80,11 +80,15 @@ jobs:
           cd REPO
           echo "TODO: OCA/odoo-module-migrator"
           echo "TODO: update version"
-          git add -A
-          git commit -m ":arrow_up:${{ env.PORT_TO_BRANCH_TAGS }} OCA/odoo-module-migrator
-          close #${{ github.event.issue.number }}
+      - name: Commit
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: |
+            :arrow_up:${{ env.PORT_TO_BRANCH_TAGS }} OCA/odoo-module-migrator
+
+            close #${{ github.event.issue.number }}
           
-          > Made via .github/workflows/DINAR-PORT.yml" || echo "OCA/odoo-module-migrator: no changes"
+            > Made via .github/workflows/DINAR-PORT.yml
               
       - name: PR
         uses: peter-evans/create-pull-request@v3
