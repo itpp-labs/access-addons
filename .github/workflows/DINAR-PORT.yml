@@ -22,13 +22,14 @@ on:
 jobs:
   port:
     runs-on: ubuntu-latest
-    if:
-      "startsWith(github.event.issue.title, 'DINAR-PORT ')"
+    if: "startsWith(github.event.issue.title, 'DINAR-PORT ')"
     steps:
       - name: Post a message
         uses: KeisukeYamashita/create-comment@v1
         with:
-          comment: 'Porting is started. Check logs: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}'
+          comment:
+            "Porting is started. Check logs: https://github.com/${{ github.repository
+            }}/actions/runs/${{ github.run_id }}"
       - name: Checkout DINAR
         uses: actions/checkout@v2
         with:
@@ -37,7 +38,7 @@ jobs:
           ref: master
       - uses: actions/setup-python@v2
         with:
-          python-version: '3.7.x'
+          python-version: "3.7.x"
       - name: Install python tools
         run: |
           pip install plumbum pre-commit git-aggregator
@@ -87,7 +88,6 @@ jobs:
           git add -A
           git commit -m ":rainbow: pre-commit
           > Made via .github/workflows/DINAR-PORT.yml" || echo "pre-commit: no changes"
-  
       - name: make OCA/odoo-module-migrator
         run: |
           gitaggregate -c DINAR/workflow-files/odoo-module-migrator-mix.yml
@@ -104,7 +104,7 @@ jobs:
           git commit -m ":arrow_up:${{ env.PORT_TO_BRANCH_TAGS }} OCA/odoo-module-migrator
 
           close #${{ github.event.issue.number }}
-          
+
           > Made via .github/workflows/DINAR-PORT.yml"
       - name: pre-commit
         run: |
