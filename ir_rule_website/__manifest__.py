@@ -6,7 +6,7 @@
     "category": "Access",
     # "live_test_url": "",
     "images": ["images/ir_rule_website.jpg"],
-    "version": "13.0.2.0.0",
+    "version": "14.0.1.0.0",
     "application": False,
     "author": "IT-Projects LLC, Ildar Nasyrov",
     "support": "apps@itpp.dev",
