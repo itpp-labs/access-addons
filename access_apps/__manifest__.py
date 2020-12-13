@@ -7,7 +7,7 @@
     "category": "Access",
     # "live_test_url": "",
     "images": [],
-    "version": "13.0.1.3.3",
+    "version": "14.0.1.0.0",
     "application": False,
     "author": "IT-Projects LLC, Ivan Yelizariev",
     "support": "apps@itpp.dev",
