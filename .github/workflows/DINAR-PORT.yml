@@ -1,3 +1,16 @@
+# Copyright 2020 IT Projects Labs
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 name: "Port module"
 
 on:
@@ -27,7 +40,7 @@ jobs:
           python-version: '3.7.x'
       - name: Install python tools
         run: |
-          pip install plumbum pre-commit
+          pip install plumbum pre-commit git-aggregator
       - name: Check Python Version
         run:
           echo "PY=$(python --version --version | sha256sum | cut -d' ' -f1)" >>
@@ -75,11 +88,18 @@ jobs:
           git commit -m ":rainbow: pre-commit
           > Made via .github/workflows/DINAR-PORT.yml" || echo "pre-commit: no changes"
   
-      - name: OCA/odoo-module-migrator
+      - name: make OCA/odoo-module-migrator
+        run: |
+          gitaggregate -c DINAR/workflow-files/odoo-module-migrator-mix.yml
+          pip install -e ./odoo-module-migrator
+      - name: apply OCA/odoo-module-migrator
         run: |
           cd REPO
-          echo "TODO: OCA/odoo-module-migrator"
-          echo "TODO: update version"
+          odoo-module-migrate \
+          --modules ${{ env.PORT_MODULE }} \
+          --init-version-name ${{ env.PORT_FROM_BRANCH }} \
+          --target-version-name ${{ env.PORT_TO_BRANCH }} \
+           --no-commit
       - name: Commit
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
@@ -89,7 +109,13 @@ jobs:
             close #${{ github.event.issue.number }}
           
             > Made via .github/workflows/DINAR-PORT.yml
-              
+      - name: pre-commit
+        run: |
+          cd REPO
+          pre-commit run --files $(find ${{ env.PORT_MODULE }} -type f) || true
+          git add -A
+          git commit -m ":rainbow: pre-commit
+          > Made via .github/workflows/DINAR-PORT.yml" || echo "pre-commit: no changes"
       - name: PR
         uses: peter-evans/create-pull-request@v3
         with:
