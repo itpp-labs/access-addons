@@ -81,13 +81,6 @@ jobs:
           > Made via .github/workflows/DINAR-PORT.yml"
               fi
           fi
-      - name: pre-commit
-        run: |
-          cd REPO
-          pre-commit run --files $(find ${{ env.PORT_MODULE }} -type f) || true
-          git add -A
-          git commit -m ":rainbow: pre-commit
-          > Made via .github/workflows/DINAR-PORT.yml" || echo "pre-commit: no changes"
       - name: make OCA/odoo-module-migrator
         run: |
           gitaggregate -c DINAR/workflow-files/odoo-module-migrator-mix.yml
