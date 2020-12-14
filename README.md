@@ -1,7 +1,7 @@
 [![help@itpp.dev](https://itpp.dev/images/infinity-readme.png)](mailto:help@itpp.dev)
 # [14.0] Odoo Addons for extended access control
 
-
+:heavy_check_mark: [access_limit_records_number](https://apps.odoo.com/apps/modules/14.0/access_limit_records_number/)
 
 Other Addons
 ============
