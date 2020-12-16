@@ -10,7 +10,7 @@
     "version": "12.0.1.1.0",
     "application": False,
     "author": "IT-Projects LLC, Eugene Molotov",
-    "support": "apps@it-projects.info",
+    "support": "help@itpp.dev",
     "website": "https://apps.odoo.com/apps/modules/12.0/database_expiration/",
     "license": "Other OSI approved licence",  # MIT
     # "price": 9.00,
