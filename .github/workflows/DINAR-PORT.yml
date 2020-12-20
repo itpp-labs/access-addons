@@ -34,7 +34,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           path: DINAR
-          repository: itpp-labs/DINAR
+          repository: itpp-labs/DINAR-fork
           ref: master
       - uses: actions/setup-python@v2
         with:
@@ -72,7 +72,7 @@ jobs:
               then
                   # git am failed
                   git am --abort
-                  
+
                   # just copy source
                   git checkout origin/${{ env.PORT_FROM_BRANCH }} -- ${{ env.PORT_MODULE }}
                   git commit -m ":tada:${{ env.PORT_FROM_BRANCH_TAGS }} ${{ env.PORT_MODULE }}
