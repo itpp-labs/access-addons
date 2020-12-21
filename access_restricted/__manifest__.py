@@ -5,9 +5,9 @@
     "category": "Access",
     "images": ["images/icon.png"],
     "support": "apps@itpp.dev",
-    "website": "https://apps.odoo.com/apps/modules/12.0/access_restricted/",
+    "website": "https://twitter.com/OdooFree",
     "license": "Other OSI approved licence",  # MIT
-    "price": 30.00,
+    # "price": 30.00,
     "currency": "EUR",
     "depends": ["ir_rule_protected"],
     "data": ["security/access_restricted_security.xml"],
