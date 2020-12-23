@@ -5,7 +5,7 @@
     "category": "Access",
     "images": ["images/icon.png"],
     "support": "apps@itpp.dev",
-    "website": "https://www.odoo.com/apps/modules/12.0/ir_rule_protected/",
+    "website": "https://www.odoo.com/apps/modules/14.0/ir_rule_protected/",
     "license": "Other OSI approved licence",  # MIT
     "depends": [],
     "data": ["views.xml"],
