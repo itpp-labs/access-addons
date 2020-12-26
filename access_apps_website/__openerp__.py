@@ -9,8 +9,6 @@
     "author": "IT-Projects LLC",
     "website": "https://it-projects.info",
     "license": "Other OSI approved licence",  # MIT
-    "price": 20.00,
-    "currency": "EUR",
 
     "depends": [
         "access_apps",

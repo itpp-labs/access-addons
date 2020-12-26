@@ -6,8 +6,6 @@
     "category": "Access",
     'website': 'https://twitter.com/yelizariev',
     "license": "Other OSI approved licence",  # MIT
-    'price': 10.00,
-    'currency': 'EUR',
     'depends': [
         'access_apps'
     ],

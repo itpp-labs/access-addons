@@ -5,8 +5,6 @@
     'author': 'IT-Projects LLC, Ivan Yelizariev',
     'category': 'Access',
     'website': 'https://twitter.com/yelizariev',
-    'price': 10.00,
-    'currency': 'EUR',
     'depends': [
         'access_restricted'
     ],
