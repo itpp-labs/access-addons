@@ -8,8 +8,6 @@
     "website": "https://twitter.com/yelizariev",
     "images": ["images/access_restricted.jpg"],
     "license": "Other OSI approved licence",  # MIT
-    "price": 30.00,
-    "currency": "EUR",
     "depends": ["ir_rule_protected"],
     "data": ["security/access_restricted_security.xml"],
     "installable": True,
