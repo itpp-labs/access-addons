@@ -7,8 +7,6 @@
     "support": "apps@itpp.dev",
     "website": "https://twitter.com/yelizariev",
     "license": "Other OSI approved licence",  # MIT
-    "price": 10.00,
-    "currency": "EUR",
     "depends": ["access_apps"],
     "data": ["security/access_settings_menu_security.xml"],
     "demo": ["security/access_settings_menu_security_demo.xml"],
