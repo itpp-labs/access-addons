@@ -6,8 +6,6 @@
     "category": "Access",
     'website': 'https://twitter.com/yelizariev',
     "license": "LGPL-3",
-    'price': 10.00,
-    'currency': 'EUR',
     'depends': [
         'access_apps'
     ],
