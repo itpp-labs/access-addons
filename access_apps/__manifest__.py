@@ -11,7 +11,7 @@
     "application": False,
     "author": "IT-Projects LLC, Ivan Yelizariev",
     "support": "apps@itpp.dev",
-    "website": "https://apps.odoo.com/apps/modules/14.0/access_apps/",
+    "website": "https://twitter.com/OdooFree",
     "license": "Other OSI approved licence",  # MIT
     # "price": 10.00,
     "currency": "EUR",
