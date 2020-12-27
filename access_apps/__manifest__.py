@@ -7,13 +7,13 @@
     "category": "Access",
     # "live_test_url": "",
     "images": [],
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.3.3",
     "application": False,
     "author": "IT-Projects LLC, Ivan Yelizariev",
     "support": "apps@itpp.dev",
-    "website": "https://apps.odoo.com/apps/modules/12.0/access_apps/",
+    "website": "https://twitter.com/OdooFree",
     "license": "Other OSI approved licence",  # MIT
-    "price": 10.00,
+    # "price": 10.00,
     "currency": "EUR",
     "depends": ["access_restricted"],
     "external_dependencies": {"python": [], "bin": []},
@@ -25,5 +25,5 @@
     "post_init_hook": None,
     "uninstall_hook": None,
     "auto_install": False,
-    "installable": False,
+    "installable": True,
 }
