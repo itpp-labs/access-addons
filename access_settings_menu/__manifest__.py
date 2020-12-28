@@ -5,12 +5,10 @@
     "author": "IT-Projects LLC, Ivan Yelizariev",
     "category": "Access",
     "support": "apps@itpp.dev",
-    "website": "https://twitter.com/yelizariev",
+    "website": "https://twitter.com/OdooFree",
     "license": "Other OSI approved licence",  # MIT
-    "price": 10.00,
-    "currency": "EUR",
     "depends": ["access_apps"],
     "data": ["security/access_settings_menu_security.xml"],
     "demo": ["security/access_settings_menu_security_demo.xml"],
-    "installable": False,
+    "installable": True,
 }

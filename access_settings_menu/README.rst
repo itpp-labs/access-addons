@@ -12,4 +12,4 @@ Uninstallation
 
 After uninstalling, you need to update ``base`` module to return restriction to ``Settings`` menu back.
 
-Tested on `13.0 <https://github.com/odoo/odoo/commit/c16d4b5e7b9181c2c792f595a117de10510d45be>`_
+Tested on `14.0 <https://github.com/odoo/odoo/commit/05c373a99a6064f08fc9eb0662ab2ccdb1978cd7>`_
