@@ -19,7 +19,7 @@ number of active users at moment of installation of this module.
 In order to make user to be ignoring the limit, you can use field ``is_excluded_from_limiting`` in one of the following ways:
 
 * Create or set ``is_excluded_from_limiting`` to True in supersuper (sudo) mode. See `<tests/test_excluded_users.py>`_
-* Define user record in `data files <https://www.odoo.com/documentation/13.0/reference/data.html>`__ with ``is_excluded_from_limiting`` set to True.
+* Define user record in `data files <https://www.odoo.com/documentation/14.0/reference/data.html>`__ with ``is_excluded_from_limiting`` set to True.
 
 Questions?
 ==========
@@ -34,9 +34,7 @@ Contributors
 Further information
 ===================
 
-Odoo Apps Store: https://apps.odoo.com/apps/modules/13.0/access_limit_max_users/
+Odoo Apps Store: https://apps.odoo.com/apps/modules/14.0/access_limit_max_users/
 
 
-Notifications on updates: `via Atom <https://github.com/it-projects-llc/access-addons/commits/13.0/access_limit_max_users.atom>`_, `by Email <https://blogtrottr.com/?subscribe=https://github.com/it-projects-llc/access-addons/commits/13.0/access_limit_max_users.atom>`_
-
-Tested on `Odoo 13.0 <https://github.com/odoo/odoo/commit/991c3392708946fdf9973d18e8c29469fa21eed9>`_
+Tested on `Odoo 14.0 <https://github.com/odoo/odoo/commit/05c373a99a6064f08fc9eb0662ab2ccdb1978cd7>`_
