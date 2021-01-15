@@ -12,6 +12,6 @@
     "external_dependencies": {"python": [], "bin": []},
     "data": ["views.xml"],
     "demo": [],
-    "installable": False,
+    "installable": True,
     "auto_install": False,
 }
