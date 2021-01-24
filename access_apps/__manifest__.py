@@ -1,4 +1,4 @@
-# Copyright 2018 Ivan Yelizariev <https://it-projects.info/team/yelizariev>
+# Copyright 2018,2021 Ivan Yelizariev <https://it-projects.info/team/yelizariev>
 # Copyright 2018 Ildar Nasyrov <https://it-projects.info/team/iledarn>
 # License MIT (https://opensource.org/licenses/MIT).
 {
@@ -7,7 +7,7 @@
     "category": "Access",
     # "live_test_url": "",
     "images": [],
-    "version": "14.0.1.3.3",
+    "version": "14.0.2.0.0",
     "application": False,
     "author": "IT-Projects LLC, Ivan Yelizariev",
     "support": "apps@itpp.dev",
@@ -23,7 +23,7 @@
     "post_load": None,
     "pre_init_hook": None,
     "post_init_hook": None,
-    "uninstall_hook": None,
+    "uninstall_hook": "uninstall_hook",
     "auto_install": False,
     "installable": True,
 }
