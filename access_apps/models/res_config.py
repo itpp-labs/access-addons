@@ -33,7 +33,7 @@ class ResConfigSettings(models.TransientModel):
         for name, module in classified["to_uninstall"]:
             res[name] = module.state in ("installed", "to install", "to upgrade")
             if self._fields[name].type == "selection":
-                res[name] = int(res[name])
+                res[name] = str(int(res[name]))
 
         return res
 
