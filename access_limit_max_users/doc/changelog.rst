@@ -1,3 +1,8 @@
+`1.1.1`
+-------
+
+- **Fix**: Fixed impossibility to successfully edit any user
+
 `1.1.0`
 -------
 
