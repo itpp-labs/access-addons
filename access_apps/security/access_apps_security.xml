@@ -5,7 +5,7 @@
     -->
 <odoo>
     <record id="base.access_ir_module_module_group_user" model="ir.model.access">
-        <field name="active" eval="False"/>
+        <field name="active" eval="False" />
     </record>
     <record id="module_category_access_apps" model="ir.module.category">
         <field name="name">Apps access</field>
