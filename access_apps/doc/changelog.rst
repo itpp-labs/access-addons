@@ -1,3 +1,8 @@
+`2.0.0`
+-------
+- **Fix:** restore original access rights on uninstallation
+- **Fix:** error in Settings menu when some modules are installed
+
 `1.3.3`
 -------
 - **Fix:** Grant `Allow installing apps` to Admin and System users (it was only System)
