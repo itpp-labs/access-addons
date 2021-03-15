@@ -17,7 +17,7 @@ class ResUsers(models.Model):
             )
         return super(ResUsers, self).create(vals)
 
-    @api.model
+    @api.multi
     def write(self, vals):
         if vals.get("is_excluded_from_limiting") and not self.env.user._is_superuser():
             raise ValidationError(
