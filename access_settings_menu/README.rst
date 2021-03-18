@@ -12,4 +12,8 @@ Uninstallation
 
 After uninstalling, you need to update ``base`` module to return restriction to ``Settings`` menu back.
 
+===================
+
+Odoo Apps Store: https://apps.odoo.com/apps/modules/12.0/access_settings_menu/
+
 Tested on `12.0 <https://github.com/odoo/odoo/commit/b34b7d4270eda98ee8e87516c044161232b335ae>`_
