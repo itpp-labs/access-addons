@@ -8,7 +8,7 @@
     "version": "14.0.1.1.0",
     "author": "IT-Projects LLC, Pavel Romanchenko",
     "support": "apps@itpp.dev",
-    "website": "https://it-projects.info",
+    "website": "https://twitter.com/OdooFree",
     "license": "Other OSI approved licence",  # MIT
     "depends": ["base_automation"],
     "external_dependencies": {"python": [], "bin": []},
