@@ -5,7 +5,7 @@
     'version': '1.0.0',
     'author': 'IT-Projects LLC, Ivan Yelizariev',
     'license': 'LGPL-3',
-    'website': 'https://it-projects.info',
+    'website': 'https://twitter.com/OdooFree',
     "category": "Access",
     'depends': ['base'],
     "external_dependencies": {"python": [], "bin": []},
