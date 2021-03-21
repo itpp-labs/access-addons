@@ -5,7 +5,7 @@
     "author": "IT-Projects LLC, Ivan Yelizariev",
     "license": "Other OSI approved licence",  # MIT
     "support": "apps@itpp.dev",
-    "website": "https://it-projects.info",
+    "website": "https://twitter.com/OdooFree",
     "category": "Access",
     "depends": ["base"],
     "external_dependencies": {"python": [], "bin": []},
