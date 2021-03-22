@@ -2,6 +2,7 @@
 # [14.0] Odoo Addons for extended access control
 
 :heavy_check_mark: [access_apps](https://apps.odoo.com/apps/modules/14.0/access_apps/)
+<br/>:heavy_check_mark: [access_limit_max_users](https://apps.odoo.com/apps/modules/14.0/access_limit_max_users/)
 <br/>:heavy_check_mark: [access_limit_records_number](https://apps.odoo.com/apps/modules/14.0/access_limit_records_number/)
 <br/>:heavy_check_mark: [access_restricted](https://apps.odoo.com/apps/modules/14.0/access_restricted/)
 <br/>:heavy_check_mark: [access_settings_menu](https://apps.odoo.com/apps/modules/14.0/access_settings_menu/)
