@@ -12,7 +12,9 @@
                 <div
                     class="block_ui database_block_message alert alert-danger"
                     onclick="$('a.full').trigger('click');"
-                >Your database is blocked</div>
+                >
+                    Your database is blocked
+                </div>
             </div>
         </t>
     </t>
