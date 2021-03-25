@@ -1,4 +1,5 @@
 # Copyright 2020 Eugene Molotov <https://it-projects.info/team/em230418>
+# Copyright 2021 Denis Mudarisov <https://github.com/trojikman>
 # License MIT (https://opensource.org/licenses/MIT).
 
 import logging
@@ -61,12 +62,10 @@ class IrHttp(models.AbstractModel):
                 )
                 res["database_block_is_warning"] = True
             elif delta.days == 1:
-                res[
-                    "database_expiration_message"
-                ] = "Your database will expire tomorrow"
+                res["database_block_message"] = "Your database will expire tomorrow"
                 res["database_block_is_warning"] = True
             elif delta.days == 0:
-                res["database_expiration_message"] = "Your database will expire today"
+                res["database_block_message"] = "Your database will expire today"
                 res["database_block_is_warning"] = True
 
             if res.get("database_block_message"):

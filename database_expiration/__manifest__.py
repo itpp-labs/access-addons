@@ -1,4 +1,5 @@
 # Copyright 2020 Eugene Molotov <https://it-projects.info/team/em230418>
+# Copyright 2021 Denis Mudarisov <https://github.com/trojikman>
 # License MIT (https://opensource.org/licenses/MIT).
 
 {
@@ -7,7 +8,7 @@
     "category": "Hidden",
     # "live_test_url": "http://apps.it-projects.info/shop/product/DEMO-URL?version=13.0",
     "images": [],
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.1.1",
     "application": False,
     "author": "IT-Projects LLC, Eugene Molotov",
     "support": "apps@it-projects.info",
