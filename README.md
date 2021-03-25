@@ -6,6 +6,8 @@
 <br/>:heavy_check_mark: [access_limit_records_number](https://apps.odoo.com/apps/modules/14.0/access_limit_records_number/)
 <br/>:heavy_check_mark: [access_restricted](https://apps.odoo.com/apps/modules/14.0/access_restricted/)
 <br/>:heavy_check_mark: [access_settings_menu](https://apps.odoo.com/apps/modules/14.0/access_settings_menu/)
+<br/>:heavy_check_mark: [database_block](https://apps.odoo.com/apps/modules/14.0/database_block/)
+<br/>:heavy_check_mark: [database_expiration](https://apps.odoo.com/apps/modules/14.0/database_expiration/)
 <br/>:heavy_check_mark: [ir_rule_protected](https://apps.odoo.com/apps/modules/14.0/ir_rule_protected/)
 
 Other Addons
