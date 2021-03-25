@@ -11,7 +11,7 @@ Configuration
 
 * `Log in as admin
 * `Activate Developer Mode <https://odoo-development.readthedocs.io/en/latest/odoo/usage/debug-mode.html>`__
-* Open menu ``[[ Settings ]] >> Technical >> System Parameter``
+* Open menu ``[[ Settings ]] >> Technical >> System Parameters``
 * Edit existing record by key `database_expiration_date` or create new one
 * Set date with format YYYY-MM-DD HH:MM:SS, click "Save" and reload web page
 * If you set past date, "Your database is expired" will appear and will disable navigating

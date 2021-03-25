@@ -35,9 +35,9 @@ Contributors
 Further information
 ===================
 
-Odoo Apps Store: https://apps.odoo.com/apps/modules/13.0/database_expiration/
+Odoo Apps Store: https://apps.odoo.com/apps/modules/14.0/database_expiration/
 
 
-Notifications on updates: `via Atom <https://github.com/it-projects-llc/access-addons/commits/13.0/database_expiration.atom>`_, `by Email <https://blogtrottr.com/?subscribe=https://github.com/it-projects-llc/access-addons/commits/13.0/database_expiration.atom>`_
+Notifications on updates: `via Atom <https://github.com/itpp-labs/access-addons/commits/14.0/database_expiration.atom>`_, `by Email <https://blogtrottr.com/?subscribe=https://github.com/itpp-labs/access-addons/commits/14.0/database_expiration.atom>`_
 
-Tested on `Odoo 12.0 <https://github.com/odoo/odoo/commit/6a57ad66b8374966ba7011e34cec20f6344f4f6d>`_
+Tested on `Odoo 14.0 <https://github.com/odoo/odoo/commit/829ae7b7e2941b6bb7af73a6d3d78b4ef1abf453>`_
