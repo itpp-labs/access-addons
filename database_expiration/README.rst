@@ -20,7 +20,7 @@ module will start to show warning in main menu.
 To configure how many days to show warning in advance, you can set ``database_expiration_warning_delay`` in "System Parameters"
 
 You can also add hyperlink below warning/expiration message. To define url, set ``database_expiration_details_link`` in "System Parameters".
-By default hyperlink's label is "Details". To define the other one, set ``database_expiraation_details_link_label`` in "System Paramters".
+By default hyperlink's label is "Details". To define the other one, set ``database_expiration_details_link_label`` in "System Paramters".
 
 Questions?
 ==========
