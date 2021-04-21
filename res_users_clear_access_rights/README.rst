@@ -25,4 +25,4 @@ Further information
 
 Odoo Apps Store: https://apps.odoo.com/apps/modules/13.0/res_users_clear_access_rights/
 
-Tested on `Odoo 12.0 <https://github.com/odoo/odoo/commit/e7cf0b4d61a167952554827b90672de90c3caf2e>`_
+Tested on `Odoo 13.0 <https://github.com/odoo/odoo/commit/05551281085fd12f83904305aa7bf259f663a834>`_
