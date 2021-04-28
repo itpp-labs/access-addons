@@ -13,9 +13,9 @@ class ResUsers(models.Model):
 
     auth_quick_token = fields.Char()
 
-    def _check_credentials(self, password):
+    def _check_credentials(self, password, user_agent_env):
         try:
-            return super(ResUsers, self)._check_credentials(password)
+            return super(ResUsers, self)._check_credentials(password, user_agent_env)
         except AccessDenied:
             res = self.sudo().search(
                 [("id", "=", self.env.uid), ("auth_quick_token", "=", password)]
