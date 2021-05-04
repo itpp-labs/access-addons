@@ -12,6 +12,7 @@
 <br/>:heavy_check_mark: [database_limit_size](https://apps.odoo.com/apps/modules/13.0/database_limit_size/)
 <br/>:heavy_check_mark: [ir_rule_protected](https://apps.odoo.com/apps/modules/13.0/ir_rule_protected/)
 <br/>:heavy_check_mark: [ir_rule_website](https://apps.odoo.com/apps/modules/13.0/ir_rule_website/)
+<br/>:heavy_check_mark: [res_users_clear_access_rights](https://apps.odoo.com/apps/modules/13.0/res_users_clear_access_rights/)
 
 Other Addons
 ============
