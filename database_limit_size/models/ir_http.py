@@ -41,12 +41,15 @@ class IrHttp(models.AbstractModel):
         total_size = database_size + filestore_size
         if total_size > database_limit_size:
             res["database_block_message"] = "Database size exceed ({} / {})".format(
-                human_size(total_size), human_size(database_limit_size),
+                human_size(total_size),
+                human_size(database_limit_size),
             )
         elif total_size > database_limit_size * 0.9:
-            res["database_block_message"] = (
-                "Database size is about to be exceed (%s / %s)"
-                % (human_size(total_size), human_size(database_limit_size))
+            res[
+                "database_block_message"
+            ] = "Database size is about to be exceed (%s / %s)" % (
+                human_size(total_size),
+                human_size(database_limit_size),
             )
             res["database_block_is_warning"] = True
 
