@@ -4,16 +4,13 @@
     "name": """Quick Auth""",
     "summary": """Odoo Authentication for developers / testers / support team""",
     "category": "Extra Tools",
-    # "live_test_url": "http://apps.it-projects.info/shop/product/DEMO-URL?version=12.0",
     "images": ["images/icon.png"],
     "version": "14.0.1.0.0",
     "application": False,
     "author": "IT-Projects LLC, Ivan Yelizariev",
     "support": "apps@itpp.dev",
-    "website": "https://itpp.dev",
+    "website": "https://twitter.com/OdooFree",
     "license": "Other OSI approved licence",  # MIT
-    # "price": 9.00,
-    # "currency": "EUR",
     "depends": [],
     "external_dependencies": {"python": [], "bin": []},
     "data": [],
@@ -25,14 +22,4 @@
     "uninstall_hook": None,
     "auto_install": False,
     "installable": True,
-    # "demo_title": "Quick Authentication",
-    # "demo_addons": [
-    # ],
-    # "demo_addons_hidden": [
-    # ],
-    # "demo_url": "DEMO-URL",
-    # "demo_summary": "{SHORT_DESCRIPTION_OF_THE_MODULE}",
-    # "demo_images": [
-    #    "images/MAIN_IMAGE",
-    # ]
 }
