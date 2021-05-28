@@ -40,4 +40,4 @@ Contributors
 Odoo Apps Store: https://apps.odoo.com/apps/modules/13.0/ir_rule_website
 
 
-Tested on `Odoo 13.0 <https://github.com/odoo/odoo/commit/669203b6a86c1c2d8463dc34b8674b2a38010ed0>`_
+Tested on `Odoo 14.0 <https://github.com/odoo/odoo/commit/3780fa2af5d5f6cac91e419bcab69a253db280bd>`_
