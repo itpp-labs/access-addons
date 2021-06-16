@@ -10,7 +10,7 @@
     "application": False,
     "author": "IT-Projects LLC, Ildar Nasyrov",
     "support": "apps@itpp.dev",
-    "website": "https://itpp.dev",
+    "website": "https://twitter.com/OdooFree",
     "license": "Other OSI approved licence",  # MIT
     # "price": 20.00,
     # "currency": "EUR",
