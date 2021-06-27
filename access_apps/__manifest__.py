@@ -6,7 +6,7 @@
     "summary": """You can configure administrators which don't have access to Apps""",
     "category": "Access",
     # "live_test_url": "",
-    "images": [],
+    "images": ["images/banner.png"],
     "version": "14.0.2.0.0",
     "application": False,
     "author": "IT-Projects LLC, Ivan Yelizariev",
