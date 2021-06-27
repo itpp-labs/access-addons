@@ -1,9 +1,9 @@
 {
     "name": "Show settings menu for non-admin",
-    "summary": """Set up non-admin users rights so they can see the ``[[ Settings ]]`` menu""",
+    "summary": """Allows to make Settings menu visible for non-admins""",
     "version": "14.0.1.0.2",
     "author": "IT-Projects LLC, Ivan Yelizariev",
-    "category": "Access",
+    "category": "Extra Tools",
     "support": "apps@itpp.dev",
     "website": "https://twitter.com/OdooFree",
     "license": "Other OSI approved licence",  # MIT
