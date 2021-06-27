@@ -4,6 +4,7 @@
     "version": "14.0.1.0.2",
     "author": "IT-Projects LLC, Ivan Yelizariev",
     "category": "Extra Tools",
+    "images": ["images/banner.png"],
     "support": "apps@itpp.dev",
     "website": "https://twitter.com/OdooFree",
     "license": "Other OSI approved licence",  # MIT
