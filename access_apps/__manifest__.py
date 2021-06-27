@@ -4,7 +4,7 @@
 {
     "name": """Control access to Apps""",
     "summary": """You can configure administrators which don't have access to Apps""",
-    "category": "Access",
+    "category": "Extra Tools",
     # "live_test_url": "",
     "images": ["images/banner.png"],
     "version": "14.0.2.0.0",
