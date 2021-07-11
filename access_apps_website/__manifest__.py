@@ -3,7 +3,7 @@
     "summary": """Only users with "Show Apps Menu" access see "Install Apps" menu.""",
     "category": "Access",
     "images": ["images/install_apps.png"],
-    "vesion": "11.0.1.0.0",
+    "version": "11.0.1.0.0",
     "author": "IT-Projects LLC",
     "support": "apps@itpp.dev",
     "website": "https://itpp.dev",
