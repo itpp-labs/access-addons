@@ -1,6 +1,8 @@
 [![help@itpp.dev](https://itpp.dev/images/infinity-readme.png)](mailto:help@itpp.dev)
 # [13.0] Odoo Addons for extended access control
 
+:open_file_folder: Get a **.zip** file with all needed dependencies:
+
 :heavy_check_mark: [access_apps](https://apps.odoo.com/apps/modules/13.0/access_apps/)
 <br/>:heavy_check_mark: [access_limit_max_users](https://apps.odoo.com/apps/modules/13.0/access_limit_max_users/)
 <br/>:heavy_check_mark: [access_limit_records_number](https://apps.odoo.com/apps/modules/13.0/access_limit_records_number/)
@@ -13,6 +15,10 @@
 <br/>:heavy_check_mark: [ir_rule_protected](https://apps.odoo.com/apps/modules/13.0/ir_rule_protected/)
 <br/>:heavy_check_mark: [ir_rule_website](https://apps.odoo.com/apps/modules/13.0/ir_rule_website/)
 <br/>:heavy_check_mark: [res_users_clear_access_rights](https://apps.odoo.com/apps/modules/13.0/res_users_clear_access_rights/)
+
+:star: Star this repo if you **like** it!
+
+:heart: [Sponsor us](https://patreon.com/itpp) if you **love** it!
 
 Other Addons
 ============
