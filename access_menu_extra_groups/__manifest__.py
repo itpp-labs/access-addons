@@ -3,7 +3,7 @@
     "summary": """Restrict access to menus globall""",
     "category": "Access",
     "images": [],
-    "vesion": "13.0.1.0.0",
+    "version": "13.0.1.0.0",
     "author": "IT-Projects LLC",
     "support": "apps@itpp.dev",
     "website": "https://itpp.dev",
