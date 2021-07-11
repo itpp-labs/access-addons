@@ -2,7 +2,7 @@
 {
     "name": "Clear access rights button",
     "summary": """Useful tool to reset user rights""",
-    "vesion": "10.0.1.0.0",
+    "version": "10.0.1.0.0",
     "author": "IT-Projects LLC, Ivan Yelizariev",
     "license": "Other OSI approved licence",  # MIT
     "support": "apps@itpp.dev",
