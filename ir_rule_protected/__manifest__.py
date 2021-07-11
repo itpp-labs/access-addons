@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     "name": "Protect ir.rule records",
-    "vesion": "10.0.1.0.0",
+    "version": "10.0.1.0.0",
     "author": "IT-Projects LLC, Ivan Yelizariev",
     "category": "Access",
     "support": "apps@itpp.dev",
