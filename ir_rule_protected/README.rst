@@ -17,4 +17,4 @@ Roadmap
 Further information
 ===================
 
-Tested on `Odoo 14.0 <https://github.com/odoo/odoo/commit/c16d4b5e7b9181c2c792f595a117de10510d45be>`_
+Tested on `Odoo 15.0 <https://github.com/odoo/odoo/commit/c16d4b5e7b9181c2c792f595a117de10510d45be>`_

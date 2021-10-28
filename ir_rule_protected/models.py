@@ -16,7 +16,7 @@ class IRRule(models.Model):
             return
         for r in self:
             if r.protected:
-                raise exceptions.Warning(
+                raise exceptions.UserError(
                     _("The Rule is protected. You don't have access for this operation")
                 )
 
@@ -35,5 +35,5 @@ class Module(models.Model):
     def button_uninstall(self):
         for r in self:
             if r.name == MODULE_NAME and self.env.uid != SUPERUSER_ID:
-                raise exceptions.Warning(_("Only admin can uninstall the module"))
+                raise exceptions.UserError(_("Only admin can uninstall the module"))
         return super(Module, self).button_uninstall()
