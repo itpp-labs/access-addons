@@ -1,7 +1,7 @@
 {
     "name": "Show settings menu for non-admin",
     "summary": """Allows to make Settings menu visible for non-admins""",
-    "version": "14.0.1.0.2",
+    "version": "15.0.1.0.2",
     "author": "IT-Projects LLC, Ivan Yelizariev",
     "category": "Extra Tools",
     "images": ["images/banner.png"],
