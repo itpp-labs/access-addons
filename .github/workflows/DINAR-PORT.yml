@@ -84,7 +84,6 @@ jobs:
           previous commits history: https://github.com/${{ github.repository }}/commits/${{ env.PORT_FROM_BRANCH }}/${{ env.PORT_MODULE }}
 
           > Made via .github/workflows/DINAR-PORT.yml"
-              fi
           fi
       - name: make OCA/odoo-module-migrator
         run: |
