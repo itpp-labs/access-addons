@@ -83,6 +83,8 @@ jobs:
           > Made via .github/workflows/DINAR-PORT.yml"
               fi
           fi
+          ls
+          ls ${{ env.PORT_MODULE }}
       - name: make OCA/odoo-module-migrator
         run: |
           gitaggregate -c DINAR/workflow-files/odoo-module-migrator-mix.yml
