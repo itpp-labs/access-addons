@@ -82,7 +82,6 @@ jobs:
               git checkout origin/${{ env.PORT_FROM_BRANCH }} -- ${{ env.PORT_MODULE }}
               git commit -m ":tada:${{ env.PORT_FROM_BRANCH_TAGS }} ${{ env.PORT_MODULE }}
           previous commits history: https://github.com/${{ github.repository }}/commits/${{ env.PORT_FROM_BRANCH }}/${{ env.PORT_MODULE }}
-
           > Made via .github/workflows/DINAR-PORT.yml"
           fi
       - name: make OCA/odoo-module-migrator
