@@ -1,7 +1,7 @@
 {
     "name": "Restricted administration rights",
     "summary": "Apply strict restriction on what an admin can do",
-    "version": "14.0.1.3.5",
+    "version": "15.0.1.3.5",
     "author": "IT-Projects LLC, Ivan Yelizariev",
     "category": "Extra Tools",
     "images": ["images/banner.jpg"],
