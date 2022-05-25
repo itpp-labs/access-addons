@@ -1,3 +1,8 @@
+`2.0.0`
+-------
+
+- Improvement: replace `access_apps` dependency with `access_restricted` since only the latter one is needed
+
 `1.0.2`
 -------
 
