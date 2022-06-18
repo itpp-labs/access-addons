@@ -1,4 +1,5 @@
 # Copyright 2020 Eugene Molotov <https://it-projects.info/team/em230418>
+# Copyright 2021 Denis Mudarisov <https://github.com/trojikman>
 # License MIT (https://opensource.org/licenses/MIT).
 
 {
