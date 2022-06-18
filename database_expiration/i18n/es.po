@@ -1,0 +1,75 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * database_expiration
+#
+# Translators:
+# Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-26 04:34+0000\n"
+"PO-Revision-Date: 2022-06-18 18:53-0400\n"
+"Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
+"Language-Team: ES <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#. module: database_expiration
+#: code:addons/database_expiration/models/ir_http.py:0
+#, python-format
+msgid "Click here!"
+msgstr "¡Haga clic aquí!"
+
+#. module: database_expiration
+#: code:addons/database_expiration/models/ir_http.py:0
+#, python-format
+msgid "Could not get expiration warning delay: %s. Using default: 7 days"
+msgstr ""
+"No se pudo obtener el retraso de advertencia de caducidad: %s. Usando por "
+"defecto: 7 días"
+
+#. module: database_expiration
+#: code:addons/database_expiration/models/ir_http.py:0
+#, python-format
+msgid "Details"
+msgstr "Detalles"
+
+#. module: database_expiration
+#: model:ir.model,name:database_expiration.model_ir_http
+msgid "HTTP Routing"
+msgstr "Ruta HTTP"
+
+#. module: database_expiration
+#: code:addons/database_expiration/models/ir_http.py:0
+#, python-format
+msgid "Value must be greater than 1!"
+msgstr "¡Valor debe ser mayor que 1!"
+
+#. module: database_expiration
+#: code:addons/database_expiration/models/ir_http.py:0
+#, python-format
+msgid "Your database is expired!"
+msgstr "¡Su base de datos ha caducado!"
+
+#. module: database_expiration
+#: code:addons/database_expiration/models/ir_http.py:0
+#, python-format
+msgid "Your database will expire in {} days!"
+msgstr "¡Su base de datos caducará en {} días!"
+
+#. module: database_expiration
+#: code:addons/database_expiration/models/ir_http.py:0
+#, python-format
+msgid "Your database will expire today!"
+msgstr "¡Su base de datos caducará hoy!"
+
+#. module: database_expiration
+#: code:addons/database_expiration/models/ir_http.py:0
+#, python-format
+msgid "Your database will expire tomorrow!"
+msgstr "¡Su base de datos caducará mañana!"
