@@ -24,7 +24,7 @@ method and return dictionary with following keys:
   to show warning in advance, for example, **5**, it use by as default value: *7*.
 
 * ``database_expiration_details_link`` - this parameter record a text value for add hyperlink below
-  warning/expiration message, for example, **https://soporte.pidela.cl/**.
+  warning/expiration message, for example, **https://support.mystore.com/**.
 
 * ``database_expiration_details_link_label`` - this parameter record a text value for the hyperlink's
   label for the link, for example, **More details**, it use by as default value: *Details*.
@@ -33,10 +33,6 @@ For setup this add-on is defined in "Settings > Technical > Parameters > System 
 
 Also if ``web_responsive`` add-on is installed, by default 7 days before expiration date 
 module will start to show warning in main menu.
-To configure how many days to show warning in advance, you can set ``database_expiration_warning_delay`` in "System Parameters"
-
-You can also add hyperlink below warning/expiration message. To define url, set ``database_expiration_details_link`` in "System Parameters".
-By default hyperlink's label is "Details". To define the other one, set ``database_expiraation_details_link_label`` in "System Paramters".
 
 Questions?
 ==========
