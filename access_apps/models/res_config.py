@@ -30,7 +30,8 @@ class ResConfigSettings(models.TransientModel):
 
         # modules: which modules are installed/to install
         classified = self._get_classified_fields()
-        for name, module in classified["to_uninstall"]:
+        for module in classified["to_uninstall"]:
+            name = f"module_{module.name}"
             res[name] = module.state in ("installed", "to install", "to upgrade")
             if self._fields[name].type == "selection":
                 res[name] = str(int(res[name]))
@@ -38,21 +39,19 @@ class ResConfigSettings(models.TransientModel):
         return res
 
     @api.model
-    def _get_classified_fields(self):
+    def _get_classified_fields(self, fnames=None):
         # classify mudules to install and uninstall independently
-        res = super(ResConfigSettings, self)._get_classified_fields()
+        res = super(ResConfigSettings, self)._get_classified_fields(fnames=fnames)
 
-        to_uninstall_modules = []
+        to_uninstall = res["module"].filtered(
+            lambda m: not self[f"module_{m.name}"]
+            and m.state in ("installed", "to upgrade")
+        )
 
-        for name, module in res["module"]:
-            if not self[name]:
-                if module and module.state in ("installed", "to upgrade"):
-                    to_uninstall_modules.append((name, module))
-
-        modules = list(set(res["module"]).difference(set(to_uninstall_modules)))
+        modules = res["module"] - to_uninstall
 
         res["module"] = modules
-        res["to_uninstall"] = to_uninstall_modules
+        res["to_uninstall"] = to_uninstall
 
         return res
 
@@ -65,7 +64,7 @@ class ResConfigSettings(models.TransientModel):
             "access_apps.group_allow_apps_only_from_settings"
         ):
             to_uninstall_modules = self.env["ir.module.module"]
-            for _name, module in to_uninstall:
+            for module in to_uninstall:
                 to_uninstall_modules += module
             to_uninstall_modules.sudo().button_immediate_uninstall()
         return res
