@@ -31,4 +31,4 @@ With this module installed:
 * The user from previous example cannot increase his privileges. There is no ``Sales: Manager`` option for him, and also no ``Customer Addresses``
   option in module configuration
 * The only exception is done for users who are in special group 'Allow add implied groups from settings' - if your user is included in this group by the superuser then you may select
-  ``Customer Addresses`` from ``Sale`` module ``Configuration >> Settings`` menu
+  ``Units of Measure`` from ``Sale`` module ``Configuration >> Settings`` menu
