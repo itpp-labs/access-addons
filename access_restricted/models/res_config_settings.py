@@ -7,9 +7,9 @@ class ResConfigSettings(models.TransientModel):
     _inherit = "res.config.settings"
 
     @api.model
-    def _get_classified_fields(self):
+    def _get_classified_fields(self, fnames=None):
         uid = self.env.uid
-        classified = super(ResConfigSettings, self)._get_classified_fields()
+        classified = super(ResConfigSettings, self)._get_classified_fields(fnames)
         if uid == SUPERUSER_ID:
             return classified
 
@@ -26,9 +26,9 @@ class ResConfigSettings(models.TransientModel):
         return classified
 
     @api.model
-    def fields_get(self, fields=None, **kwargs):
+    def fields_get(self, allfields=None, **kwargs):
         uid = self.env.uid
-        fields = super(ResConfigSettings, self).fields_get(fields, **kwargs)
+        fields = super(ResConfigSettings, self).fields_get(allfields, **kwargs)
 
         if uid == SUPERUSER_ID:
             return fields
