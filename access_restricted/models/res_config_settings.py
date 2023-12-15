@@ -10,7 +10,9 @@ class ResConfigSettings(models.TransientModel):
     def _get_classified_fields(self, fnames=None):
         uid = self.env.uid
         classified = super(ResConfigSettings, self)._get_classified_fields(fnames)
-        if uid == SUPERUSER_ID:
+        config = self.env.context.get("config")
+        is_execute_stage = config and isinstance(config, models.Model)
+        if uid == SUPERUSER_ID or is_execute_stage:
             return classified
 
         group = []

@@ -10,13 +10,16 @@ Installation
 Configuration
 =============
 
-* By default all users except a superuser restricted to escalate the privileges
-* There is only one configuration option this module provides. Under superuser open menu ``[[ Settings  ]] >> Users & Companies >> Users``
-* In ``Access Rights`` tab you can select 'Allow add implied groups from settings' -
-  to allow some users to configure modules by means of ``group_XXX`` fields from ``Settings`` menus
+
+* `Log in as SUPERUSER <https://odoo-development.readthedocs.io/en/latest/odoo/usage/login-as-superuser.html>`__
+* Navigate to menu ``[[ Settings  ]] >> Users & Companies >> Users``
+* In ``Access Rights`` tab you can select *Allow add implied groups from settings*:
+  it allows a user to configure groups via ``group_XXX`` fields from ``Settings`` menu.
 
 Usage
 =====
+
+By default all users except a superuser restricted to escalate the privileges.
 
 Let's take ``Sales (sale_management)`` module as an example.
 
@@ -30,5 +33,5 @@ With this module installed:
 
 * The user from previous example cannot increase his privileges. There is no ``Sales: Manager`` option for him, and also no ``Customer Addresses``
   option in module configuration
-* The only exception is done for users who are in special group 'Allow add implied groups from settings' - if your user is included in this group by the superuser then you may select
-  ``Units of Measure`` from ``Sale`` module ``Configuration >> Settings`` menu
+* The only exception is done for users who are in special group *Allow add implied groups from settings*: if your user is included in this group by the superuser then you may select
+  ``Customer Addresses`` from ``Sale`` module ``Configuration >> Settings`` menu
