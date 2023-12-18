@@ -5,11 +5,14 @@
 Show settings menu for non-admin
 ================================
 
-Adds "Show Settings Menu" tick in user's access rights tab.
+Adds "Show Settings Menu" checkbox in user's access rights tab.
 
 Uninstallation
---------------
+==============
 
 After uninstalling, you need to update ``base`` module to return restriction to ``Settings`` menu back.
 
-Tested on `16.0 <https://github.com/odoo/odoo/commit/9917d841fa38ccc1e6d67875a665494dc22ef92f>`_
+Further information
+===================
+
+Tested on `Odoo 17.0 <https://github.com/odoo/odoo/commit/40b19d89846303016098840f4958fe7cc105067c>`_
