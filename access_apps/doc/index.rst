@@ -10,15 +10,15 @@ Installation
 Configuration
 =============
 
-After the installation of this module by default no one has access to installing modules.
-To control such permission follow the steps below.
+After the installation of this module by default only *default admin* and *superuser* have access to installing modules.
+To update the permission follow for other users follow the steps below.
 
 
 * Open menu ``[[ Settings ]] >> Users & Companies >> Users``, select the user you want to grant the access to
 * On ``Access Rights`` tab, ``Other`` settings group there is an ``Apps access`` security category
 
  * Select ``Allow installing apps`` - to allow apps installation from everywhere
- * Select ``Allow installing apps only from settings`` - to allow apps installation only from other module's ``Configuration >> Settings`` menu, there is no ``[[ Apps ]]`` menu available
+ * Select ``Allow installing apps only from settings`` - allow apps installation only from other module's ``Configuration >> Settings`` menu. More precisely, it just hides ``[[ Apps ]]`` menu
  * Select blank line - to restrict application installation
 
 Usage
