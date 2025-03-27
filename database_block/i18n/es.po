@@ -1,0 +1,30 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * database_block
+# Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-25 20:08+0000\n"
+"PO-Revision-Date: 2022-06-18 18:50-0400\n"
+"Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
+"Language-Team: ES <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#. module: database_block
+#: model:ir.model,name:database_block.model_ir_http
+msgid "HTTP Routing"
+msgstr "Ruta HTTP"
+
+#. module: database_block
+#. openerp-web
+#: code:addons/database_block/static/src/xml/apps.xml:0
+#, python-format
+msgid "Your database is blocked"
+msgstr "Tu base de datos está bloqueada"

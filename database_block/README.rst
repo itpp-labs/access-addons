@@ -12,11 +12,15 @@
 
 This technical module allows blocking backend access and display the message
 
-In order to do that, dependent module need to override ``ir.http`` 's session_info method and return
-dictionary with following keys:
+In order to do that, dependent module need to override ``ir.http`` 's ``session_info`` 
+method and return dictionary with following keys:
 
-* ``database_block_message`` - the displayed message itself. Can be HTML
-* ``database_block_is_warning`` - if true, backend is not blocked, but displayed message is shown as warning (``web_responsive`` must be installed in order for warning to be displayed)
+* ``database_block_message`` - this parameter record a text value, the displayed
+  message itself. Can be HTML, for example, **<h1>Your database is blocked</h1>**.
+
+* ``database_block_is_warning`` - this parameter record the boolean value, if ``True``,
+  the Odoo backend is not blocked, but displayed message is shown as warning
+  (``web_responsive`` add-on must be installed in order for warning to be displayed).
 
 Questions?
 ==========

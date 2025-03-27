@@ -15,7 +15,8 @@ class IrHttp(models.AbstractModel):
             self.env["ir.module.module"]
             .with_user(SUPERUSER_ID)
             .search(
-                [("name", "=", "web_responsive"), ("state", "=", "installed")], limit=1,
+                [("name", "=", "web_responsive"), ("state", "=", "installed")],
+                limit=1,
             )
         )
 
